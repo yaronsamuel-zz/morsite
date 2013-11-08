@@ -1,0 +1,31 @@
+<head>
+    
+    <script src="{{STATIC_URL}}FancyZoom_1.1/js-global/FancyZoom.js" type="text/javascript"></script>
+    <script src="{{STATIC_URL}}FancyZoom_1.1/js-global/FancyZoomHTML.js" type="text/javascript"></script>
+</head>
+
+<body id="myBody" onload="setupZoom()">
+    
+    <table border=1>
+    {% for category in prCategories %}
+    <tr colspan=2>
+        <td>
+        <h1>{{ category.category_Name }}</h1>
+        </td>
+    </tr>    
+    {% for product in category.product_set.all %}
+        <tr>
+            <td>
+            {{ product.product_name }}
+            </td>
+            <td>
+                <a href="{{product.pictureURL }}">
+                <img src="{{product.thumb125 }}" /></a>  
+                {{product.thumb125 }}                
+            </td>
+        </tr>
+    {% endfor %}
+    
+    {% endfor %}
+    </table>
+</body>
