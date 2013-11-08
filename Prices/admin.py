@@ -7,7 +7,7 @@ class ProductInline(admin.TabularInline):
     extra = 0
     exclude = ('order',)
  
-class CategoryAdmin(admin.ModelAdmin):
+class CategoryAdmin(OrderedModelAdmin):
     # fieldsets = [
         # (None,               {'fields': ['category_Name']}),
         # ('Description',      {'fields': ['category_description'],
@@ -23,7 +23,8 @@ class CategoryAdmin(admin.ModelAdmin):
               ]
               
     list_display = ('category_Name',
-              'category_description'
+              'category_description' ,
+              'reorder' , 
               )
               
     # list_filter = ['datePublished']
