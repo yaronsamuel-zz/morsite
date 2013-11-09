@@ -8,6 +8,18 @@ from django.db.models.fields.files import ImageFieldFile
 from PIL import Image
 from django.core.files.base import ContentFile
 import cStringIO
+from django.contrib.staticfiles.finders import FileSystemFinder
+
+MAG_GLASS_PNG = 'magGlass.png'
+
+def addMaginifyingGlass(image):
+    
+    magGlass = Image.open(FileSystemFinder().find(MAG_GLASS_PNG))
+    cordinates = ( image.size[0] - magGlass.size[0] ,
+                   image.size[1] - magGlass.size[1])
+    image.paste(magGlass ,cordinates , magGlass)
+    return image
+
 
 def generate_thumb(img, thumb_size, format):
     """
@@ -51,6 +63,9 @@ def generate_thumb(img, thumb_size, format):
         # not quad
         image2 = image
         image2.thumbnail(thumb_size, Image.ANTIALIAS)
+    
+    #adds maginfying glass to the thumbnail
+    image2 = addMaginifyingGlass(image2)
     
     io = cStringIO.StringIO()
     # PNG and GIF are the same, JPG is JPEG

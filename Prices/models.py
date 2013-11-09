@@ -10,6 +10,7 @@ class ProductCategory(OrderedModel):
     
     def __unicode__(self):
         return u'%s' % (self.category_Name, )
+        
 
 class Product(OrderedModel):
     category = models.ForeignKey(ProductCategory)
@@ -23,31 +24,26 @@ class Product(OrderedModel):
     big_price = models.IntegerField(default = 0 , null=True)
     huge_price = models.IntegerField(default = 0 , null=True)
     datePublished = models.DateTimeField('date published')
-    
-    
-    def generateThumbnailPath(self , size , size2 = None):
-        if size2 is None:
-            size2 = size
-            
-        path , ext = os.path.splitext(self.pictureURL)
-        newExt = "%sx%s%s" % (size , size2 , ext)
-        return "%s.%s" % (path , newExt) 
+
     
     @property
     def pictureURL(self):
-        return "%s%s" % (
+        if self.product_picture:
+            return "%s%s" % (
                     MEDIA_URL ,
                     self.product_picture.name)        
+        else:
+            return None
         
         
       
     @property
     def thumb125(self):
-        return self.generateThumbnailPath(125)
+        return self.product_picture.url_125x125
         
     @property    
     def thumb200(self):
-        return self.generateThumbnailPath(200)
+        return self.product_picture.url_200x200
         
 
     

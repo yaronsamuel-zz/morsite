@@ -13,6 +13,8 @@ urlpatterns = patterns('',
                  {'document_root': settings.MY_STATIC_ROOT}),
     (r'^media/(?P<path>.*)$', 'django.views.static.serve',
                  {'document_root': settings.MEDIA_ROOT}),
+    
+    url(r'^weblog/', include('zinnia.urls')),
+    url(r'^comments/', include('django.contrib.comments.urls')),
 ) 
 
-urlpatterns += staticfiles_urlpatterns()
