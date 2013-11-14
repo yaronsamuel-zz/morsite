@@ -1,11 +1,15 @@
-<head>
+{% extends "zinnia/base.html" %}
+
+{% block script %}
     {% load static %}
     <script src="{% static 'FancyZoom_1.1/js-global/FancyZoom.js'%}" type="text/javascript"></script>
     <script src="{% static 'FancyZoom_1.1/js-global/FancyZoomHTML.js'%}" type="text/javascript"></script>
-</head>
 
-<body id="myBody" onload="setupZoom()">
-    
+{% endblock script %}
+<!--<body id="myBody" onload="setupZoom()">  -->
+{% block body-onload %}setupZoom(){% endblock body-onload %}
+{% block content %}
+
     <table border=1 cellpadding="10">
     {% for category in prCategories %}
     <tr colspan=2>
@@ -36,4 +40,5 @@
     
     {% endfor %}
     </table>
-</body>
+{% endblock content %}
+<!-- </body> -->

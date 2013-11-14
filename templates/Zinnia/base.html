@@ -9,7 +9,7 @@
 
 {% block link %}
     <link rel="index" href="{% url 'zinnia_entry_archive_index' %}" />
-    <link rel="author" type="text/plain" href="{% url 'zinnia_humans' %}" />
+    <!-- <link rel="author" type="text/plain" href="{% url 'zinnia_humans' %}" /> -->
     <link rel="EditURI" type="application/rsd+xml" href="{% url 'zinnia_rsd' %}" />
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="{% url 'zinnia_wlwmanifest' %}" />
     <link rel="search" type="application/opensearchdescription+xml" title="Zinnia's Blog" href="{% url 'zinnia_opensearch' %}" />
@@ -36,14 +36,15 @@
   <h3>{% trans "Categories" %}</h3>
   {% get_categories %}
 </div>
-<div id="widget-authors" class="widget">
+<!--<div id="widget-authors" class="widget">
   <h3>{% trans "Authors" %}</h3>
   {% get_authors %}
-</div>
-<div id="widget-calendar" class="widget">
+</div> -->
+<!-- <div id="widget-calendar" class="widget">
   <h3>{% trans "Calendar" %}</h3>
   {% get_calendar_entries %}
-</div>
+</div> -->
+
 <div id="widget-tags" class="widget">
   <h3>{% trans "Tags" %}</h3>
   {% get_tag_cloud %}
@@ -60,18 +61,18 @@
   <h3>{% trans "Recent linkbacks" %}</h3>
   {% get_recent_linkbacks %}
 </div>
-<div id="widget-randoms" class="widget">
+<!-- <div id="widget-randoms" class="widget">
   <h3>{% trans "Random entries" %}</h3>
   {% get_random_entries %}
-</div>
-<div id="widget-populars" class="widget">
+</div> -->
+<!-- <div id="widget-populars" class="widget">
   <h3>{% trans "Popular entries" %}</h3>
   {% get_popular_entries %}
-</div>
-<div id="widget-archives" class="widget">
+</div> -->
+<!-- <div id="widget-archives" class="widget">
   <h3>{% trans "Archives" %}</h3>
   {% get_archives_entries_tree %}
-</div>
+</div>-->
 {% if user.is_authenticated %}
 <div id="widget-tools" class="widget">
   <h3>{% trans "Tools" %}</h3>
