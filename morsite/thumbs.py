@@ -21,7 +21,7 @@ def addMaginifyingGlass(image):
     return image
 
 
-def generate_thumb(img, thumb_size, format):
+def generate_thumb(img, thumb_size, format , maginify= True):
     """
     Generates a thumbnail image and returns a ContentFile object with the thumbnail
     
@@ -65,7 +65,8 @@ def generate_thumb(img, thumb_size, format):
         image2.thumbnail(thumb_size, Image.ANTIALIAS)
     
     #adds maginfying glass to the thumbnail
-    image2 = addMaginifyingGlass(image2)
+    if maginify:
+        image2 = addMaginifyingGlass(image2)
     
     io = cStringIO.StringIO()
     # PNG and GIF are the same, JPG is JPEG

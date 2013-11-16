@@ -20,10 +20,11 @@
     <!--[if lt IE 8]>
         <link rel="stylesheet" type="text/css" media="screen, projection" href="{% static "zinnia/css/ie.css" %}" />
     <![endif]-->
+    {% include  "menu/_top_menu_resources.html" %}
     {% block link %}{% endblock link %}
     {% block script %}{% endblock script %}
   </head>
-  <body onload="{% block body-onload %}{% endblock body-onload %}" class="zinnia {% block theme-class %}default{% endblock theme-class %} {% block color-class %}blue{% endblock color-class %} {% block sidebar-class %}right-sidebar{% endblock sidebar-class %} {% block body-class %}{% endblock body-class %}">
+  <body onload="{% block body-onload %}{% endblock body-onload %}" class="zinnia {% block theme-class %}dark{% endblock theme-class %} {% block color-class %}blue{% endblock color-class %} {% block sidebar-class %}right-sidebar{% endblock sidebar-class %} {% block body-class %}{% endblock body-class %}">
     <div class="container">
       <div id="header" >
         <ul class="top-navigation">
@@ -51,7 +52,11 @@
         </h1>
         <blockquote>
           <p>{% trans "חלומות מתוקים" %}</p>
+            {% block top_menu %}
+            {% include  "menu/_top_menu.html" %}
+            {% endblock top_menu %}
         </blockquote>
+
         {% block breadcrumbs %}{% endblock breadcrumbs %}
       </div>
       {% block slider %}{% endblock slider %}

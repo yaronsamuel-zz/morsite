@@ -127,6 +127,7 @@ INSTALLED_APPS = (
     'tagging',
     'mptt',
     'zinnia',
+    'menu' ,
     
 )
 
@@ -137,7 +138,10 @@ TEMPLATE_CONTEXT_PROCESSORS = (
   'django.core.context_processors.request',
   'django.core.context_processors.media',
   'django.core.context_processors.static',
-  'zinnia.context_processors.version',) # Optional
+  'zinnia.context_processors.version',
+  "django.core.context_processors.debug",
+  "django.contrib.messages.context_processors.messages",
+  ) # Optional
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 

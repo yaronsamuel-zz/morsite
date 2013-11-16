@@ -1,8 +1,6 @@
 from django.db import models
 from morsite.thumbs import ImageWithThumbsField
 from orderedmodel import OrderedModel
-from morsite.settings import MEDIA_URL
-import os
 
 class ProductCategory(OrderedModel):
     category_Name = models.CharField(max_length=50)
@@ -29,9 +27,7 @@ class Product(OrderedModel):
     @property
     def pictureURL(self):
         if self.product_picture:
-            return "%s%s" % (
-                    MEDIA_URL ,
-                    self.product_picture.name)        
+            return  self.product_picture.url        
         else:
             return None
         
