@@ -27,6 +27,13 @@
   <body onload="{% block body-onload %}{% endblock body-onload %}" class="zinnia {% block theme-class %}dark{% endblock theme-class %} {% block color-class %}blue{% endblock color-class %} {% block sidebar-class %}right-sidebar{% endblock sidebar-class %} {% block body-class %}{% endblock body-class %}">
     <div class="container">
       <div id="header" >
+      
+      
+        <h1>
+          <a href="{% url 'zinnia_entry_archive_index' %}" title="העוגות של מור" rel="home">
+            העוגות של מור
+          </a>
+        </h1>
         <ul class="top-navigation">
           <li>
             <a href="{% url 'zinnia_sitemap' %}" title="{% trans "Sitemap" %}" class="sitemap">
@@ -39,27 +46,24 @@
             </a>
           </li>
         </ul>
-        <form method="get" action="{% url 'zinnia_entry_search' %}">
-          <p>
-            <input type="text" value="{% trans "Keywords..." %}" name="pattern" onfocus="this.value=''" />
-            <input type="submit" class="submitbutton" value="OK" />
-          </p>
-        </form>
-        <h1>
-          <a href="{% url 'zinnia_entry_archive_index' %}" title="העוגות של מור" rel="home">
-            העוגות של מור
-          </a>
-        </h1>
-        <blockquote>
+
+        <!-- <blockquote>
           <p>{% trans "חלומות מתוקים" %}</p>
-            {% block top_menu %}
-            {% include  "menu/_top_menu.html" %}
-            {% endblock top_menu %}
-        </blockquote>
+
+        </blockquote>-->
+
 
         {% block breadcrumbs %}{% endblock breadcrumbs %}
+        <div id="top-navigation-menu">
+            {% block top_menu %}
+                {% include  "menu/_top_menu.html" %}
+            {% endblock top_menu %}
+        </div>
       </div>
-      {% block slider %}{% endblock slider %}
+
+      {% block slider %}
+
+      {% endblock slider %}
       <div id="content" class="hfeed">
         {% block content %}
         <div class="links">

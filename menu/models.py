@@ -40,8 +40,8 @@ class MenuItem(OrderedModel):
     title = models.CharField(max_length=100)
     login_required = models.BooleanField(blank=True, help_text='Should this item only be shown to authenticated users?')
     anonymous_only = models.BooleanField(blank=True, help_text='Should this item only be shown to non-logged-in users?')
-    item_picture  = ImageWithThumbsField(upload_to = 'menu/' , sizes=( (THUMB_W, THUMB_H) , ) ) 
-                                            
+    item_picture  = ImageWithThumbsField(upload_to = 'menu/' , sizes=( (THUMB_W, THUMB_H) , ) ,magnify = False) 
+    description = models.TextField(blank=True, null=True)                                   
     
     
      

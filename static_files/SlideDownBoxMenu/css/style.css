@@ -1,33 +1,44 @@
+
+
+
 ul.sdt_menu{
-	margin:0;
-	padding:0;
+	margin:auto;
+	
 	list-style: none;
 	font-family:"Myriad Pro", "Trebuchet MS", sans-serif;
-	font-size:14px;
-	width:1020px;
+	font-size:14px;	
+    clear:both;
+    width:900px;
+    
+    
 }
 ul.sdt_menu a{
 	text-decoration:none;
 	outline:none;
+    text-align: center;
 }
 ul.sdt_menu li{
-	float:left;
-	width:170px;
-	height:85px;
+	float:right;
+	
+	height:60px;
 	position:relative;
-	cursor:pointer;
+	cursor:none;
+    list-style-image:none;
+    background:#333;
 }
 ul.sdt_menu li > a{
 	position:absolute;
 	top:0px;
 	left:0px;
 	width:170px;
-	height:85px;
+	height:60px;
 	z-index:12;
 	background:transparent url(../images/overlay.png) no-repeat bottom right;
 	-moz-box-shadow:0px 0px 2px #000 inset;
 	-webkit-box-shadow:0px 0px 2px #000 inset;
 	box-shadow:0px 0px 2px #000 inset;
+    text-align: center;
+    
 }
 ul.sdt_menu li a img{
 	border:none;
@@ -43,7 +54,7 @@ ul.sdt_menu li a img{
 }
 ul.sdt_menu li span.sdt_wrap{
 	position:absolute;
-	top:25px;
+	top:15px;
 	left:0px;
 	width:170px;
 	height:60px;
@@ -52,7 +63,7 @@ ul.sdt_menu li span.sdt_wrap{
 ul.sdt_menu li span.sdt_active{
 	position:absolute;
 	background:#111;
-	top:85px;
+	top:35px;
 	width:170px;
 	height:0px;
 	left:0px;
@@ -65,22 +76,24 @@ ul.sdt_menu li span span.sdt_link,
 ul.sdt_menu li span span.sdt_descr,
 ul.sdt_menu li div.sdt_box a{
 	margin-left:15px;
+    margin-right:15px;
 	text-transform:uppercase;
 	text-shadow:1px 1px 1px #000;
+    
 }
 ul.sdt_menu li span span.sdt_link{
 	color:#fff;
-	font-size:24px;
-	float:left;
+	font-size:20px;
 	clear:both;
+    
 }
 ul.sdt_menu li span span.sdt_descr{
 	color:#0B75AF;
-	float:left;
-	clear:both;
-	width:155px; /*For dumbass IE7*/
+	float:right;
+	clear:both;	
 	font-size:10px;
 	letter-spacing:1px;
+    
 }
 ul.sdt_menu li div.sdt_box{
 	display:block;
@@ -105,3 +118,4 @@ ul.sdt_menu li div.sdt_box a:first-child{
 ul.sdt_menu li div.sdt_box a:hover{
 	color:#fff;
 }
+</script>

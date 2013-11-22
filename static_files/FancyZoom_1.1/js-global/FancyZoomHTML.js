@@ -134,11 +134,14 @@ function insertZoomHTML() {
 		
 		var inCol1 = document.createElement("td");
 		inCol1.style.width = '27px';
+        inCol1.setAttribute('padding', '0');
 		inRow1.appendChild(inCol1);  
+        
 		var inShadowImg1 = document.createElement("img");
 		inShadowImg1.setAttribute('src', zoomImagesURI+'zoom-shadow1.png');
 		inShadowImg1.setAttribute('width', '27');
 		inShadowImg1.setAttribute('height', '25');
+        
 		inShadowImg1.style.display = 'block';
 		inCol1.appendChild(inShadowImg1);
 		
@@ -285,12 +288,15 @@ function insertZoomHTML() {
 		inTbody.appendChild(inCapRow1);
 		
 		var inCapCol1 = document.createElement("td");
-		inCapCol1.setAttribute('align', 'right');
-		inCapRow1.appendChild(inCapCol1);
+		inCapCol1.setAttribute('align', 'right');        
+		inCapCol1.style.padding = '0';
+        inCapRow1.appendChild(inCapCol1);
+        
 		var inCapImg1 = document.createElement("img");
 		inCapImg1.setAttribute('src', zoomImagesURI+'zoom-caption-l.png');
 		inCapImg1.setAttribute('width', '13');
 		inCapImg1.setAttribute('height', '26');
+        
 		inCapImg1.style.display = 'block';
 		inCapCol1.appendChild(inCapImg1);
 		
@@ -304,9 +310,11 @@ function insertZoomHTML() {
 		inCapCol2.style.color = '#ffffff';
 		inCapCol2.style.textShadow = '0px 2px 4px #000000';
 		inCapCol2.style.whiteSpace = 'nowrap';
+        inCapCol2.style.padding = '0';
 		inCapRow1.appendChild(inCapCol2);
 		
 		var inCapCol3 = document.createElement("td");
+        inCapCol3.style.padding = '0';
 		inCapRow1.appendChild(inCapCol3);
 		var inCapImg2 = document.createElement("img");
 		inCapImg2.setAttribute('src', zoomImagesURI+'zoom-caption-r.png');

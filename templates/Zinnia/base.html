@@ -25,6 +25,14 @@
 
 
 {% block sidebar %}
+<div id="serch-sidebar">
+    <form method="get" action="{% url 'zinnia_entry_search' %}">
+      <p>
+        <input type="text" value="{% trans "חפש..." %}" name="pattern" onfocus="this.value=''" />
+        <input type="submit" class="submitbutton" value="OK" />
+      </p>
+    </form>
+</div>
 <div id="widget-welcome" class="widget">
   <h3>{% trans "Welcome!" %}</h3>
   <p>

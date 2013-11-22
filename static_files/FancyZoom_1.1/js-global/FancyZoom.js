@@ -57,6 +57,8 @@ var zoomID         = "ZoomBox";
 var theID          = "ZoomImage";
 var zoomCaption    = "ZoomCaption";
 var zoomCaptionDiv = "ZoomCapDiv";
+var zoomToggle = true;
+var lastZoomed = 0;
 
 if (navigator.userAgent.indexOf("MSIE") != -1) {
 	var browserIsIE = true;
@@ -150,7 +152,7 @@ function preloadAnim(from) {
 function zoomClick(from, evt) {
 
 	var shift = getShift(evt);
-
+    
 	// Check for Command / Alt key. If pressed, pass them through -- don't zoom!
 	if (! evt && window.event && (window.event.metaKey || window.event.altKey)) {
 		return true;
@@ -170,7 +172,18 @@ function zoomClick(from, evt) {
 		}
 	} else {
 		// Otherwise, we're loaded: do the zoom!
-		zoomIn(from, shift);
+        if (lastZoomed != from) {
+            zoomToggle=true;
+        }
+        lastZoomed = from;
+        if (zoomToggle) {         
+            zoomIn(from, shift); 
+            zoomToggle = false;
+         
+        }else {
+            zoomOut(from, shift); 
+            zoomToggle = true;
+        }
 	}
 	
 	return false;

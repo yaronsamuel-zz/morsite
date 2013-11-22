@@ -13,6 +13,7 @@
             <a href="{{ entry.get_absolute_url }}" rel="bookmark"
                title="{{ entry.title }}">{{ entry.title }}</a>
           </h2>
+          
           {{ entry.excerpt|safe|linebreaks|truncatewords_html:30 }}
         </div>
       </li>
@@ -20,7 +21,7 @@
     </ul>
   </div>
 </div>
-<script type="text/javascript" src="{% static "zinnia/js/jquery.js" %}"></script>
+
 <script type="text/javascript" src="{% static "zinnia/js/jquery.flexslider.js" %}"></script>
 <script type="text/javascript">
   jQuery(window).load(function() {
@@ -34,6 +35,7 @@
            slideshowSpeed: 7000,
            animationDuration: 600
     });
+    
   });
 </script>
 {% endif %}

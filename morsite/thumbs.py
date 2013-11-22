@@ -83,7 +83,7 @@ class ImageWithThumbsFieldFile(ImageFieldFile):
     def __init__(self, *args, **kwargs):
         super(ImageWithThumbsFieldFile, self).__init__(*args, **kwargs)
         self.sizes = self.field.sizes
-        
+        self.magnify = self.field.magnify
         if self.sizes:
             def get_size(self, size):
                 if not self:
@@ -97,7 +97,7 @@ class ImageWithThumbsFieldFile(ImageFieldFile):
                 (w,h) = size
                 setattr(self, 'url_%sx%s' % (w,h), get_size(self, size))
                 
-    def save(self, name, content, save=True):
+    def save(self, name, content, save=True ):
         super(ImageWithThumbsFieldFile, self).save(name, content, save)
         
         if self.sizes:
@@ -107,7 +107,7 @@ class ImageWithThumbsFieldFile(ImageFieldFile):
                 thumb_name = '%s.%sx%s.%s' % (split[0],w,h,split[1])
                 
                 # you can use another thumbnailing function if you like
-                thumb_content = generate_thumb(content, size, split[1])
+                thumb_content = generate_thumb(content, size, split[1] , self.magnify)
                 
                 thumb_name_ = self.storage.save(thumb_name, thumb_content)        
                 
@@ -171,10 +171,11 @@ class ImageWithThumbsField(ImageField):
     Add method to regenerate thubmnails
     
     """
-    def __init__(self, verbose_name=None, name=None, width_field=None, height_field=None, sizes=None, **kwargs):
+    def __init__(self, verbose_name=None, name=None, width_field=None, height_field=None, sizes=None ,magnify = True, **kwargs):
         self.verbose_name=verbose_name
         self.name=name
         self.width_field=width_field
         self.height_field=height_field
         self.sizes = sizes
+        self.magnify = magnify
         super(ImageField, self).__init__(**kwargs)

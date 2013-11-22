@@ -2,6 +2,10 @@ from menu.models import Menu, MenuItem
 from django import template
 from django.core.cache import cache
 
+MENU_WIDTH = 879 # we should decrease 21px from to
+                 # actual width
+MAX_PICUTE_HEIGHT = 150
+
 register = template.Library()
 
 def build_top_sub_menu(parser, token):
@@ -25,6 +29,12 @@ class TopMenuObject(template.Node):
         top_menu = Menu.objects.filter(name=self.menu_name)
         menuItems = MenuItem.objects.filter(menu=top_menu)
         context['menuitems'] = menuItems
+        
+        #align the length
+        context['menu_width'] = (MENU_WIDTH / len(menuItems)) * len(menuItems)
+        menu_item_width = MENU_WIDTH / len(menuItems)
+        context['menu_item_width'] = menu_item_width
+        context['picture_height'] = min(MAX_PICUTE_HEIGHT ,  menu_item_width)
         return ''
     
     

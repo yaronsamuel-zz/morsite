@@ -1,6 +1,4 @@
 todo
 
-{% load od menu
-sub title for men model
 FB social plugin
 remove stuff from base and skeleton
