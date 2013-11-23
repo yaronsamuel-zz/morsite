@@ -35,6 +35,12 @@ class TopMenuObject(template.Node):
         menu_item_width = MENU_WIDTH / len(menuItems)
         context['menu_item_width'] = menu_item_width
         context['picture_height'] = min(MAX_PICUTE_HEIGHT ,  menu_item_width)
+        context['highighted'] = None
+        for item in menuItems:          
+            if item.link_url.endswith(current_path):
+                context['highlighted'] = item
+                break
+            
         return ''
     
     

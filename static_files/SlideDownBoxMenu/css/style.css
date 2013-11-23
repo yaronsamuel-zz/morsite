@@ -25,6 +25,7 @@ ul.sdt_menu{
 	font-size:24px;	
     clear:both;
     width:900px;
+    border:none;
     
     
 }
@@ -32,6 +33,7 @@ ul.sdt_menu a{
 	text-decoration:none;
 	outline:none;
     text-align: center;
+    
 }
 ul.sdt_menu li{
 	float:right;
@@ -40,19 +42,20 @@ ul.sdt_menu li{
 	position:relative;
 	cursor:none;
     list-style-image:none;
-    background:#333;
+    /* background:#333; */
 }
 ul.sdt_menu li > a{
 	position:absolute;
 	top:0px;
-	left:0px;
+	left:2px;
 	width:170px;
 	height:60px;
 	z-index:12;
+    border:none;
 	background:transparent url(../images/overlay.png) no-repeat bottom right;
-	-moz-box-shadow:0px 0px 2px #000 inset;
-	-webkit-box-shadow:0px 0px 2px #000 inset;
-	box-shadow:0px 0px 2px #000 inset;
+	-moz-box-shadow:0px 0px 0px #000 inset;
+	-webkit-box-shadow:0px 0px 0px #000 inset;
+	box-shadow:0px 0px 0px #000 inset;
     text-align: center;
     
 }
@@ -75,6 +78,7 @@ ul.sdt_menu li span.sdt_wrap{
 	width:170px;
 	height:60px;
 	z-index:15;
+    border:none;
 }
 ul.sdt_menu li span.sdt_active{
 	position:absolute;
