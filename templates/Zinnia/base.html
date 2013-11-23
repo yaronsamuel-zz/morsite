@@ -33,6 +33,10 @@
       </p>
     </form>
 </div>
+{% block facebook-block %}
+{% include  "Facebook/FacebookPlugin.html" %}
+{% endblock facebook-block %}
+
 <div id="widget-welcome" class="widget">
   <h3>{% trans "Welcome!" %}</h3>
   <p>

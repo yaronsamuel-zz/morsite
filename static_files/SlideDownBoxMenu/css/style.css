@@ -1,12 +1,28 @@
 
 
+.felix007Medium {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'felix007Medium', sans-serif;
+    font-size-adjust: 0.45;
+}
+
+@font-face{ 
+	font-family: 'felix007Medium';
+	src: url('fonts/felix007-medium-webfont.eot');
+	src: url('fonts/felix007-medium-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('fonts/felix007-medium-webfont.woff') format('woff'),
+	     url('fonts/felix007-medium-webfont.ttf') format('truetype'),
+	     url('fonts/felix007-medium-webfont.svg#webfont') format('svg');
+}
+
 
 ul.sdt_menu{
 	margin:auto;
 	
 	list-style: none;
-	font-family:"Myriad Pro", "Trebuchet MS", sans-serif;
-	font-size:14px;	
+	font-family:'felix007Medium' , "Myriad Pro", "Trebuchet MS", sans-serif;
+	font-size:24px;	
     clear:both;
     width:900px;
     
@@ -54,7 +70,7 @@ ul.sdt_menu li a img{
 }
 ul.sdt_menu li span.sdt_wrap{
 	position:absolute;
-	top:15px;
+	top:13px;
 	left:0px;
 	width:170px;
 	height:60px;
@@ -83,7 +99,7 @@ ul.sdt_menu li div.sdt_box a{
 }
 ul.sdt_menu li span span.sdt_link{
 	color:#fff;
-	font-size:20px;
+	font-size:24px;
 	clear:both;
     
 }
