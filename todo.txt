@@ -1,4 +1,5 @@
 todo
 
-FB social plugin
+Build contact page
 remove stuff from base and skeleton
+build prices page

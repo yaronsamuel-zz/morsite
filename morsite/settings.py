@@ -128,7 +128,8 @@ INSTALLED_APPS = (
     'mptt',
     'zinnia',
     'menu' ,
-    
+    'SliderGallery',
+
 )
 
 #Zinnia stuff
@@ -173,3 +174,4 @@ LOGGING = {
         },
     }
 }
+

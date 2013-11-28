@@ -60,7 +60,17 @@
             {% endblock top_menu %}
         </div>
       </div>
-
+    </div>
+    
+    
+      {% block slide-gallery %}
+          {% url 'SliderGallery.views.slider_gallery_view' as slider_gallery_url %}
+          <iframe src="{{ slider_gallery_url }}" style="width:100%" height="220px">
+          </iframe>
+      {% endblock slide-gallery %}
+      
+      
+    <div class="container">
       {% block slider %}
 
       {% endblock slider %}

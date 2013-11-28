@@ -2,8 +2,7 @@ from menu.models import Menu, MenuItem
 from django import template
 from django.core.cache import cache
 
-MENU_WIDTH = 879 # we should decrease 21px from to
-                 # actual width
+MENU_WIDTH = 900
 MAX_PICUTE_HEIGHT = 150
 
 register = template.Library()
@@ -31,11 +30,13 @@ class TopMenuObject(template.Node):
         context['menuitems'] = menuItems
         
         #align the length
-        context['menu_width'] = (MENU_WIDTH / len(menuItems)) * len(menuItems)
-        menu_item_width = MENU_WIDTH / len(menuItems)
+        context['menu_width'] = MENU_WIDTH
+        menu_item_width = (MENU_WIDTH* 1.0 ) / len(menuItems)
         context['menu_item_width'] = menu_item_width
+        
         context['picture_height'] = min(MAX_PICUTE_HEIGHT ,  menu_item_width)
         context['highighted'] = None
+
         for item in menuItems:          
             if item.link_url.endswith(current_path):
                 context['highlighted'] = item

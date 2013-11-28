@@ -13,7 +13,6 @@ line-height:1
 }
 
 body{
-width:900px;
 margin:auto;
 }
 
@@ -216,7 +215,8 @@ margin-right:auto;
 background-origin:content-box;
 -webkit-background-clip:content-box;
 -moz-background-clip:content-box;
-background-clip:content-box
+background-clip:content-box;
+width:900px;
 }
 
 .zinnia .container:after{
