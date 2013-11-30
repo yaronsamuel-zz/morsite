@@ -19,5 +19,6 @@ urlpatterns = patterns('',
     url(r'^topmenu.html', 'menu.views.topmenu_view'),
     url(r'^weblog/sg.html', 'SliderGallery.views.slider_gallery_view'),
     url(r'^contact/', 'contact_form.contact'),
+    url(r'^thanks/', 'contact_form.thanks'),
 ) 
 

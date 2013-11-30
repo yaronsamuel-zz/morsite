@@ -1,5 +1,5 @@
 todo
 
-Build contact page
-remove stuff from base and skeleton
+thank - add context
+fix validation
 build prices page

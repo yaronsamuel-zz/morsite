@@ -11,7 +11,7 @@ TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
     ('Yaron' , 'samuel.yaron@gmail.com')
-    # ('Your Name', 'your_email@example.com'),
+    # ('Your Name', 'your_emai@example.com'),
 )
 
 MANAGERS = ADMINS
@@ -175,3 +175,9 @@ LOGGING = {
     }
 }
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'cakesnmore1010@gmail.com'
+EMAIL_HOST_PASSWORD = '1234567y'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_RECIPIAENTS_LIST = [EMAIL_HOST_USER ]
