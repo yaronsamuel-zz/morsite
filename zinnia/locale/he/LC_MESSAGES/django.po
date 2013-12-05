@@ -1608,4 +1608,12 @@ msgstr ""
 
 #: .\xmlrpc\pingback.py:108
 msgid "No title"
-msgstr ""
+msgstr "אין כותרת"
+
+#: templates\contact_form\contact.html
+msgid "Please enter a valid phone number"
+msgstr "אנא הכנס מספר טלפון חוקי"
+
+#: templates\contact_form\contact.html
+msgid "Please enter at least one of mail and phone fields"
+msgstr "אנא הכנס לפחות אחד משדות הדואר האלקטרוני והטלפון"

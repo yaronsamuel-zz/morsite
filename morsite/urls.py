@@ -18,7 +18,8 @@ urlpatterns = patterns('',
     url(r'^comments/', include('django.contrib.comments.urls')),
     url(r'^topmenu.html', 'menu.views.topmenu_view'),
     url(r'^weblog/sg.html', 'SliderGallery.views.slider_gallery_view'),
-    url(r'^contact/', 'contact_form.contact'),
-    url(r'^thanks/', 'contact_form.thanks'),
+    url(r'^contact/', 'contact_form.contact_form.contact'),
+    url(r'^thanks/', 'contact_form.contact_form.thanks'),
+    url(r'^contact/sidebar', 'contact_form.contact_form.contact'),
 ) 
 

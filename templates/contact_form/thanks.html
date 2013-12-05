@@ -3,35 +3,76 @@
 {% load static %}
 {% block content %}
 
-<link rel="stylesheet" href="{% static 'contact_form/css/screen.css' %}" media="screen" />
+<link rel="stylesheet" href="{% static 'contact_form/css/contact_form.css' %}" media="screen" />
 
 <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
 
 
-
+<div id="contact-title">
+    <i class="fa fa-envelope fa-4x page-title-icon" style="margin-right:10px"></i>
+    <h1>פנייתך התקבלה בהצלחה!</h1>
+</div>
 <div id="form-container">
-    <div id="contact-title">
-        <i class="fa fa-envelope fa-4x page-title-icon"></i>
-        <h1>פנייתך התקבלה! </h1>
-    </div>
-<div id="form1" action="/contact/" method="post">{% csrf_token %}
+    <div id="form1" >
     <div id="contact-info">
-        <h3>
+        <p>
         פרטי פנייתך
-        </h3>
-        <p>
-        <i class="fa fa-phone-square form-info-icon"></i>
-        0546-345-733
-        </p>
-        <p>
-        <i class="fa fa-envelope form-info-icon"></i>
-        mor1010@gmail.com
-        </p>
-        
+        </p>        
     </div>
+    <hr>
+    
+    
+       <table border=0 >
+        <tr>
+            <td id="details-td">
+                שם 
+            </td>
+            <td id="details-td">
+            {{ name }}
+            </td>
+        </tr>
+        <tr>
+            <td id="details-td">
+                טלפון 
+            </td>
+            <td id="details-td">
+            {{ phone }}
+            </td>
+        </tr>
+        
+        <tr>
+            <td id="details-td">
+                דואר אלקטרוני 
+            </td>
+            <td id="details-td">
+            {{ mail }}
+            </td>
+        </tr>
+        
+        <tr>
+            <td id="details-td">
+                כתובת 
+            </td>
+            <td id="details-td">
+            {{ address }}
+            </td>
+        </tr>
+        
+        <tr>
+            <td id="details-td">
+                תוכן ההודעה 
+            </td>
+            <td id="details-td">
+            {{ message }}
+            </td>
+        </tr>
+            
+        </table>     
 
+   
                 
-</div>	
+    </div>	
+
 
 
 </div>

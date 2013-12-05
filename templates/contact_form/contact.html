@@ -3,52 +3,78 @@
 {% load static %}
 {% block content %}
 
-<link rel="stylesheet" href="{% static 'contact_form/css/screen.css' %}" media="screen" />
+<link rel="stylesheet" href="{% static 'contact_form/css/contact_form.css' %}" media="screen" />
 
 <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 
-<div id="form-container">
+
+
     <div id="contact-title">
         <i class="fa fa-envelope fa-4x page-title-icon"></i>
         <h1>צור קשר </h1>
     </div>
-<form id="form1" action="/contact/" method="post">{% csrf_token %}
+    
+<div id="form-container">
+
+
     <div id="contact-info">
-        <h3>
+        <p id="contact-info">
         להזמנות, חוות דעת על העסק או יצירת קשר, 
         התקשרו או השאירו הודעה
-        </h3>
+        </p>
         <p>
         <i class="fa fa-phone-square form-info-icon"></i>
         0546-345-733
         </p>
-        <p>
+        <p id="contact-info">
         <i class="fa fa-envelope form-info-icon"></i>
         mor1010@gmail.com
         </p>
+        <p id="contact-info">
+        <i class="fa fa-facebook-square form-info-icon"></i>
+        <a href="https://www.facebook.com/morscakes">
+        הצטרפו לדף הפייסבוק
+        </a>
+        <div class="fb-like" 
+            data-href="https://www.facebook.com/morscakes" 
+            data-layout="button" 
+            data-action="like" 
+            data-show-faces="false" 
+            data-share="false">
+        </div>
         
+        </p>
     </div>
     <hr>
     
-    <fieldset><legend>Contact form</legend>																			
-        <p>            
-            <label for="{{ form.message.id_for_label }}" >תוכן הודעה</label>
-            {% if form.message.errors %}
+    <form id="form1" action="/contact/" method="post">{% csrf_token %}
+    {% if send_mail_fail %}
+    
+        <h3 id="error-message">
+        שליחת ההודעה נכשלה עקב תקלה טכנית. אנא נסו שנית או צרו קשר באמצעות הדרכים המוצגות למעלה.
+        </h3>
+    
+    {% endif %}
+    
+    {% if form.non_field_errors %}
                 <ol id="error_ol">
-                {% for error in form.message.errors %}
+                {% for error in form.non_field_errors %}
                     <li id="error"><strong>{{ error|escape }}</strong></li>
                 {% endfor %}
                 </ol>
-            {% endif %}
-            <textarea id="{{ form.message.id_for_label }}" name="{{ form.message.html_name }}" cols="30" rows="25"></textarea>            
-        </p>								
-        
-    </fieldset>					
-
-   
-    <fieldset>
+    {% endif %}
+      
+    <fieldset><legend>Contact form</legend>
         <p class="first">
             <label for="{{ form.name.id_for_label }}" >שם</label>
             {% if form.name.errors %}
@@ -62,7 +88,7 @@
         </p>
         <p>
             
-            <label for="{{ form.address.id_for_label }}" >כתובת</label>
+            <label for="{{ form.address.id_for_label }}" >כתובת (אופציונלי)</label>
             {% if form.address.errors %}
                 <ol id="error_ol">
                 {% for error in form.address.errors %}
@@ -96,6 +122,22 @@
         </p>
         
     </fieldset>
+    
+    <fieldset>
+        <p>            
+            <label for="{{ form.message.id_for_label }}" >תוכן הודעה</label>
+            {% if form.message.errors %}
+                <ol id="error_ol">
+                {% for error in form.message.errors %}
+                    <li id="error"><strong>{{ error|escape }}</strong></li>
+                {% endfor %}
+                </ol>
+            {% endif %}
+            <textarea id="{{ form.message.id_for_label }}" name="{{ form.message.html_name }}" cols="30" rows="25"></textarea>            
+        </p>								
+        
+    </fieldset>	
+    
     <p class="submit">
         <button type="reset" class="clear-button">נקה שדות</button>
         <button type="submit" class="submit-button">!שלח</button>

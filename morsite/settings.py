@@ -6,6 +6,22 @@ PROJECT_DIR = r"c:\morsite"
 def relToAbs(path):
     return os.path.join(PROJECT_DIR, path).replace('\\','/')
 
+def dec(st):
+    ret = ''
+    key = '\xab\x67\xa4\x5c\xbb' * 10
+    for i in xrange(len(st)):
+        ret += chr( ord(st[i]) ^ ord(key[i]) )
+    
+    return ret
+    
+def assign(name , value):
+    
+    attr_name = dec(name)
+    attr_value = dec(value)
+    globals()[attr_name] = attr_value
+    
+    
+    
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -129,6 +145,7 @@ INSTALLED_APPS = (
     'zinnia',
     'menu' ,
     'SliderGallery',
+    'contact_form',
 
 )
 
@@ -177,7 +194,7 @@ LOGGING = {
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'cakesnmore1010@gmail.com'
-EMAIL_HOST_PASSWORD = '1234567y'
+assign('\xee*\xe5\x15\xf7\xf4/\xeb\x0f\xef\xf47\xe5\x0f\xe8\xfc(\xf6\x18' , '\x9aU\x97h\x8e\x9dP\xdd')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_RECIPIAENTS_LIST = [EMAIL_HOST_USER ]
