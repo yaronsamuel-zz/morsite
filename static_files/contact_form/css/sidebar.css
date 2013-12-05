@@ -1,0 +1,169 @@
+/* 
+*	
+*	CSSG Collections: Forms
+*	designed and coded by Alen Grakalic (http://cssglobe.com)
+*	brought to you by Templatica (http://templatica.com)
+*
+*/
+
+
+
+#sidebar-form-container{
+
+	width:200px;
+    margin:10px 0px;
+	text-align:right;
+    direction:rtl;
+    background:url(../images/form1/content.png) repeat 0 0;
+    -webkit-box-shadow: 10px 10px 64px 29px rgba(0,0,0,0.64);
+    -moz-box-shadow: 10px 10px 64px 29px rgba(0,0,0,0.64);
+    box-shadow: 10px 10px 64px 29px rgba(0,0,0,0.64);
+}
+
+#sidebar-form-container hr{
+width :90%;
+margin:3px; 
+}
+    
+#sidebar-contact-info p {
+font-size:160%;
+display:table;
+margin:5px 10px 0px 0px;
+}
+
+
+#sidebar-contact-info h3{          
+	font-size:140%;
+    margin-right: 20px;
+	}
+h4{          
+	font-size:120%;
+	}				
+
+a{
+	text-decoration:none;
+	color:#f30;
+	}
+a:hover{
+	color:#999;
+	}			
+table, input, textarea, select, li{
+	font:100% Trebuchet MS, Arial, Helvetica, Sans-Serif;
+	line-height:160%;
+	color:#333;
+	}				
+p, blockquote, ul, ol, form{
+	margin:1em 0;
+	}
+img{
+	border:none;
+	}			
+	
+	
+
+
+
+
+/* form 1 */
+
+#sidebar-form{
+    margin:0;
+    padding:0;
+    
+    }
+#sidebar-form fieldset{
+    margin:0;
+    padding:0;
+    border:none;	
+    float:left;
+    display:inline;
+    width:190px;
+    
+    direction:rtl;
+    text-align:center;
+    }		
+#sidebar-form legend{display:none;}	
+
+#sidebar-form label{display:block;}	
+#sidebar-form input, #sidebar-form textarea{		
+    width:130px;
+    border:1px solid #ddd;
+    background:#fff url(../images/form1/form_input.gif) repeat-x;
+    padding:3px;
+    font-style:italic;
+    font-size:13px;
+    color:black;
+    }
+#sidebar-form p{
+    margin:1px 0;
+    }	    
+#sidebar-form textarea{
+    height:80px;
+    overflow:auto;
+    }					
+#sidebar-form p.submit{
+    clear:both;
+    /* background:url(../images/form1/form_bottom.gif) no-repeat 0 100%; */
+    padding:0;
+    margin:0;
+    text-align: center;
+    }	
+
+
+
+
+
+.sidebar-submit-button {
+	-moz-box-shadow:inset 0px 1px 8px 2px #fbafe3;
+	-webkit-box-shadow:inset 0px 1px 8px 2px #fbafe3;
+	box-shadow:inset 0px 1px 8px 2px #fbafe3;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff5bb0), color-stop(1, #ef027d) );
+	background:-moz-linear-gradient( center top, #ff5bb0 5%, #ef027d 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bb0', endColorstr='#ef027d');
+	background-color:#ff5bb0;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	border-top-left-radius:0px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0;
+	border:1px solid #ee1eb5;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:40px;
+	line-height:40px;
+	width:100%;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #c70067;
+}
+.sidebar-submit-button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ef027d), color-stop(1, #ff5bb0) );
+	background:-moz-linear-gradient( center top, #ef027d 5%, #ff5bb0 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ef027d', endColorstr='#ff5bb0');
+	background-color:#ef027d;
+}.sidebar-submit-button:active {
+	position:relative;
+	top:1px;
+}
+/* This button was generated using CSSButtonGenerator.com */
+
+
+.sidebar-icon {
+margin-left: 10px;
+font-size: 24px;
+color: #383838;
+vertical-align: middle;
+}
+
