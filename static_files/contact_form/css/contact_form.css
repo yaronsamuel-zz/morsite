@@ -86,8 +86,9 @@ img{
 /* form 1 */
 
 	#form1{
-        padding: 5px 25px;
+        padding: 0px 25px;
         margin-top: 0px;
+		margin-bottom: 0px;
         
 		}
 	#form1 fieldset{
@@ -115,7 +116,7 @@ img{
 		height:185px;
 		overflow:auto;
 		}					
-	#form1 p.submit{
+	#form1 p.clear{
 		clear:both;
 		/* background:url(../images/form1/form_bottom.gif) no-repeat 0 100%; */
 		padding:0 25px 20px 45px;
@@ -125,7 +126,7 @@ img{
 
 
 
-.submit-button {
+/* .submit-button {
 	-moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
 	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
@@ -169,8 +170,53 @@ img{
 }.submit-button:active {
 	position:relative;
 	top:1px;
-}
+} */
 /* This button was generated using CSSButtonGenerator.com */
+
+.submit-button {
+	-moz-box-shadow:inset 0px 1px 8px 2px #fbafe3;
+	-webkit-box-shadow:inset 0px 1px 8px 2px #fbafe3;
+	box-shadow:inset 0px 1px 8px 2px #fbafe3;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff5bb0), color-stop(1, #ef027d) );
+	background:-moz-linear-gradient( center top, #ff5bb0 5%, #ef027d 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bb0', endColorstr='#ef027d');
+	background-color:#ff5bb0;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	border-top-left-radius:0px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0;
+	border:1px solid #ee1eb5;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:40px;
+	line-height:40px;
+	width:100%;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #c70067;
+}
+.submit-button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ef027d), color-stop(1, #ff5bb0) );
+	background:-moz-linear-gradient( center top, #ef027d 5%, #ff5bb0 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ef027d', endColorstr='#ff5bb0');
+	background-color:#ef027d;
+}.submit-button:active {
+	position:relative;
+	top:1px;
+}
 
 
 .clear-button  {

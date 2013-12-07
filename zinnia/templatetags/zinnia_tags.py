@@ -158,7 +158,7 @@ def get_similar_entries(context, number=5,
 def get_archives_entries(template='zinnia/tags/archives_entries.html'):
     """Return archives entries"""
     return {'template': template,
-            'archives': Entry.published.dates('creation_date', 'month',
+            'archives': Entry.published.datetimes('creation_date', 'month',
                                               order='DESC')}
 
 
@@ -167,7 +167,7 @@ def get_archives_entries_tree(
         template='zinnia/tags/archives_entries_tree.html'):
     """Return archives entries as a Tree"""
     return {'template': template,
-            'archives': Entry.published.dates('creation_date', 'day',
+            'archives': Entry.published.datetimes('creation_date', 'day',
                                               order='ASC')}
 
 
@@ -187,7 +187,7 @@ def get_calendar_entries(context, year=None, month=None,
         current_month = timezone.make_aware(
             current_month, timezone.utc)
 
-    dates = list(Entry.published.dates('creation_date', 'month'))
+    dates = list(Entry.published.datetimes('creation_date', 'month'))
 
     if not current_month in dates:
         dates.append(current_month)

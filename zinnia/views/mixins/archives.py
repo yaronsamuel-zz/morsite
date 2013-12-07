@@ -36,7 +36,7 @@ class PreviousNextPublishedMixin(object):
             ordering = 'ASC'
 
         dates = list(self.get_queryset().filter(
-            **filters).dates('creation_date', period, order=ordering))
+            **filters).datetimes('creation_date', period, order=ordering))
 
         if date in dates:
             dates.remove(date)

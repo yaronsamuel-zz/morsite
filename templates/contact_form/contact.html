@@ -57,7 +57,8 @@
     </div>
     <hr>
     
-    <form id="form1" action="/contact/" method="post">{% csrf_token %}
+    <form  action="/contact/" method="post">{% csrf_token %}
+	<div id="form1">
     {% if send_mail_fail %}
     
         <h3 id="error-message">
@@ -138,13 +139,13 @@
         
     </fieldset>	
     
-    <p class="submit">
+    <p class="clear">
         <button type="reset" class="clear-button">נקה שדות</button>
-        <button type="submit" class="submit-button">!שלח</button>
         
-    
     </p>
-                
+	
+	</div>
+	<button type="submit" class="submit-button">!שלח</button>
 </form>	
 
 

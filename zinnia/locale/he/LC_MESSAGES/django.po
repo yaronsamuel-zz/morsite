@@ -713,7 +713,7 @@ msgstr ""
 #: .\templates\zinnia\entry_detail_base.html.py:131
 #: .\templates\zinnia\tags\recent_comments.html.py:15
 msgid "No comments yet."
-msgstr ""
+msgstr "לא נוספה תגובה עדיין."
 
 #: .\templates\admin\zinnia\widgets\_recent_comments.html.py:39
 #: .\templates\admin\zinnia\widgets\_recent_comments.html.py:40
