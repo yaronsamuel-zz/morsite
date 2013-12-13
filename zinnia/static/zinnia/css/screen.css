@@ -452,7 +452,10 @@ color:#333
 
 .zinnia.light{
 color:#657b83;
-background-color:#fdf6e3
+background-color:#fdf6e3;
+background-image:url("../img/added/bg.jpg");
+
+
 }
 
 .zinnia.light h1,.zinnia.light h2,.zinnia.light h3,.zinnia.light h4,.zinnia.light h5,.zinnia.light h6{
