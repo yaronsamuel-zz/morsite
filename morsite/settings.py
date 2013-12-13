@@ -25,10 +25,10 @@ def assign(name , value):
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-ADMINS = (
-    ('Yaron' , 'samuel.yaron@gmail.com')
+ADMINS = [
+    ('Yaron' , 'samuel.yaron@gmail.com') ,         
     # ('Your Name', 'your_emai@example.com'),
-)
+]
 
 MANAGERS = ADMINS
 

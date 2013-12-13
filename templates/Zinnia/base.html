@@ -43,7 +43,7 @@
 {% endblock contact-sidebar-block %}
 
 
-
+{% comment %}
 <div id="widget-welcome" class="widget">
   <h3>{% trans "Welcome!" %}</h3>
   <p>
@@ -53,6 +53,7 @@
     {% trans "Don't hesitate to override the template <strong>zinnia/base.html</strong> to start <a href='http://docs.django-blog-zinnia.com/en/latest/how-to/customize_look_and_feel.html'>customizing your Weblog</a>." %}
   </p>
 </div>
+{% endcomment %}
 <div id="widget-categories" class="widget">
   <h3>{% trans "Categories" %}</h3>
   {% get_categories %}
@@ -78,10 +79,12 @@
   <h3>{% trans "Recent comments" %}</h3>
   {% get_recent_comments %}
 </div>
+{% comment %}
 <div id="widget-linkbacks" class="widget">
   <h3>{% trans "Recent linkbacks" %}</h3>
   {% get_recent_linkbacks %}
 </div>
+{% endcomment %}
 <!-- <div id="widget-randoms" class="widget">
   <h3>{% trans "Random entries" %}</h3>
   {% get_random_entries %}

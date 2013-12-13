@@ -6,7 +6,7 @@ from models import ProductCategory , Product
 def index(request):
     categories = ProductCategory.objects.all()
 
-    template = loader.get_template('prices/index.html')
+    template = loader.get_template('prices/prices.html')
     context = RequestContext(request, {
         'prCategories': categories,
     })

@@ -1,0 +1,14 @@
+#prices-container{
+    direction:rtl;
+}
+
+#prices-container table{
+    direction:rtl;
+}
+
+#prices-container td{
+
+    direction:rtl;
+    float:right;
+    text-align:right;
+}

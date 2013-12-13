@@ -31,7 +31,13 @@ class Product(OrderedModel):
         else:
             return None
         
-        
+    @property
+    def priceStr(self):
+        prices = [ self.regular_price , self.big_price ,self.huge_price]
+        prices = [str(p) for p in prices if p > 0]
+        return ' / '.join(prices)
+    
+    
       
     @property
     def thumb125(self):
