@@ -21,7 +21,8 @@ ul.sdt_menu{
 	margin:auto;
 	
 	list-style: none;
-	font-family:'felix007Medium' , "Myriad Pro", "Trebuchet MS", sans-serif;
+	font-family:"felix007Medium";
+    /* , "Myriad Pro", "Trebuchet MS", sans-serif; */
 	font-size:24px;	
     clear:both;
     width:900px;
@@ -104,6 +105,8 @@ ul.sdt_menu li span span.sdt_link{
 	color:#fff;
 	font-size:24px;
 	clear:both;
+    font-family:"felix007Medium";
+    
     
 }
 ul.sdt_menu li span span.sdt_descr{
@@ -112,6 +115,7 @@ ul.sdt_menu li span span.sdt_descr{
 	clear:both;	
 	font-size:10px;
 	letter-spacing:1px;
+    line-height:initial;
     
 }
 ul.sdt_menu li div.sdt_box{

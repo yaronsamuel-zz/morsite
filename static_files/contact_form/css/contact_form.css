@@ -10,19 +10,20 @@
 #form-container{	
 	margin:0 auto;
 	
-	width:600px;
+	width:530px;
 	
 	text-align:right;
     direction:rtl;
     
     margin:1em 0;
     padding-top:10px;
-    background:url(../images/form1/content.png) repeat 0 0;
+    /* background:url(../images/form1/content.png) repeat 0 0; */
+    background: rgba(204,0,102,.15);
     /* background:url(../images/form1/form_top.gif) no-repeat 0 0; */
     direction:rtl;
-    -webkit-box-shadow: 10px 10px 64px 29px rgba(0,0,0,0.64);
-    -moz-box-shadow: 10px 10px 64px 29px rgba(0,0,0,0.64);
-    box-shadow: 10px 10px 64px 29px rgba(0,0,0,0.64);
+    -webkit-box-shadow: 10px 2px 50px 1px rgba(0,0,0,0.64);
+    -moz-box-shadow: 10px 2px 50px 1px rgba(0,0,0,0.64);
+    box-shadow: 10px 2px 50px 1px rgba(0,0,0,0.64);
 	}		
 
 #form-container hr{
@@ -43,7 +44,7 @@ margin:10px;
 h1{
 	font-size:230%;
 	font-weight:normal;
-    display:inline;
+    /* display:inline; */
 	}		
 h2, h3, h4, h5, h6{
 	font-weight:normal;
@@ -97,14 +98,14 @@ img{
 		border:none;	
 		float:right;
 		display:inline;
-		width:230px;
+		width:200px;
         direction:rtl;
 		}		
 	#form1 legend{display:none;}	
 	#form1 p{margin:.5em 0;}	
 	#form1 label{display:block;}	
 	#form1 input, #form1 textarea{		
-		width:222px;
+		width:180px;
 		border:1px solid #ddd;
 		background:#fff url(../images/form1/form_input.gif) repeat-x;
 		padding:3px;
@@ -272,7 +273,8 @@ img{
 .page-title-icon {
 margin-left: 20px;
 font-size: 46px;
-color: #ccc;
+/* color: #ccc; */
+color: #383838;
 vertical-align: middle;
 }
 
