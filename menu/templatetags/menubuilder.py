@@ -2,7 +2,7 @@ from menu.models import Menu, MenuItem
 from django import template
 from django.core.cache import cache
 
-MENU_WIDTH = 900
+MENU_WIDTH = 870
 MAX_PICUTE_HEIGHT = 150
 
 register = template.Library()
@@ -28,13 +28,10 @@ class TopMenuObject(template.Node):
         top_menu = Menu.objects.filter(name=self.menu_name)
         menuItems = MenuItem.objects.filter(menu=top_menu)
         context['menuitems'] = menuItems
-        
-        #align the length
-        context['menu_width'] = MENU_WIDTH
+
         menu_item_width = (MENU_WIDTH* 1.0 ) / len(menuItems)
         context['menu_item_width'] = menu_item_width
         
-        context['picture_height'] = min(MAX_PICUTE_HEIGHT ,  menu_item_width)
         context['highighted'] = None
 
         for item in menuItems:          

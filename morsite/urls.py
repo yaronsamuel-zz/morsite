@@ -6,6 +6,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 admin.autodiscover()
 
 urlpatterns = patterns('',
+    url(r'^index.html','morsite.views.homepage'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^Prices/', include('Prices.urls')),
     
@@ -17,9 +18,11 @@ urlpatterns = patterns('',
     url(r'^weblog/', include('zinnia.urls')),
     url(r'^comments/', include('django.contrib.comments.urls')),
     url(r'^topmenu.html', 'menu.views.topmenu_view'),
-    url(r'^weblog/sg.html', 'SliderGallery.views.slider_gallery_view'),
+    url(r'^weblog/sg.html', 'Gallery.views.slider_gallery_view'),
+    url(r'^Gallery.html', 'Gallery.views.gallery_view'),
+    url(r'^IframeGallery.html', 'Gallery.views.Iframe_gallery_view'),
     url(r'^contact/', 'contact_form.contact_form.contact'),
     url(r'^thanks/', 'contact_form.contact_form.thanks'),
-    url(r'^contact/sidebar', 'contact_form.contact_form.contact'),
+    url(r'^contact/sidebar', 'contact_form.contact_form.contact'),    
 ) 
 

@@ -37,7 +37,21 @@ class EntryArchiveMixin(ArchiveMixin,
     """
     queryset = Entry.published.all
 
-
+class EntryFeaturedIndex(EntryArchiveMixin,
+                 EntryQuerysetArchiveTodayTemplateResponseMixin,
+                 BaseArchiveIndexView):
+    """
+    View returning the archive index.
+    """
+    
+    context_object_name = 'entry_list'
+    
+    @staticmethod
+    def filterFeatured():
+        return Entry.published.filter(featured=True)
+       
+    queryset = filterFeatured
+    
 class EntryIndex(EntryArchiveMixin,
                  EntryQuerysetArchiveTodayTemplateResponseMixin,
                  BaseArchiveIndexView):

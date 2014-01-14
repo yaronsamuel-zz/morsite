@@ -50,7 +50,7 @@ display:block
 
 .zinnia{
 line-height:1.5;
-font-family:Arial, Helvetica, sans-serif;
+font-family:Arial, Helvetica, sans-serif , "felix007Medium";
 font-size:75%;
 color-profile:sRGB;
 rendering-intent:auto
@@ -204,10 +204,10 @@ cursor:help
 direction:rtl;
 max-width:41em;
 _width:41em;
-padding-left:1em;
+/* padding-left:1em;
 padding-right:1em;
 margin-left:auto;
-margin-right:auto;
+margin-right:auto; */
 -webkit-background-origin:content;
 -moz-background-origin:content;
 -ms-background-origin:content-box;
@@ -216,7 +216,7 @@ background-origin:content-box;
 -webkit-background-clip:content-box;
 -moz-background-clip:content-box;
 background-clip:content-box;
-width:900px;
+width:940px;
 }
 
 .zinnia .container:after{
@@ -225,57 +225,7 @@ display:table;
 clear:both
 }
 
-#top-container{
-/* background:#262626; */
-background-image:url("../img/added/bg.jpg");
 
-border-bottom:25px solid black;
-}
-
-#slider-gallery-container{
-/* background:#262626; */
-
-
-}
-
-#middle-container{
-/* background-image:url("../img/added/bg.jpg"); */
-background-image:url("../img/added/5.png");
-}
-
-#top.container{
-/* background:transparent url(../img/added/overlay.png); */
- /* url(../images/overlay.png) no-repeat bottom right */
-/* z-index: 12; */
-/* {
-stripes : [ 
-    {
-        color: '#b14f7b',
-        rotation: 109,
-        opacity: 7,
-        mode: 'normal',
-        width: 34,
-        gap: 40,
-        offset: 0
-    },
-    {
-        color: '#f7b4ff',
-        rotation: 0,
-        opacity: 80,
-        mode: 'normal',
-        width: 51,
-        gap: 40,
-        offset: 0
-    }
-],
-bg : '#a5b0ea'
-} */
-}
-
-#middle.container{
-padding:20px;
-background: rgba(255, 255, 255, .8);
-}
 
 @media (min-width: 50em){
 .zinnia .container{
@@ -285,53 +235,8 @@ max-width:83em
 
 }
 
-.zinnia #header,.zinnia #footer{
-clear:both
-}
 
-.zinnia #top-navigation-menu{
-clear:both;
-margin:20px;
-margin-bottom:20px;
-border-bottom:1px solid #586e75;
-height:70px;
-margin:auto;
-}
 
-@media (min-width: 50em){
-.zinnia #content,.zinnia.right-sidebar #content{
-width:66.26506%;
-float:left;
-margin-right:1.20482%
-}
-
-.zinnia #sidebar,.zinnia.right-sidebar #sidebar{
-width:32.53012%;
-float:right;
-margin-right:0
-}
-
-.zinnia.left-sidebar #content{
-width:66.26506%;
-float:right;
-margin-right:0
-}
-
-.zinnia.left-sidebar #sidebar{
-width:32.53012%;
-float:left;
-margin-right:1.20482%
-}
-
-.zinnia.no-sidebar #content{
-width:100%;
-float:left;
-margin-right:1.20482%
-}
-
-.zinnia.no-sidebar #sidebar{
-display:none
-}
 
 
 }
@@ -398,7 +303,8 @@ color:#333
 }
 
 .zinnia.default .entry-body img{
-border:1px solid #ddd
+border:1px solid #ddd;
+height:30px;
 }
 
 .zinnia.default .entry-footer strong{
@@ -557,7 +463,7 @@ border:1px solid #93a1a1
 color:#586e75
 }
 
-.zinnia.light .entry-widgets,.zinnia.light #comments,.zinnia.light #pingbacks,.zinnia.light #trackbacks,.zinnia.light #footer{
+.zinnia.light .entry-widgets,.zinnia.light #comments,.zinnia.light #pingbacks,.zinnia.light #trackbacks,{
 border-top:1px solid #93a1a1
 }
 
@@ -573,13 +479,6 @@ border:1px solid #93a1a1
 background-color:#93a1a1
 }
 
-.zinnia.light #header{
-border-bottom:1px solid #93a1a1
-}
-
-.zinnia.light #header h1{
-text-shadow:2px 2px 2px #93a1a1
-}
 
 .zinnia.light fieldset{
 border:1px solid #93a1a1
@@ -719,13 +618,7 @@ border:1px solid #586e75
 background-color:#586e75
 }
 
-.zinnia.dark #header{
-/* border-bottom:1px solid #586e75 */
-}
 
-.zinnia.dark #header h1{
-text-shadow:2px 2px 2px #586e75
-}
 
 .zinnia.dark fieldset{
 border:1px solid #586e75
@@ -1187,72 +1080,7 @@ color:#fff
 color:#fff
 }
 
-.zinnia #header{
-margin-bottom:1em
-}
 
-.zinnia #header h1{
-/* margin-top:0.5em; */
-margin-bottom:0;
-font-weight:bold
-}
-
-.zinnia #header h1:first-letter{
-font-size:130%
-}
-
-.zinnia #header blockquote{
-border:none;
-background:none;
-margin:0 0 1.5em 0;
-padding:0 1.5em 0 0
-}
-
-.zinnia #header form{
-float:right;
-clear:both;
-display:none
-}
-
-.zinnia #header form input[type=text]{
-width:85%;
-background-image:url('../img/search.png?1362237962');
-background-repeat:no-repeat;
-background-position:5px center;
-padding-left:25px;
--webkit-border-radius:5px;
--moz-border-radius:5px;
--ms-border-radius:5px;
--o-border-radius:5px;
-border-radius:5px
-}
-
-.zinnia #header form input[type=submit]{
-display:none
-}
-
-.zinnia #header .top-navigation{
-margin:0;
-float:left;
-display:none
-}
-
-.zinnia #header .top-navigation li{
-list-style:none;
-display:inline
-}
-
-.zinnia #header .top-navigation li:after{
-content:"|"
-}
-
-.zinnia #header .top-navigation li:last-child:after{
-content:""
-}
-
-.zinnia #header .top-navigation li.last:after{
-content:""
-}
 
 .zinnia #header .top-navigation .sitemap{
 background:transparent url('../img/sitemap.png?1362237962') no-repeat scroll left center;
@@ -1264,38 +1092,6 @@ background:transparent url('../img/rss.png?1362237962') no-repeat scroll left ce
 padding-left:1.5em
 }
 
-@media (min-width: 480px){
-.zinnia #header form,.zinnia #header .top-navigation{
-display:block
-}
-
-
-}
-
-@media (min-width: 768px){
-.zinnia #header h1{
-font-size:4em
-}
-
-
-}
-
-@media (min-width: 1024px){
-.zinnia #header h1{
-background:transparent url('../img/logo.png?1362237962') no-repeat scroll left center;
-padding-left:1.5em
-}
-
-.zinnia #header blockquote{
-margin-left:6em
-}
-
-
-}
-
-.zinnia #footer{
-padding-top:1em
-}
 
 .zinnia ul.breadcrumbs{
 margin:0;
@@ -1399,7 +1195,7 @@ font-weight:bold
 }
 
 .zinnia .hentry{
-margin-bottom:1em
+margin-bottom:1em;
 }
 
 .zinnia h2.entry-title{
@@ -1409,7 +1205,6 @@ margin-bottom:0
 
 .zinnia .entry-info{
 padding-left:2em;
-background:transparent url('../img/category.png?1362237962') no-repeat scroll 0.5em
 }
 
 .zinnia .entry-last-update{
@@ -1492,6 +1287,23 @@ background:transparent url('../img/comments.png?1362237962') no-repeat scroll
 
 .zinnia .entry-widgets p,.zinnia .entry-widgets ul{
 padding-left:1.5em
+}
+
+.zinnia .entry-next-prev{
+display: inline-flex;
+line-height:20px;
+text-align:center;
+}
+
+.zinnia .entry-next-prev h3{
+margin:3px;
+}
+
+.zinnia .entry-next{
+margin-left:20px;
+}
+
+.zinnia .entry-previous{
 }
 
 .zinnia .entry-widgets,.zinnia #comments,.zinnia #pingbacks,.zinnia #trackbacks{

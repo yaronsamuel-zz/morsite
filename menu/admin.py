@@ -14,10 +14,10 @@ class MenuItemAdmin(OrderedModelAdmin):
     list_display = ('menu' , 
                     'title',
                     'link_url',
-                    'description',
+                    # 'description',
                     'login_required' ,
                     'anonymous_only' , 
-                    'item_picture',
+                    # 'item_picture',
                     'reorder'
           )
           

@@ -1,0 +1,24 @@
+{% extends "zinnia/base_not_home_page.html" %}
+{% load static %}
+
+
+
+{% block sidebar %}
+{% endblock sidebar %}
+
+{% block content %}
+
+<h2 style="font-family:felix007Medium; margin-right: 350px;">גלריה</h2>
+
+
+{% url 'Gallery.views.Iframe_gallery_view' as iframe_gallery_url %}
+
+<iframe id="gallery-iframe" src="{{ iframe_gallery_url }}" style="height:{{iframe_height}}px;">
+</iframe>
+
+
+{% endblock content %}
+
+	
+    
+

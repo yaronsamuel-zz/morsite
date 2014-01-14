@@ -8,7 +8,7 @@
 {% block body-class %}{{ block.super }} archive date year year-{{ year|date:"Y" }}{% endblock body-class %}
 
 {% block content-title %}
-<h1>{% trans "Archives" %} {{ year|date:"Y" }}</h1>
+<h3>{% trans "Archives" %} {{ year|date:"Y" }}</h3>
 {% endblock content-title %}
 
 {% block content-related %}

@@ -144,7 +144,7 @@ INSTALLED_APPS = (
     'mptt',
     'zinnia',
     'menu' ,
-    'SliderGallery',
+    'Gallery',
     'contact_form',
 
 )

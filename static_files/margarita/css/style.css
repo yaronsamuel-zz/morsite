@@ -6,6 +6,25 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
+.felix007Medium {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'felix007Medium', sans-serif;
+    font-size-adjust: 0.45;
+}
+
+@font-face{ 
+	font-family: 'felix007Medium';
+	src: url('../fonts/felix007-medium-webfont.eot');
+	src: url('../fonts/felix007-medium-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/felix007-medium-webfont.woff') format('woff'),
+	     url('../fonts/felix007-medium-webfont.ttf') format('truetype'),
+	     url('../fonts/felix007-medium-webfont.svg#webfont') format('svg');
+}
+
+
+
 body {
 	background: #e4e4e7 url(../images/bg-body.jpg) repeat-x left top;
 	font-family: Verdana, Geneva, sans-serif;
@@ -24,6 +43,7 @@ body {
 	display: inline-block;
 	width: 100%;
 	padding: 18px 0 0;
+    direction:rtl;
 }
 #featured h3, #links h3, #posts h3, #shop span.price, #blogs .time, #sidebar > div.section h3 {
 	background: url(../images/interface.png) no-repeat;
@@ -79,13 +99,14 @@ img {
 	display: inline-block;
 	list-style: none;
 	width: 924px;
-	margin: 0;
+	margin:31px 0 0 0;
 	padding: 0;
 }
 #navigation li {
-	float: left;
+	float: right;
 	width: 126px;
 	padding-right: 6px;
+    list-style-image: none;
 }
 #navigation li:hover, #navigation li.selected {
 	background: url(../images/bg-navi-hover.png) no-repeat right top;
@@ -94,10 +115,12 @@ img {
 #navigation li a {
 	color: #2e2e2e;
 	display: block;
-	font-size: 12px;
+	font-size: 22px;
 	padding: 8px 0 18px;
 	text-decoration: none;
 	text-transform: uppercase;
+    font-family:"felix007Medium";
+    
 }
 #navigation li a:hover, #navigation li.selected a {
 	background-color: #ffffff;
@@ -136,6 +159,8 @@ img {
 #contents p a:hover {
 	color: #eabe60;
 }
+
+
 /** Adbox **/
 #adbox {
 	max-height: 466px;
@@ -143,9 +168,26 @@ img {
 	padding: 5px 0 0;
 	text-align: center;
 }
+
+#adbox img{
+z-index:0;
+}
+
+#wrap-abox {
+    background: url(../images/perfume-ad.jpg) no-repeat;
+    height:940px ;
+
+}
+#wrap-abox .changing{
+height:100px;
+width:100px;
+z-index:300;
+
+}
+
 /** Featured **/
 #featured {
-	float: left;
+	float: right;
 	background-position: -952px 0;
 	width: 640px;
 	margin: 0 0 12px;
@@ -159,9 +201,17 @@ img {
 	height: 44px;
 	line-height: 24px;
 	width: 650px;
-	margin: 0;
+	margin: 0 20px 0 0;
 	padding: 0 0 0 20px;
+    float: left;
+    text-align: right;
+    text-indent: 60px;
 }
+
+#featured .featured-img{
+width:260px;
+}
+
 #featured ul {
 	background-position: -1591px bottom;
 	list-style: none;
@@ -172,21 +222,22 @@ img {
 	display: inline-block;
 	border-top: 1px solid #eeeeee;
 	padding: 18px 30px 24px 0;
+    width: 570px;
 }
 #featured ul li:first-child {
 	border: 0;
 }
 #featured ul li img {
-	float: left;
+	float: right;
 	border: 1px solid #eeeeee;
-	margin: 6px 30px 0 0;
+	margin: 6px 0 0 30px;
 }
 #featured ul li h4 {
 	color: #7c7c7c;
 	font-size: 20px;
 	font-style: italic;
 	font-weight: normal;
-	margin: 0 0 24px;
+	margin: 3px 24px 0 0;
 	padding: 0;
 }
 #featured ul li a.more {
@@ -194,7 +245,21 @@ img {
 	font-size: 12px;
 	font-style: italic;
 	text-decoration: none;
+    float:left;
+    margin: 0 0 0 20px;
 }
+
+#featured .entry-footer p{
+line-height: 20px;
+padding: 0;
+
+}
+
+#content {
+width: 610px;
+display: inline-block;
+}
+
 /** Links **/
 #links {
 	float: left;
@@ -834,34 +899,49 @@ img {
 #footer > div:first-child {
 	background-color: #ffffff;
 	background-position: -10px 0;
-	line-height: 54px;
+	line-height: 18px;
 	width: 940px;
+    height:54px;
 	margin: 0 auto;
 	text-align: right;
 }
+
 #footer p {
 	color: #888888;
 	font-size: 10px;
 	margin: 0;
-	padding: 0 20px;
+	padding: 10px 20px;
+    text-align:left;
+    
 }
 #footer .navigation {
-	float: left;
+	float: right;
 	display: inline-block;
 	list-style: none;
-	margin: 0;
+	margin: 17px 0 0 0;
 	padding: 0 15px;
 }
 #footer .navigation li {
-	float: left;
+	float: right;
 	margin: 0 15px;
+    list-style-image: none;
 }
 #footer .navigation li a {
 	color: #888888;
-	font-size: 10px;
+	font-size: 12px;
 	text-decoration: none;
 }
 #footer .navigation li a:hover, #footer .navigation li.selected a {
 	color: #eb32ba;
 	text-decoration: underline;
+}
+
+
+/* Gallery */
+#gallery-iframe {
+width: 900px;
+float:center;
+padding:20px;
+
+
 }

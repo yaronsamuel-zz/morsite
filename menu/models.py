@@ -40,19 +40,19 @@ class MenuItem(OrderedModel):
     title = models.CharField(max_length=100)
     login_required = models.BooleanField(blank=True, help_text='Should this item only be shown to authenticated users?')
     anonymous_only = models.BooleanField(blank=True, help_text='Should this item only be shown to non-logged-in users?')
-    item_picture  = ImageWithThumbsField(upload_to = 'menu/' , sizes=( (THUMB_W, THUMB_H) , ) ,magnify = False) 
-    description = models.TextField(blank=True, null=True)                                   
+    # item_picture  = ImageWithThumbsField(upload_to = 'menu/' , sizes=( (THUMB_W, THUMB_H) , ) ,magnify = False) 
+    # description = models.TextField(blank=True, null=True)                                   
     
     
      
     def __unicode__(self):
         return "%s %s. %s" % (self.menu.slug, self.order, self.title)
 
-    @property
-    def pictureURL(self):
-        return self.item_picture.url
+    # @property
+    # def pictureURL(self):
+        # return self.item_picture.url
     
-    @property    
-    def thumb(self):
-        attr_name = 'url_%sx%s' % THUMB_SIZE
-        return getattr(self.item_picture, attr_name)
+    # @property    
+    # def thumb(self):
+        # attr_name = 'url_%sx%s' % THUMB_SIZE
+        # return getattr(self.item_picture, attr_name)
