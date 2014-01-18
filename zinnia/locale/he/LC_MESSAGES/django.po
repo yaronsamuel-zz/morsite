@@ -20,12 +20,12 @@ msgstr ""
 #: .\feeds.py:139 .\templates\zinnia\entry_archive.html.py:4
 #: .\templates\zinnia\entry_archive.html.py:6
 msgid "Latest entries"
-msgstr ""
+msgstr "פוסטים אחרונים"
 
 #: .\feeds.py:143
 #, python-format
 msgid "The latest entries for the site %s"
-msgstr ""
+msgstr "הפוסטים האחרונים לאתר %s"
 
 #: .\feeds.py:163
 #, python-format
@@ -35,66 +35,66 @@ msgstr "פוסטים בקטגורית %s"
 #: .\feeds.py:167
 #, python-format
 msgid "The latest entries for the category %s"
-msgstr ""
+msgstr "הפוסטים האחרונים בקטגוריית %s"
 
 #: .\feeds.py:187
 #, python-format
 msgid "Entries for author %s"
-msgstr ""
+msgstr "פוסטים מאת %s"
 
 #: .\feeds.py:191
 #, python-format
 msgid "The latest entries by %s"
-msgstr ""
+msgstr "פוסטים אחרונים מאת %s"
 
 #: .\feeds.py:212
 #, python-format
 msgid "Entries for the tag %s"
-msgstr ""
+msgstr "פוסטים מתויגים על ידי %s"
 
 #: .\feeds.py:216
 #, python-format
 msgid "The latest entries for the tag %s"
-msgstr ""
+msgstr "פוסטים אחרונים שתויגו עם %s"
 
 #: .\feeds.py:239
 #, python-format
 msgid "Results of the search for '%s'"
-msgstr ""
+msgstr "תוצאות החיפוש עבור' %s'"
 
 #: .\feeds.py:243
 #, python-format
 msgid "The entries containing the pattern '%s'"
-msgstr ""
+msgstr "פוסטים שמכילים'%s'"
 
 #: .\feeds.py:288
 msgid "Latest discussions"
-msgstr ""
+msgstr "שיחות אחרונות"
 
 #: .\feeds.py:292
 #, python-format
 msgid "The latest discussions for the site %s"
-msgstr ""
+msgstr "השיחות האחרונות באתר %s"
 
 #: .\feeds.py:315
 #, python-format
 msgid "Discussions on %s"
-msgstr ""
+msgstr "שיחות על %s"
 
 #: .\feeds.py:319
 #, python-format
 msgid "The latest discussions for the entry %s"
-msgstr ""
+msgstr "השיחות האחרונות על הפוסט - %s"
 
 #: .\feeds.py:338
 #, python-format
 msgid "Comments on %s"
-msgstr ""
+msgstr "תגובות על %s"
 
 #: .\feeds.py:342
 #, python-format
 msgid "The latest comments for the entry %s"
-msgstr ""
+msgstr "התגובות האחרונות על הפוסט %s"
 
 #: .\feeds.py:372
 #, python-format
@@ -123,7 +123,7 @@ msgstr ""
 
 #: .\admin\category.py:30
 msgid "tree path"
-msgstr ""
+msgstr "נתיב"
 
 #: .\admin\entry.py:33 .\templates\admin\zinnia\widgets\quickpost.html.py:17
 msgid "Content"
@@ -145,7 +145,7 @@ msgstr "תגובות"
 
 #: .\admin\entry.py:50
 msgid "Publication"
-msgstr ""
+msgstr "פרסום"
 
 #: .\admin\entry.py:78
 #, python-format
@@ -189,35 +189,35 @@ msgstr ""
 
 #: .\admin\entry.py:224
 msgid "The selected entries now belong to you."
-msgstr ""
+msgstr "הפוסטים נבחרו שייכים מעכשיו לך"
 
 #: .\admin\entry.py:225
 msgid "Set the entries to the user"
-msgstr ""
+msgstr "שייך פוסטים למשתמש"
 
 #: .\admin\entry.py:232
 msgid "The selected entries are now marked as published."
-msgstr ""
+msgstr "הפוסטים שנבחרו מסומנים כעת כ-published" 
 
 #: .\admin\entry.py:233
 msgid "Set entries selected as published"
-msgstr ""
+msgstr "סמן את הפוסטים שנבחרו כ-published" 
 
 #: .\admin\entry.py:239
 msgid "The selected entries are now marked as hidden."
-msgstr ""
+msgstr "הפוסטים שנבחרו מסומנים כעת כ-hidden"
 
 #: .\admin\entry.py:240
 msgid "Set entries selected as hidden"
-msgstr ""
+msgstr "סמן את הפוסטים שנבחרו כ-hidden"
 
 #: .\admin\entry.py:246
 msgid "Comments are now closed for selected entries."
-msgstr ""
+msgstr "התגובות סגורות כעת עבור הפוסטים שנבחרו"
 
 #: .\admin\entry.py:247
 msgid "Close the comments for selected entries"
-msgstr ""
+msgstr "סגור את התגובות לפוסטים שנבחרו"
 
 #: .\admin\entry.py:254
 msgid "Pingbacks are now closed for selected entries."
@@ -237,27 +237,27 @@ msgstr ""
 
 #: .\admin\entry.py:271
 msgid "The selected entries are now set at the current date."
-msgstr ""
+msgstr "הפוסטים שנבחרו משויכים כעת לתאריך הנוכחי"
 
 #: .\admin\entry.py:273
 msgid "Put the selected entries on top at the current date"
-msgstr ""
+msgstr "שים את הפוסטים שנבחרו הכי גבוה בתאריך הנוכחי"
 
 #: .\admin\entry.py:279
 msgid "Selected entries are now marked as featured."
-msgstr ""
+msgstr "הפוסטים שנבחרו מסומנים כעת כ-featured"
 
 #: .\admin\entry.py:280
 msgid "Mark selected entries as featured"
-msgstr ""
+msgstr "סמן את הפוסטים שנבחרו כ-featured"
 
 #: .\admin\entry.py:286
 msgid "Selected entries are no longer marked as featured."
-msgstr ""
+msgstr "הערכים שנבחרו כבר לא מסומנים כ-featured"
 
 #: .\admin\entry.py:288
 msgid "Unmark selected entries as featured"
-msgstr ""
+msgstr "הורד סימון featured מהערכים שנבחרו "
 
 #: .\admin\entry.py:303
 msgid "The selected entries have been tweeted."
@@ -280,46 +280,46 @@ msgstr ""
 #, python-format
 msgid "%(item)s (%(count)i entry)"
 msgid_plural "%(item)s (%(count)i entries)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(item)s פוסט (%(count)i)"
+msgstr[1] "%(item)s (%(count)i פוסטים)"
 
 #: .\admin\filters.py:48
 msgid "published authors"
-msgstr ""
+msgstr "עורכים שפירסמו"
 
 #: .\admin\filters.py:59
 msgid "published categories"
-msgstr ""
+msgstr "קטגוריות שפורסמו"
 
 #: .\admin\forms.py:22
 msgid "Parent category"
-msgstr ""
+msgstr "קטגוריית אם"
 
 #: .\admin\forms.py:24
 msgid "No parent category"
-msgstr ""
+msgstr "אין קטגוריית אם"
 
 #: .\admin\forms.py:38
 msgid "A category cannot be parent of itself."
-msgstr ""
+msgstr "קטגוריה אינה יכולה להיות קטגוריית אם של עצמה. "
 
 #: .\admin\forms.py:49 .\templates\zinnia\base.html.py:36
 #: .\templates\zinnia\category_list.html.py:6
 #: .\templates\zinnia\sitemap.html.py:52 .\templatetags\zbreadcrumbs.py:65
 msgid "Categories"
-msgstr ""
+msgstr "קטגוריות"
 
 #: .\admin\forms.py:51 .\models\category.py:75 .\models_bases\entry.py:403
 msgid "categories"
-msgstr ""
+msgstr "קטגוריות"
 
 #: .\models\category.py:24 .\models_bases\entry.py:51
 msgid "slug"
-msgstr ""
+msgstr "קיצור"
 
 #: .\models\category.py:25
 msgid "Used to build the category's URL."
-msgstr ""
+msgstr "בשימוש ליצירת הurl של הקטגוריה"
 
 #: .\models\category.py:28
 msgid "description"
@@ -327,83 +327,83 @@ msgstr "תיאור"
 
 #: .\models\category.py:34
 msgid "parent category"
-msgstr ""
+msgstr "קטגוריית אם"
 
 #: .\models\category.py:74
 msgid "category"
-msgstr ""
+msgstr "קטגוריה"
 
 #: .\models_bases\entry.py:43
 msgid "draft"
-msgstr ""
+msgstr "טיוטה"
 
 #: .\models_bases\entry.py:44
 msgid "hidden"
-msgstr ""
+msgstr "חבוי"
 
 #: .\models_bases\entry.py:45
 msgid "published"
-msgstr ""
+msgstr "מפורסם"
 
 #: .\models_bases\entry.py:53 .\models_bases\entry.py:74
 msgid "Used to build the entry's URL."
-msgstr ""
+msgstr "בשימוש ליצירת הURL של הפוסט"
 
 #: .\models_bases\entry.py:56
 msgid "status"
-msgstr ""
+msgstr "סטטוס"
 
 #: .\models_bases\entry.py:59
 msgid "start publication"
-msgstr ""
+msgstr "תחילת פרסום"
 
 #: .\models_bases\entry.py:60
 msgid "Start date of publication."
-msgstr ""
+msgstr "תאריך תחילת הפרסום"
 
 #: .\models_bases\entry.py:63
 msgid "end publication"
-msgstr ""
+msgstr "סוף פרסום"
 
 #: .\models_bases\entry.py:64
 msgid "End date of publication."
-msgstr ""
+msgstr "תאריך סוף הפרסום"
 
 #: .\models_bases\entry.py:69
 msgid "sites"
-msgstr ""
+msgstr "אתרים"
 
 #: .\models_bases\entry.py:70
 msgid "Sites where the entry will be published."
-msgstr ""
+msgstr "אתרים בהם הפוסט יפורסם"
 
 #: .\models_bases\entry.py:73
 msgid "creation date"
-msgstr ""
+msgstr "תאריך יצירה"
 
 #: .\models_bases\entry.py:77
 msgid "last update"
-msgstr ""
+msgstr "עודכן לאחרונה"
 
 #: .\models_bases\entry.py:179
 msgid "entry"
-msgstr ""
+msgstr "פוסט"
 
 #: .\models_bases\entry.py:180
 msgid "entries"
-msgstr ""
+msgstr "פוסטים"
 
 #: .\models_bases\entry.py:192
 msgid "content"
-msgstr ""
+msgstr "תוכן"
 
 #: .\models_bases\entry.py:234
 msgid "comments enabled"
-msgstr ""
+msgstr "ניתן לכתוב תגובות"
 
 #: .\models_bases\entry.py:235
 msgid "Allows comments if checked."
-msgstr ""
+msgstr "אפשר תגובות אם מסומן"
 
 #: .\models_bases\entry.py:237
 msgid "pingbacks enabled"
@@ -423,7 +423,7 @@ msgstr ""
 
 #: .\models_bases\entry.py:244
 msgid "comment count"
-msgstr ""
+msgstr "מונה תגובות"
 
 #: .\models_bases\entry.py:246
 msgid "pingback count"
@@ -435,23 +435,23 @@ msgstr ""
 
 #: .\models_bases\entry.py:332
 msgid "related entries"
-msgstr ""
+msgstr "פוסטים מקושרים"
 
 #: .\models_bases\entry.py:350
 msgid "excerpt"
-msgstr ""
+msgstr "ציטוט"
 
 #: .\models_bases\entry.py:351
 msgid "Optional element."
-msgstr ""
+msgstr "אלמנט אופציונלי"
 
 #: .\models_bases\entry.py:362
 msgid "image"
-msgstr ""
+msgstr "תמונה"
 
 #: .\models_bases\entry.py:363
 msgid "Used for illustration."
-msgstr ""
+msgstr "בשימוש לשם אילוסטרציה"
 
 #: .\models_bases\entry.py:374
 msgid "featured"
@@ -459,27 +459,27 @@ msgstr ""
 
 #: .\models_bases\entry.py:389
 msgid "authors"
-msgstr ""
+msgstr "כותבים"
 
 #: .\models_bases\entry.py:413
 msgid "tags"
-msgstr ""
+msgstr "טאגים"
 
 #: .\models_bases\entry.py:432
 msgid "login required"
-msgstr ""
+msgstr "דרוש login"
 
 #: .\models_bases\entry.py:433
 msgid "Only authenticated users can view the entry."
-msgstr ""
+msgstr "רק משתמשים רשומים יכולים לצפות בפוסט"
 
 #: .\models_bases\entry.py:445
 msgid "password"
-msgstr ""
+msgstr "סיסמה"
 
 #: .\models_bases\entry.py:446
 msgid "Protects the entry with a password."
-msgstr ""
+msgstr "מגן על הפוסט עם סיסמה"
 
 #: .\models_bases\entry.py:458
 msgid "content template"
@@ -541,7 +541,7 @@ msgstr ""
 
 #: .\templates\admin\zinnia\widgets\_content_stats.html.py:3
 msgid "Contents"
-msgstr ""
+msgstr "תוכן"
 
 #: .\templates\admin\zinnia\widgets\_content_stats.html.py:9
 #: .\templates\zinnia\author_list.html.py:19
@@ -555,8 +555,8 @@ msgstr ""
 #, python-format
 msgid "%(entry_count)s entry"
 msgid_plural "%(entry_count)s entries"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "פוסט %(entry_count)s"
+msgstr[1] "%(entry_count)s פוסטים"
 
 #: .\templates\admin\zinnia\widgets\_content_stats.html.py:14
 #: .\templates\zinnia\_entry_detail_base.html.py:120
@@ -565,16 +565,16 @@ msgstr[1] ""
 #, python-format
 msgid "%(comment_count)s comment"
 msgid_plural "%(comment_count)s comments"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "תגובה %(comment_count)s"
+msgstr[1] "%(comment_count)s תגובות"
 
 #: .\templates\admin\zinnia\widgets\_content_stats.html.py:21
 #: .\templates\zinnia\tags\statistics.html.py:13
 #, python-format
 msgid "%(category_count)s category"
 msgid_plural "%(category_count)s categories"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "קטגוריה %(category_count)s"
+msgstr[1] "%(category_count)s קטגוריות"
 
 #: .\templates\admin\zinnia\widgets\_content_stats.html.py:24
 #: .\templates\zinnia\_entry_detail_base.html.py:139
@@ -590,8 +590,8 @@ msgstr[1] ""
 #, python-format
 msgid "%(tag_count)s tag"
 msgid_plural "%(tag_count)s tags"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "תאג %(tag_count)s"
+msgstr[1] "%(tag_count)s תאגים"
 
 #: .\templates\admin\zinnia\widgets\_content_stats.html.py:32
 #: .\templates\zinnia\_entry_detail_base.html.py:148
@@ -607,26 +607,26 @@ msgstr[1] ""
 #, python-format
 msgid "%(author_count)s author"
 msgid_plural "%(author_count)s authors"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "עורך %(author_count)s"
+msgstr[1] "%(author_count)s עורכים"
 
 #: .\templates\admin\zinnia\widgets\_content_stats.html.py:42
 #: .\templates\zinnia\tags\statistics.html.py:25
 #, python-format
 msgid "%(reject_count)s rejected item"
 msgid_plural "%(reject_count)s rejected items"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "פריט %(reject_count)s שנדחה"
+msgstr[1] "%(reject_count)s פריטים שנדחו"
 
 #: .\templates\admin\zinnia\widgets\_content_stats.html.py:47
 msgid "Statistics"
-msgstr ""
+msgstr "סטטיסטיקות"
 
 #: .\templates\admin\zinnia\widgets\_content_stats.html.py:49
 #: .\templates\zinnia\tags\statistics.html.py:28
 #, python-format
 msgid "%(entries_per_month)s entries per month"
-msgstr ""
+msgstr "%(entries_per_month)s לחודש"
 
 #: .\templates\admin\zinnia\widgets\_content_stats.html.py:54
 #: .\templates\zinnia\tags\statistics.html.py:31
@@ -656,7 +656,7 @@ msgstr ""
 #: .\templates\zinnia\entry_detail_base.html.py:223
 #: .\templates\zinnia\entry_detail_base.html.py:224
 msgid "Edit the entry"
-msgstr ""
+msgstr "ערוך פוסט"
 
 #: .\templates\admin\zinnia\widgets\_draft_entries.html.py:9
 #: .\templates\comments\zinnia_entry_preview.html.py:25
@@ -675,17 +675,17 @@ msgstr " "
 #: .\templates\admin\zinnia\widgets\_draft_entries.html.py:15
 #: .\templates\comments\zinnia\entry\form.html.py:25
 msgid "Preview"
-msgstr ""
+msgstr "תצוגה מקדימה"
 
 #: .\templates\admin\zinnia\widgets\_draft_entries.html.py:22
 #: .\templates\zinnia\tags\draft_entries.html.py:9
 msgid "No draft entries."
-msgstr ""
+msgstr "אין טיוטות"
 
 #: .\templates\admin\zinnia\widgets\_draft_entries.html.py:31
 #: .\templates\admin\zinnia\widgets\_draft_entries.html.py:32
 msgid "View all draft entries"
-msgstr ""
+msgstr "הצג את כל הטיוטות"
 
 #: .\templates\admin\zinnia\widgets\_recent_comments.html.py:10
 #: .\templates\zinnia\_entry_detail_base.html.py:35
@@ -701,24 +701,24 @@ msgstr ""
 
 #: .\templates\admin\zinnia\widgets\_recent_comments.html.py:22
 msgid "Edit the comment"
-msgstr ""
+msgstr "ערוך תגובה"
 
 #: .\templates\admin\zinnia\widgets\_recent_comments.html.py:23
 #: .\templates\admin\zinnia\widgets\_recent_linkbacks.html.py:18
 msgid "Edit"
-msgstr ""
+msgstr "ערוך"
 
 #: .\templates\admin\zinnia\widgets\_recent_comments.html.py:30
 #: .\templates\zinnia\_entry_detail_base.html.py:124
 #: .\templates\zinnia\entry_detail_base.html.py:131
 #: .\templates\zinnia\tags\recent_comments.html.py:15
 msgid "No comments yet."
-msgstr "לא נוספה תגובה עדיין."
+msgstr "לא קיימות תגובות"
 
 #: .\templates\admin\zinnia\widgets\_recent_comments.html.py:39
 #: .\templates\admin\zinnia\widgets\_recent_comments.html.py:40
 msgid "Manage the comments"
-msgstr ""
+msgstr "נהל תגובות"
 
 #: .\templates\admin\zinnia\widgets\_recent_linkbacks.html.py:7
 msgid "made a linkback on"
@@ -736,40 +736,40 @@ msgstr ""
 #: .\templates\admin\zinnia\widgets\content_stats.html.py:6
 #: .\templates\admin\zinnia\widgets\content_stats.html.py:8
 msgid "Today"
-msgstr ""
+msgstr "היום"
 
 #: .\templates\admin\zinnia\widgets\draft_entries.html.py:6
 #: .\templates\admin\zinnia\widgets\draft_entries.html.py:8
 msgid "Draft entries"
-msgstr ""
+msgstr "טיוטות"
 
 #: .\templates\admin\zinnia\widgets\quickpost.html.py:5
 #: .\templates\admin\zinnia\widgets\quickpost.html.py:6
 msgid "Quick publishing"
-msgstr ""
+msgstr "פרסום מהיר"
 
 #: .\templates\admin\zinnia\widgets\quickpost.html.py:9
 msgid "Title"
-msgstr ""
+msgstr "כותרת"
 
 #: .\templates\admin\zinnia\widgets\quickpost.html.py:25
 #: .\templates\zinnia\_entry_detail_base.html.py:92
 #: .\templates\zinnia\base.html.py:48 .\templates\zinnia\tag_list.html.py:6
 #: .\templatetags\zbreadcrumbs.py:58
 msgid "Tags"
-msgstr ""
+msgstr "טאגים"
 
 #: .\templates\admin\zinnia\widgets\quickpost.html.py:33
 msgid "Save as draft"
-msgstr ""
+msgstr "שמור כטיוטה"
 
 #: .\templates\admin\zinnia\widgets\quickpost.html.py:34
 msgid "Reset"
-msgstr ""
+msgstr "נקה"
 
 #: .\templates\admin\zinnia\widgets\quickpost.html.py:35
 msgid "Publish"
-msgstr ""
+msgstr "פרסם"
 
 #: .\templates\admin\zinnia\widgets\recent_comments.html.py:6
 #: .\templates\admin\zinnia\widgets\recent_comments.html.py:8
@@ -824,7 +824,7 @@ msgstr ""
 
 #: .\templates\comments\zinnia_entry_preview.html.py:4
 msgid "Comment preview"
-msgstr ""
+msgstr "תצוגה מקדימה"
 
 #: .\templates\comments\zinnia_entry_preview.html.py:10
 msgid "Please correct following error."
@@ -842,7 +842,7 @@ msgstr "פרסם תגובה"
 
 #: .\templates\comments\zinnia\entry\form.html.py:20
 msgid "Comment as"
-msgstr ""
+msgstr "הגב בתור"
 
 #: .\templates\comments\zinnia\entry\form.html.py:20
 #: .\templates\zinnia\base.html.py:96 .\templates\zinnia\base.html.py:97
@@ -946,7 +946,7 @@ msgstr "הגב ראשון!"
 #: .\templates\zinnia\entry_detail_base.html.py:127
 #: .\templates\zinnia\entry_detail_base.html.py:133
 msgid "Comments are closed."
-msgstr ""
+msgstr "לא ניתן להגיב יותר"
 
 #: .\templates\zinnia\_entry_detail_base.html.py:138
 #, python-format
@@ -1060,7 +1060,7 @@ msgstr "אין עדיין קטגוריות"
 
 #: .\templates\zinnia\entry_archive.html.py:16
 msgid "Yearly archives"
-msgstr "ארכיונים שנתיים"
+msgstr "ארכיון" 
 
 #: .\templates\zinnia\entry_archive_day.html.py:16
 #: .\templates\zinnia\entry_archive_today.html.py:16
@@ -1073,7 +1073,7 @@ msgstr "יום הבא"
 
 #: .\templates\zinnia\entry_archive_month.html.py:15
 msgid "Daily archives"
-msgstr "ארכיונים יומיים"
+msgstr "ארכיון יומי"
 
 #: .\templates\zinnia\entry_archive_month.html.py:25
 msgid "Previous month"
@@ -1087,7 +1087,7 @@ msgstr "חודש הבא"
 #: .\templates\zinnia\entry_archive_today.html.py:6
 #: .\templates\zinnia\entry_archive_today.html.py:11
 msgid "Today archives"
-msgstr ""
+msgstr "חם מהתנור - פוסטים מהיום"
 
 #: .\templates\zinnia\entry_archive_week.html.py:4
 #: .\templates\zinnia\entry_archive_week.html.py:6
@@ -1113,7 +1113,7 @@ msgstr "שבוע הבא"
 #: .\templates\zinnia\entry_archive_year.html.py:15
 #: .\templates\zinnia\sitemap.html.py:69
 msgid "Monthly archives"
-msgstr "ארכיונים חודשיים"
+msgstr "ארכיון חודשי"
 
 #: .\templates\zinnia\entry_archive_year.html.py:25
 msgid "Previous year"
@@ -1161,7 +1161,7 @@ msgstr "תגובות"
 
 #: .\templates\zinnia\entry_detail_base.html.py:119
 msgid "Direct link to this comment"
-msgstr ""
+msgstr "קישור לתגובה זו"
 
 #: .\templates\zinnia\entry_detail_base.html.py:141
 msgid "Pingbacks"
@@ -1292,35 +1292,35 @@ msgstr "אין תוצאות"
 
 #: .\templates\zinnia\login.html.py:4 .\templates\zinnia\login.html.py:9
 msgid "Login required"
-msgstr ""
+msgstr "יש להתחבר"
 
 #: .\templates\zinnia\login.html.py:13
 msgid "Your username and password didn't match. Please try again."
-msgstr ""
+msgstr "שם המשתמש והסיסמה אינם תואמים. אנא נסה שנית. "
 
 #: .\templates\zinnia\login.html.py:17
 msgid "You need to be connected to view this entry."
-msgstr ""
+msgstr "עליך להתחבר לאתר על מנת לצפות בפוסט זה. "
 
 #: .\templates\zinnia\login.html.py:34
 msgid "Login"
-msgstr ""
+msgstr "התחברות"
 
 #: .\templates\zinnia\password.html.py:4 .\templates\zinnia\password.html.py:9
 msgid "Password required"
-msgstr ""
+msgstr "דרושה סיסמה"
 
 #: .\templates\zinnia\password.html.py:13
 msgid "The password provided is not valid. Please try again."
-msgstr ""
+msgstr "הסיסמה שהזנת אינה תקינה. אנא נסה שנית. "
 
 #: .\templates\zinnia\password.html.py:17
 msgid "You need to provide a password to view this entry."
-msgstr ""
+msgstr "עליך להזין סיסמה על מנת לצפות בפוסט זה."
 
 #: .\templates\zinnia\password.html.py:24
 msgid "Password"
-msgstr ""
+msgstr "סיסמה"
 
 #: .\templates\zinnia\password.html.py:29
 msgid "Valid"
@@ -1332,11 +1332,11 @@ msgstr ""
 #: .\templates\zinnia\skeleton.html.py:69
 #: .\templates\zinnia\skeleton.html.py:70
 msgid "Sitemap"
-msgstr ""
+msgstr "מפת האתר"
 
 #: .\templates\zinnia\sitemap.html.py:12
 msgid "Entries per categories"
-msgstr ""
+msgstr "פוסטים לפי קטגוריות"
 
 #: .\templates\zinnia\sitemap.html.py:20 .\templates\zinnia\sitemap.html.py:40
 msgid "comment"
@@ -1344,7 +1344,7 @@ msgstr ""
 
 #: .\templates\zinnia\sitemap.html.py:33
 msgid "All the entries"
-msgstr ""
+msgstr "כל הפוסטים"
 
 #: .\templates\zinnia\skeleton.html.py:11
 #: .\templates\zinnia\skeleton.html.py:53
@@ -1354,11 +1354,11 @@ msgstr ""
 #: .\templates\zinnia\skeleton.html.py:43
 #: .\templates\zinnia\tags\search_form.html.py:4
 msgid "Keywords..."
-msgstr ""
+msgstr "מילות חיפוש"
 
 #: .\templates\zinnia\skeleton.html.py:61
 msgid "Useful links"
-msgstr ""
+msgstr "קישורים שימושיים"
 
 #: .\templates\zinnia\skeleton.html.py:64
 #: .\templates\zinnia\skeleton.html.py:65
@@ -1367,7 +1367,7 @@ msgstr ""
 
 #: .\templates\zinnia\skeleton.html.py:76
 msgid "Search"
-msgstr ""
+msgstr "חפש"
 
 #: .\templates\zinnia\skeleton.html.py:86
 #, python-format
@@ -1380,17 +1380,16 @@ msgstr ""
 #: .\templates\zinnia\tag_list.html.py:4
 #: .\templates\zinnia\tag_list.html.py:11
 msgid "Tag list"
-msgstr ""
+msgstr "רשימת תאגים"
 
 #: .\templates\zinnia\tag_list.html.py:22
 #: .\templates\zinnia\tags\tag_cloud.html.py:11
 msgid "No tags yet."
-msgstr ""
-
+msgstr "לא קיימים תאגים"
 #: .\templates\zinnia\tags\archives_entries.html.py:12
 #: .\templates\zinnia\tags\archives_entries_tree.html.py:37
 msgid "No archives yet."
-msgstr ""
+msgstr "לא קיים ארכיון"
 
 #: .\templates\zinnia\tags\pagination.html.py:4
 #, python-format
@@ -1399,17 +1398,17 @@ msgstr ""
 
 #: .\templates\zinnia\tags\pagination.html.py:10
 msgid "More recent entries"
-msgstr ""
+msgstr "פוסטים חדשים יותר"
 
 #: .\templates\zinnia\tags\pagination.html.py:20
 #: .\templates\zinnia\tags\pagination.html.py:33
 #: .\templates\zinnia\tags\pagination.html.py:47
 msgid "Entries page"
-msgstr ""
+msgstr "עמוד הפוסטים"
 
 #: .\templates\zinnia\tags\pagination.html.py:56
 msgid "More old entries"
-msgstr ""
+msgstr "פוסטים ישנים יותר"
 
 #: .\templates\zinnia\tags\recent_linkbacks.html.py:9
 msgid "Linkback on"
@@ -1417,14 +1416,14 @@ msgstr ""
 
 #: .\templates\zinnia\tags\search_form.html.py:6
 msgid ""
-"You can use - to exclude words or phrases, &quot;double quotes&quot; for "
+"You can use - to exclude words or phrases, \" for "
 "exact phrases and the AND/OR boolean operators combined with parenthesis for "
 "complex queries."
 msgstr ""
 
 #: .\templates\zinnia\tags\similar_entries.html.py:9
 msgid "No similar entries."
-msgstr ""
+msgstr "אין ערכים דומים"
 
 #: .\templates\zinnia\tags\tag_cloud.html.py:6
 #, python-format
@@ -1436,20 +1435,20 @@ msgstr[1] ""
 #: .\templatetags\zbreadcrumbs.py:90
 #, python-format
 msgid "Page %s"
-msgstr ""
+msgstr "עמוד %s"
 
 #: .\templatetags\zbreadcrumbs.py:116
 #, python-format
 msgid "Week %s"
-msgstr ""
+msgstr "שבוע %s"
 
 #: .\tests\views.py:450 .\views\search.py:30
 msgid "The pattern is too short"
-msgstr ""
+msgstr "התבנית קצרה מדי"
 
 #: .\tests\views.py:454 .\views\search.py:34
 msgid "No pattern to search found"
-msgstr ""
+msgstr "לא נמצא ערך לחיפוש"
 
 #: .\urls\__init__.py:23
 msgid "^feeds/"
@@ -1587,24 +1586,24 @@ msgstr ""
 #: .\views\tags.py:48
 #, python-format
 msgid "No Tag found matching \"%s\"."
-msgstr ""
+msgstr "לא נמצא תג מתאים ל-\"%s\". "
 
 #: .\xmlrpc\metaweblog.py:45
 msgid "Username is incorrect."
-msgstr ""
+msgstr "שם המשתמש שגוי."
 
 #: .\xmlrpc\metaweblog.py:47
 msgid "Password is invalid."
-msgstr ""
+msgstr "סיסמה שגויה."
 
 #: .\xmlrpc\metaweblog.py:49
 msgid "User account unavailable."
-msgstr ""
+msgstr "חשבון המשתמש אינו זמין. "
 
 #: .\xmlrpc\metaweblog.py:52
 #, python-format
 msgid "User cannot %s."
-msgstr ""
+msgstr "המשתמש אינו יכול %s."
 
 #: .\xmlrpc\pingback.py:108
 msgid "No title"
@@ -1616,4 +1615,4 @@ msgstr "אנא הכנס מספר טלפון חוקי"
 
 #: templates\contact_form\contact.html
 msgid "Please enter at least one of mail and phone fields"
-msgstr "אנא הכנס לפחות אחד משדות הדואר האלקטרוני והטלפון"
+msgstr""

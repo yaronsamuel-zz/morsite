@@ -1,7 +1,8 @@
 todo
 
-
-
+prices
+add product description
+remove sidebar
 
 mail not required for comment
 comments/post/
@@ -9,7 +10,7 @@ remove url from comment
 
 sidebar
 
-prices
+
 
 
 
