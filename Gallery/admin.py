@@ -2,10 +2,11 @@ from django.contrib import admin
 from Gallery.models import GalleryImage
 from orderedmodel import OrderedModelAdmin
 
-    
+
+
 class GalleryImageAdmin(OrderedModelAdmin):
     
-    list_display = ('title',
+    list_display = ('Title',
                     'image_short_name' , 
                     'homepage',
                     'gallery',

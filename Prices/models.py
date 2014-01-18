@@ -5,23 +5,29 @@ from orderedmodel import OrderedModel
 class ProductCategory(OrderedModel):
     category_Name = models.CharField(max_length=50)
     category_description = models.CharField(max_length=100  , blank=True)
+    category_image =  models.ImageField(upload_to='products/categories')
     
     def __unicode__(self):
         return u'%s' % (self.category_Name, )
-        
+    
+    @property
+    def pictureURL(self):
+        if self.category_image:
+            return  self.category_image.url        
+        else:
+            return None
 
 class Product(OrderedModel):
+    
     category = models.ForeignKey(ProductCategory)
-    product_name = models.CharField(max_length=50)
-    product_description = models.CharField(max_length=500  , blank=True)
-    comments = models.CharField(max_length=300 , blank=True)
+    product_name = models.CharField(max_length=50)    
+    # product_description = models.CharField(max_length=500  , blank=True)    
     product_picture = ImageWithThumbsField(upload_to='products/',
-                                    sizes=((125,125),(200,200)) , null=True ,blank=True)    
+                                    sizes=() , null=True ,blank=True)    
 
     regular_price = models.IntegerField()
     big_price = models.IntegerField(default = 0 , null=True)
-    huge_price = models.IntegerField(default = 0 , null=True)
-    datePublished = models.DateTimeField('date published')
+    huge_price = models.IntegerField(default = 0 , null=True)    
 
     
     @property
@@ -36,16 +42,7 @@ class Product(OrderedModel):
         prices = [ self.regular_price , self.big_price ,self.huge_price]
         prices = [str(p) for p in prices if p > 0]
         return ' / '.join(prices)
-    
-    
-      
-    @property
-    def thumb125(self):
-        return self.product_picture.url_125x125
-        
-    @property    
-    def thumb200(self):
-        return self.product_picture.url_200x200
+
         
 
     

@@ -10,42 +10,51 @@
 {% block body-onload %}setupZoom(){% endblock body-onload %}
 {% block content %}
     
-    <div id="prices-container">
-    <table id="prices-container">
-    {% for category in prCategories %}
-    <tr id="prices-container">
-        <td>
-        <h1>{{ category.category_Name }}</h1>
-        </td>
-         <td>
-            <h3>{{ category.category_description }}</h3>
-        </td>
-    </tr>    
-    {% for product in category.product_set.all %}
-        <tr id="prices-container">
-            <td width="125px">
-              {% if product.pictureURL %}
-                    <a href="{{product.pictureURL }}" 
-                    {% if product.product_description %}
-                    title="{{ product.product_description}}"
-                    >
-                    {% endif %}
-                    <img src="{{product.thumb125 }}"/></a> 
-              
-              {% else %}
-                    &nbsp
-              {% endif %} 
-            </td>
-            <td width="200px">
-            {{ product.product_name }}
-            </td>
-            <td>
-                {{ product.priceStr }}
-            </td>
-        </tr>
+    
+    
+    {% for triple_categories in product_categories %}
+    
+        <ul id="prices-ul">
+        {% for category in triple_categories %}
+           
+           <li id="prices-container">
+                    <div id="category-picture">
+                        <img src ="{{ category.pictureURL }}" />
+                        <h1>{{ category.category_Name }}</h1>
+                        {% if category.category_description %}
+                        <h4>{{ category.category_description }}</h4>
+                        {% else %}
+                        <h4>&nbsp<h4>
+                        {% endif %}
+                    </div>
+                <table>
+                {% for product in category.product_set.all %}
+                    <tr>
+                         <td id="icon-column" >
+                          {% if product.pictureURL %}
+                                <a href="{{product.pictureURL }}" title="{{ product.product_description}}">
+                                <i class="fa fa-plus-square prices-icon"></i>                 
+                                </a> 
+                          
+                          {% else %}
+                                &nbsp
+                          {% endif %} 
+                        </td>
+                        <td id="name-column" >
+                        <h3>{{ product.product_name }}</h3>
+                        </td>
+                        <td id="prices-column">
+                            <h3>{{ product.priceStr }}</h3>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </table>
+            </li>
+
+
     {% endfor %}
+    </ul>
     
     {% endfor %}
-    </table>
-    </div>
+    
 {% endblock content %}

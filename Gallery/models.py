@@ -3,18 +3,17 @@ from orderedmodel import OrderedModel
 from morsite.thumbs import ImageWithThumbsField
 import os
 
-THUMB_H_FLOAT = 200.0
-THUMB_HEIGHT = int(THUMB_H_FLOAT)
-THUMB_WIDTH = 200
-
+HOMEPAGE_THUMB_SIZE = (100*2,100*2)
+HOMEPAGE_THUMB_WIDTH = 170
+HOMEPAGE_THUMB_HEIGHT = 170
+GALLERY_THUMB_SIZE = (123 * 2 , 112*2) 
+SIZES = [HOMEPAGE_THUMB_SIZE , GALLERY_THUMB_SIZE]
 
 # thumb that is (19,9) is in format (w,h) gets url 19x9.jpg
 
 class GalleryImage(OrderedModel):
     
-    picture_width = models.IntegerField(blank=True, null=True,)
-    picture_height = models.IntegerField(blank=True, null=True,)
-    item_picture  = ImageWithThumbsField(upload_to = 'SliderGallery/' , magnify = False) 
+    item_picture  = ImageWithThumbsField(upload_to = 'Gallery/' , magnify = False , sizes = SIZES) 
     homepage = models.BooleanField(default = False)
     gallery = models.BooleanField(default = True)
     title = models.CharField(max_length=30 , blank=True)
@@ -27,19 +26,31 @@ class GalleryImage(OrderedModel):
         existing items without having to manually shuffle 
         them all around.
         """
+       
+        # sizes = []
+        # if self.homepage:
+            # sizes.append(HOMEPAGE_THUMB_SIZE)
+            
+        # if self.gallery:    
+            # sizes.append(GALLERY_THUMB_SIZE)
+                
+        # if sizes:
+            # self.item_picture.sizes = sizes
         
-        self.picture_height = THUMB_HEIGHT
-        # self.picture_width  = 1.0 * self.item_picture.width * (THUMB_H_FLOAT / self.item_picture.height )
-        # self.picture_width = int(self.picture_width)
-        self.picture_width = THUMB_WIDTH
-        
-        
-        self.item_picture.sizes = ( (self.picture_width, self.picture_height) , ) 
         super(GalleryImage, self).save()
+        
         
     def __unicode__(self):
         return u'%s' % (os.path.basename(self.item_picture.name) , )
        
+    
+    def Title(self):
+        if not self.title:
+            return "Untitled"
+        return self.title
+    
+    Title.short_description = 'Title'
+    
     def image_short_name(self):
         return self.__unicode__()
         
@@ -49,15 +60,23 @@ class GalleryImage(OrderedModel):
     def pictureURL(self):
         return self.item_picture.url
     
+
     @property    
-    def thumb_size(self):
-        return (self.picture_width , self.picture_height)
-    
-    @property    
-    def thumb(self):
+    def thumb_hompage(self):
         
-        (w,h) = self.thumb_size
+        (w,h) = HOMEPAGE_THUMB_SIZE
         split = self.pictureURL.rsplit('.',1)
         thumb_url = '%s.%sx%s.%s' % (split[0],w,h,split[1])
         
         return thumb_url
+        
+    @property    
+    def thumb_gallery(self):
+        
+        (w,h) = GALLERY_THUMB_SIZE
+        split = self.pictureURL.rsplit('.',1)
+        thumb_url = '%s.%sx%s.%s' % (split[0],w,h,split[1])
+        
+        return thumb_url
+        
+        

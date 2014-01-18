@@ -1,0 +1,71 @@
+{% load static %}
+{% load gallerybuilder %}{% gallery homepage %} 
+
+
+{% block script %}
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>     <!-- link to the jQuery library (see http://jquery.com) -->    
+    <script src="{% static 'beaverslider/beaverslider2.0-compressed.js' %}"></script>
+	<script src="{% static 'beaverslider/beaverslider2.0-effects-compressed.js' %}"></script>
+    
+    
+	
+<script>
+    {% for images , interval in imagesItemsArray %}
+    $(function(){
+      var slider = new BeaverSlider({
+        structure: {
+          container: {
+            id: "my-slider-{{forloop.counter0}}",
+            width: {{width}},
+            height: {{height}}
+          }
+        },
+        content: {
+          images: [
+          {% for image in images %}
+                '{{image }}' , 
+            {% endfor %}
+          ]
+        },
+        animation: {
+          effects: "fadeOut:2000:10:10,fade:2000:10:10",
+          interval: 12000,
+          initialInterval: {{ interval }}
+        }
+      });   
+	});
+    
+    
+	{% endfor %}
+</script>
+
+{% endblock script %}
+	
+<table>
+    <tr>
+        <td>
+        <div id="slider-wrap">
+            <div id="my-slider-0"></div>
+        </div>
+        </td>
+        <td>
+        <div id="slider-wrap">
+            <div id="my-slider-1"></div>
+        </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <div id="slider-wrap">
+            <div id="my-slider-2"></div>
+        </div>
+        </td>
+        <td>
+        <div id="slider-wrap">
+            <div id="my-slider-3"></div>
+        </div>
+        </td>
+    </tr>
+
+</table>

@@ -8,26 +8,21 @@ class ProductInline(admin.TabularInline):
     exclude = ('order',)
  
 class CategoryAdmin(OrderedModelAdmin):
-    # fieldsets = [
-        # (None,               {'fields': ['category_Name']}),
-        # ('Description',      {'fields': ['category_description'],
-                              # 'classes': ['collapse']})
-                              # ]
-    
+   
     search_fields = ['category_Name',
                     'category_description',
                     ]
     
     fields = ['category_Name',
               'category_description', 
+              'category_image' ,
               ]
               
     list_display = ('category_Name',
               'category_description' ,
+              'category_image' , 
               'reorder' , 
               )
-              
-    # list_filter = ['datePublished']
 
     inlines = [ProductInline]
 
@@ -36,8 +31,6 @@ class ProductAdmin(OrderedModelAdmin):
            
     list_display = ('category' , 
                     'product_name',
-                    'product_description' ,
-                    'comments' , 
                     'regular_price',
                     'big_price',
                     'huge_price' ,
@@ -45,13 +38,10 @@ class ProductAdmin(OrderedModelAdmin):
               )
               
     search_fields = ['product_name',
-                    'product_description',
-                    'comments' , 
                     'regular_price',
                     'big_price',
                     'huge_price']
                     
-    list_filter = ['datePublished']
     
 
 

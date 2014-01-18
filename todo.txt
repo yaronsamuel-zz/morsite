@@ -1,12 +1,14 @@
 todo
 
 
+
+
 mail not required for comment
 comments/post/
 remove url from comment
 
 sidebar
-gallery
+
 prices
 
 

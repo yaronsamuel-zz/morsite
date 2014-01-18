@@ -178,7 +178,7 @@ function zoomClick(from, evt) {
         lastZoomed = from;
         if (zoomToggle) {         
             zoomIn(from, shift); 
-            zoomToggle = false;
+            zoomToggle = true;
          
         }else {
             zoomOut(from, shift); 
