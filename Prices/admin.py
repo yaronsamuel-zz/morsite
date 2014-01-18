@@ -31,6 +31,7 @@ class ProductAdmin(OrderedModelAdmin):
            
     list_display = ('category' , 
                     'product_name',
+                    'product_description',
                     'regular_price',
                     'big_price',
                     'huge_price' ,
@@ -40,7 +41,8 @@ class ProductAdmin(OrderedModelAdmin):
     search_fields = ['product_name',
                     'regular_price',
                     'big_price',
-                    'huge_price']
+                    'huge_price',
+                    'product_description']
                     
     
 

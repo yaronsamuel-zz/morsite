@@ -21,7 +21,7 @@ class Product(OrderedModel):
     
     category = models.ForeignKey(ProductCategory)
     product_name = models.CharField(max_length=50)    
-    # product_description = models.CharField(max_length=500  , blank=True)    
+    product_description = models.CharField(max_length=100  , blank=True)    
     product_picture = ImageWithThumbsField(upload_to='products/',
                                     sizes=() , null=True ,blank=True)    
 
@@ -41,7 +41,7 @@ class Product(OrderedModel):
     def priceStr(self):
         prices = [ self.regular_price , self.big_price ,self.huge_price]
         prices = [str(p) for p in prices if p > 0]
-        return ' / '.join(prices)
+        return '/'.join(prices)
 
         
 
