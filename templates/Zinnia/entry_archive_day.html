@@ -15,15 +15,19 @@
 
 {% if previous_day %}
 <h3>{% trans "Previous day" %}</h3>
-<p>
+<ul>
+    <li>
   <a href="{% url 'zinnia_entry_archive_day' previous_day|date:"Y" previous_day|date:"m" previous_day|date:"d" %}" rel="archives">{{ previous_day|date:"DATE_FORMAT" }}</a>
-</p>
+  </li>
+</ul>
 {% endif %}
 {% if next_day %}
 <h3>{% trans "Next day" %}</h3>
-<p>
+<ul>
+    <li>
   <a href="{% url 'zinnia_entry_archive_day' next_day|date:"Y" next_day|date:"m" next_day|date:"d" %}" rel="archives">{{ next_day|date:"DATE_FORMAT" }}</a>
-</p>
+  </li>
+</ul>
 {% endif %}
 
 <h3>{% trans "Archives" %}</h3>

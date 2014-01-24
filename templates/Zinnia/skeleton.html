@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" media="screen, projection" href="{% static "zinnia/css/screen.css" %}" />
     <link rel="stylesheet" type="text/css" media="print" href="{% static "zinnia/css/print.css" %}" />    	
     <link rel="stylesheet" href="{% static 'margarita/css/style.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
     
     <!--[if lt IE 8]>
         <link rel="stylesheet" type="text/css" media="screen, projection" href="{% static "zinnia/css/ie.css" %}" />
@@ -28,23 +29,6 @@
   <body onload="{% block body-onload %}{% endblock body-onload %}" class="zinnia {% block theme-class %}light{% endblock theme-class %} {% block color-class %}magenta{% endblock color-class %} {% block sidebar-class %}right-sidebar{% endblock sidebar-class %} {% block body-class %}{% endblock body-class %}" >
     <div id="page">
 		<div id="header">
-<!--             <h1>
-              <a href="{% url 'zinnia_entry_archive_index' %}" title="העוגות של מור" rel="home">
-                העוגות של מור
-              </a>
-            </h1>
-            <ul class="top-navigation">
-              <li>
-                <a href="{% url 'zinnia_sitemap' %}" title="{% trans "Sitemap" %}" class="sitemap">
-                  {% trans "Sitemap" %}
-                </a>
-              </li>
-<!--               <li>
-                <a href="{% url 'zinnia_entry_latest_feed' %}" title="{% trans "RSS Feed of latest entries" %}" class="feeds">
-                  {% trans "RSS Feed" %}
-                </a>
-              </li>
- -->            
             </ul> -->
 			<div id="logo">
 				<a href="index.html"><img src="{% static 'margarita/images/logo.png' %}" alt="LOGO"></a>
@@ -63,10 +47,8 @@
         <div id="body">
         <div class="container" id="middle">
 
-          <div id="sidebar">
-            {% block sidebar %}
-            {% endblock sidebar %}
-          </div>
+        {% block sidebar %}
+        {% endblock sidebar %}
           
           <div id="content" class="hfeed">
             {% block content %}

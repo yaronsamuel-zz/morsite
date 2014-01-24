@@ -24,15 +24,19 @@
 
 {% if previous_month %}
 <h3>{% trans "Previous month" %}</h3>
-<p>
+<ul>
+  <li>
   <a href="{% url 'zinnia_entry_archive_month' previous_month|date:"Y" previous_month|date:"m" %}" rel="archives">{{ previous_month|date:"YEAR_MONTH_FORMAT" }}</a>
-</p>
+  </li>
+</ul>
 {% endif %}
 {% if next_month %}
 <h3>{% trans "Next month" %}</h3>
-<p>
+<ul>
+  <li>
   <a href="{% url 'zinnia_entry_archive_month' next_month|date:"Y" next_month|date:"m" %}" rel="archives">{{ next_month|date:"YEAR_MONTH_FORMAT" }}</a>
-</p>
+  </li>
+</ul>
 {% endif %}
 <h3>{% trans "Archives" %}</h3>
 <ul>

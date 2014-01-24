@@ -20,8 +20,8 @@ urlpatterns = patterns('',
     url(r'^topmenu.html', 'menu.views.topmenu_view'),
     url(r'^hompageGallery.html', 'Gallery.views.homepage_gallery_view'),
     url(r'^Gallery.html', 'Gallery.views.gallery_view'),
-    url(r'^contact/', 'contact_form.contact_form.contact'),
-    url(r'^thanks/', 'contact_form.contact_form.thanks'),
-    url(r'^contact/sidebar', 'contact_form.contact_form.contact'),    
+    url(r'^contact/', 'contact_form.views.contact'),
+    url(r'^thanks/', 'contact_form.views.thanks'),
+    url(r'^contact/sidebar', 'contact_form.views.contact'),    
 ) 
 

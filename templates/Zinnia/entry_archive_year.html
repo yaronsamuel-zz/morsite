@@ -24,15 +24,15 @@
 
 {% if previous_year %}
 <h3>{% trans "Previous year" %}</h3>
-<p>
+<ul><li>
   <a href="{% url 'zinnia_entry_archive_year' previous_year|date:"Y" %}" rel="archives">{{ previous_year|date:"Y" }}</a>
-</p>
+</li></ul>
 {% endif %}
 {% if next_year %}
 <h3>{% trans "Next year" %}</h3>
-<p>
+<ul><li>
   <a href="{% url 'zinnia_entry_archive_year' next_year|date:"Y" %}" rel="archives">{{ next_year|date:"Y" }}</a>
-</p>
+</li></ul>
 {% endif %}
 
 {% endblock content-related %}

@@ -3,63 +3,47 @@
 {% load static %}
 {% load formbuilder %}{% contact_form_tag %} 
 
+<h3>הזמינו עכשיו!</h3>
 
-<link rel="stylesheet" href="{% static 'contact_form/css/sidebar.css' %}" media="screen" />
-
-<link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
-
-
-<div id="sidebar-form-container">
     <div id="sidebar-contact-info">
-        <p id="sidebar-contact-info">
-        <i class="fa fa-arrow-circle-o-left sidebar-icon"></i>
-        הזמינו עכשיו!
-        </p>
+
         <p id="sidebar-contact-info">
         <i class="fa fa-phone-square sidebar-icon"></i>
         0546-345-733
         </p>
     </div>
-    <hr>
 
-<form id="sidebar-form" action="/contact/" method="post">{% csrf_token %}
+    <form id="sidebar-form" action="/contact/" method="post">{% csrf_token %}
 
-    <fieldset><legend>Contact form</legend>																			
-
-        <p class="first">
-            <label for="{{ form.name.id_for_label }}" ></label>  
-            <input id="{{ form.name.id_for_label }}" name="{{ form.name.html_name }}" type="text" size="30" placeholder="שם..."/>   
-        </p>
-        {% comment%}
-        <p>
-            
-            <label for="{{ form.address.id_for_label }}" ></label>
-            <input id="{{ form.address.id_for_label }}" name="{{ form.address.html_name }}" type="text" size="30" placeholder="כתובת..."/>   
-        </p>
-        {% endcomment%}
-        <p>
-            <label for="{{ form.phone.id_for_label }}" ></label>
-            <input id="{{ form.phone.id_for_label }}" name="{{ form.phone.html_name }}" type="text" size="30" placeholder="טלפון..."/>   
-        </p>
-		<p>
-            <label for="{{ form.mail.id_for_label }}" ></label>
-            <input id="{{ form.mail.id_for_label }}" name="{{ form.mail.html_name }}" type="text" size="30" placeholder="דואר אלקטרוני..."/>
-        </p>
-        
-        <p>            
-            <label for="{{ form.message.id_for_label }}" ></label>
-            <textarea id="{{ form.message.id_for_label }}" name="{{ form.message.html_name }}" cols="30" rows="25" placeholder="תוכן ההודעה..."></textarea>            
-        </p>	
-        
-    </fieldset>
-    <p class="submit">
-        <button type="submit" class="sidebar-submit-button">שלח!</button>
-        
-    </p>
+            <p class="first">
+                <label for="{{ form.name.id_for_label }}" ></label>  
+                <input id="{{ form.name.id_for_label }}" name="{{ form.name.html_name }}" type="text" size="30" placeholder="שם..."/>   
+            </p>
+            {% comment%}
+            <p>
                 
-</form>	
+                <label for="{{ form.address.id_for_label }}" ></label>
+                <input id="{{ form.address.id_for_label }}" name="{{ form.address.html_name }}" type="text" size="30" placeholder="כתובת..."/>   
+            </p>
+            <p>
+                <label for="{{ form.mail.id_for_label }}" ></label>
+                <input id="{{ form.mail.id_for_label }}" name="{{ form.mail.html_name }}" type="text" size="30" placeholder="דואר אלקטרוני..."/>
+            </p>
+            {% endcomment%}
+            <p>
+                <label for="{{ form.phone.id_for_label }}" ></label>
+                <input id="{{ form.phone.id_for_label }}" name="{{ form.phone.html_name }}" type="text" size="30" placeholder="טלפון..."/>   
+            </p>
+            
+            <p>            
+                <label for="{{ form.message.id_for_label }}" ></label>
+                <textarea id="{{ form.message.id_for_label }}" name="{{ form.message.html_name }}" cols="30" rows="25" placeholder="תוכן ההודעה..."></textarea>            
+            </p>	
+            
+        <p class="submit">
+            <button type="submit" class="sidebar-submit-button">שלח!</button>
+            
+        </p>
 
-
-</div>
-
-
+                    
+    </form>	

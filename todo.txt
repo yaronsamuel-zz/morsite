@@ -1,19 +1,10 @@
 todo
 
-prices
-add product description
-remove sidebar
 
-mail not required for comment
-comments/post/
-remove url from comment
+do the 2-3 static pages
 
-sidebar
-
-
-
-
-
-
-? 
-pre footer for side bar stuff
+remove stuff from sidebar
+replace abox not home page
+replace the title img
+replace titles of pages
+icon of pages

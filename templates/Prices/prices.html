@@ -18,9 +18,7 @@
     <h2 style="font-family:felix007Medium; margin-right: 350px;">מחירון</h2>
     
     {% for triple_categories in product_categories %}
-    {% for i in "XXXX" %}
         <ul id="prices-ul">
-    {% for i in "XXX" %}
         {% for category in triple_categories %}
            
            <li id="prices-container">
@@ -47,7 +45,7 @@
                           {% endif %} 
                         </td>
                         <td id="name-column" >
-                        <h3>{{ product.product_name }}</h3>
+                        <h3 style="text-align:right;">{{ product.product_name }}</h3>
                         </td>
                         <td id="prices-column">
                             <h3>{{ product.priceStr }}</h3>
@@ -66,9 +64,9 @@
             </li>
 
 
-    {% endfor %}    {% endfor %}
+    {% endfor %}
     </ul>
-        {% endfor %}
+
     {% endfor %}
     
 {% endblock content %}

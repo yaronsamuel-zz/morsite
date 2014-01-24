@@ -20,7 +20,9 @@ a{ text-decoration:none;
  }
 
 #wrap{ overflow:hidden; 
- padding:35px;
+ box-shadow: 10px 10px 5px #888888;
+ margin: 35px 40px;
+ padding: 35px;
  width: 820px;
  }
 #pbOverlay.show ~ #wrap{ -webkit-filter:blur(2px) grayscale(.4); 

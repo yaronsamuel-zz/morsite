@@ -1,0 +1,86 @@
+﻿{% load zinnia_tags i18n %}
+<div id="sidebar">
+
+    <div id="serch-sidebar">
+        <form method="get" action="{% url 'zinnia_entry_search' %}">
+          <p>
+            <input type="text" value="{% trans "חפש באתר..." %}" name="pattern" onfocus="this.value=''" />
+            <input type="submit" class="submitbutton" value="OK" />
+          </p>
+        </form>
+    </div>
+    {% block facebook-block %}
+        <div id="fb-sidebar-wrap">
+            <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fmorscakes&amp;width=240&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" 
+            scrolling="no" 
+            frameborder="0" 
+            style="border:none; overflow:hidden; width:250px; height:258px;" 
+            allowTransparency="true">
+            </iframe>
+        </div>
+    {% endblock facebook-block %}
+
+    {% if contact_page %}
+    {% else %}
+    {% block contact-sidebar-block %}
+    <div class="section">
+        {% include "contact_form/contactSideBar.html" %}
+    </div>
+    {% endblock contact-sidebar-block %}
+    {% endif %}
+
+    <form action="index.html" method="post" id="newsletter">
+        <h3>הצטרפו עכשיו לניוזלטר</h3>
+        <input type="submit" value="הירשם" class="btn">
+        <input type="text" value="" class="txtfield">
+    </form>
+
+    <div class="section">
+        <div id="widget-categories" class="widget">
+          <h3>{% trans "Categories" %}</h3>
+          {% get_categories %}
+        </div>
+
+        <div id="widget-tags" class="widget">
+          <h3>{% trans "Tags" %}</h3>
+          {% get_tag_cloud %}
+        </div>
+        <div id="widget-recents" class="widget">
+          <h3>{% trans "Recent entries" %}</h3>
+          {% get_recent_entries %}
+        </div>
+        <div id="widget-comments" class="widget">
+          <h3>{% trans "Recent comments" %}</h3>
+          {% get_recent_comments %}
+        </div>
+    </div>
+
+    {% if user.is_authenticated %}
+    <div id="widget-tools" class="widget">
+      <h3>{% trans "Tools" %}</h3>
+      <ul>
+        {% if perms.zinnia %}
+        <li>
+          <a href="{% url 'admin:app_list' 'zinnia' %}" title="{% trans "Dashboard" %}">
+            {% trans "Dashboard" %}
+          </a>
+        </li>
+        {% endif %}
+        {% if perms.zinnia.add_entry %}
+        <li>
+          <a href="{% url 'admin:zinnia_entry_add' %}" title="{% trans "Post an entry" %}">
+            {% trans "Post an entry" %}
+          </a>
+        </li>
+        {% endif %}
+        {% block admin-tools %}
+        {% endblock admin-tools %}
+        <li>
+          <a href="{% url 'admin:logout' %}" title="{% trans "Log out" %}">
+            {% trans "Log out" %}
+          </a>
+        </li>
+      </ul>
+    </div>
+    {% endif %}
+</div>

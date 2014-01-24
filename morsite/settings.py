@@ -146,8 +146,10 @@ INSTALLED_APPS = (
     'menu' ,
     'Gallery',
     'contact_form',
-
+    'my_comment_app',
 )
+
+COMMENTS_APP = 'my_comment_app'
 
 #Zinnia stuff
 TEMPLATE_CONTEXT_PROCESSORS = (

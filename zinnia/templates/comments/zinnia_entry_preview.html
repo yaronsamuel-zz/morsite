@@ -1,4 +1,4 @@
-{% extends "zinnia/base.html" %}
+{% extends "zinnia/base_not_home_page.html" %}
 {% load i18n zinnia_tags comments %}
 
 {% block title %}{% trans "Comment preview" %}{% endblock title %}
@@ -7,9 +7,9 @@
 
 {% block content %}
   {% if form.errors %}
-  <h2>{% blocktrans count errors=form.errors|length %}Please correct following error.{% plural %}Please correct following errors.{% endblocktrans %}</h2>
+  <h3>{% blocktrans count errors=form.errors|length %}Please correct following error.{% plural %}Please correct following errors.{% endblocktrans %}</h3>
   {% else %}
-  <h2>{% trans "Preview of the comment" %}</h2>
+  <h3>{% trans "Preview of the comment" %}</h3>
   <ol id="comment-list">
     {% with comment=form.get_comment_object %}
     <li id="comment-preview" class="comment vcard box1">

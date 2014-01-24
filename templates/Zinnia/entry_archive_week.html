@@ -16,19 +16,23 @@
 
 {% if previous_week %}
 <h3>{% trans "Previous week" %}</h3>
-<p>
+<ul>
+  <li>
   <a href="{% url 'zinnia_entry_archive_week' previous_week|date:"Y" previous_week|date:"W" %}" rel="archives">
     {% blocktrans with year=previous_week|date:"Y" week_number=previous_week|date:"W" %}Week {{ week_number }} of {{ year }}{% endblocktrans %}
   </a>
-</p>
+  </li>
+</ul>
 {% endif %}
 {% if next_week %}
 <h3>{% trans "Next week" %}</h3>
-<p>
+<ul>
+  <li>
   <a href="{% url 'zinnia_entry_archive_week' next_week|date:"Y" next_week|date:"W" %}" rel="archives">
     {% blocktrans with year=next_week|date:"Y" week_number=next_week|date:"W" %}Week {{ week_number }} of {{ year }}{% endblocktrans %}
   </a>
-</p>
+  </li>
+</ul>
 {% endif %}
 <h3>{% trans "Archives" %}</h3>
 <ul>
@@ -38,6 +42,6 @@
   <li>
     <a href="{% url 'zinnia_entry_archive_month' week|date:"Y" week|date:"m" %}" rel="archives">{{ week|date:"YEAR_MONTH_FORMAT" }}</a>
   </li>
-<ul>
+</ul>
 
 {% endblock content-related %}

@@ -1,5 +1,5 @@
 
-{% extends "zinnia/base.html" %}
+{% extends "zinnia/base_not_home_page.html" %}
 {% load static %}
 {% block content %}
 
@@ -8,61 +8,68 @@
 <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
 
 
-<div id="contact-title">
-    <i class="fa fa-envelope fa-4x page-title-icon" style="margin-right:10px"></i>
-    <h1>פנייתך התקבלה בהצלחה!</h1>
-</div>
-<div id="form-container">
-    <div id="form1" >
-    <div id="contact-info">
-        <p>
-        פרטי פנייתך
-        </p>        
-    </div>
-    <hr>
+
+<div id="featured" >
     
+    <h3>צור קשר </h3>
+    
+    <ul>
+    <div id="contact-info">
+    <p></h3>
+        <p id="contact-info">
+        <i class="fa fa-envelope form-info-icon"></i>
+        פנייתך התקבלה בהצלחה!
+        </p>
+    
+    </div>
+    <hr id="contact-hr">
+    
+    <div id="form1" >
+        <p id="details-title">
+        פרטי פנייתך
+        </p>      
     
        <table border=0 >
         <tr>
-            <td id="details-td">
+            <td style="width:120px" id="details-td" class="required">
                 שם 
             </td>
-            <td id="details-td">
+            <td id="details-td"  style="width:350px;"   >
             {{ name }}
             </td>
         </tr>
         <tr>
-            <td id="details-td">
+            <td style="width:120px" id="details-td" class="required">
                 טלפון 
             </td>
-            <td id="details-td">
+            <td id="details-td"  style="width:350px;"   >
             {{ phone }}
             </td>
         </tr>
         
         <tr>
-            <td id="details-td">
+            <td style="width:120px" id="details-td" class="required">
                 דואר אלקטרוני 
             </td>
-            <td id="details-td">
+            <td id="details-td"  style="width:350px;"   >
             {{ mail }}
             </td>
         </tr>
         
         <tr>
-            <td id="details-td">
+            <td style="width:120px" id="details-td" class="required">
                 כתובת 
             </td>
-            <td id="details-td">
+            <td id="details-td"  style="width:350px;"   >
             {{ address }}
             </td>
         </tr>
         
         <tr>
-            <td id="details-td">
+            <td style="width:120px" id="details-td" class="required">
                 תוכן ההודעה 
             </td>
-            <td id="details-td">
+            <td id="details-td"  style="width:350px;"   >
             {{ message }}
             </td>
         </tr>

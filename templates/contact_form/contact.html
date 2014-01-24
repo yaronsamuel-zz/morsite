@@ -1,11 +1,11 @@
 
-{% extends "zinnia/base.html" %}
+{% extends "zinnia/base_not_home_page.html" %}
 {% load static %}
 {% block content %}
 
-<link rel="stylesheet" href="{% static 'contact_form/css/contact_form.css' %}" media="screen" />
-
+{% block link %}
 <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+{% endblock link %}
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -15,16 +15,12 @@
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-
-
-
-
-    <div id="contact-title">
-        <i class="fa fa-envelope fa-4x page-title-icon"></i>
-        <h1 style="display:inline;">צור קשר </h1>
-    </div>
+      
     
-<div id="form-container">
+<div id="featured">
+    <h3>צור קשר </h3>
+    <ul>
+
 
 
     <div id="contact-info">
@@ -45,112 +41,144 @@
         <a href="https://www.facebook.com/morscakes">
         הצטרפו לדף הפייסבוק
         </a>
+        <div id="facebook-wrap">
         <div class="fb-like" 
             data-href="https://www.facebook.com/morscakes" 
             data-layout="button" 
             data-action="like" 
             data-show-faces="false" 
-            data-share="false">
+            data-share="false"
+            >
+        </div>
         </div>
         
         </p>
     </div>
-    <hr>
+    <hr id="contact-hr">
     
     <form  action="/contact/" method="post">{% csrf_token %}
 	<div id="form1">
-    {% if send_mail_fail %}
-    
-        <h3 id="error-message">
-        שליחת ההודעה נכשלה עקב תקלה טכנית. אנא נסו שנית או צרו קשר באמצעות הדרכים המוצגות למעלה.
-        </h3>
-    
-    {% endif %}
-    
-    {% if form.non_field_errors %}
-                <ol id="error_ol">
-                {% for error in form.non_field_errors %}
-                    <li id="error"><strong>{{ error|escape }}</strong></li>
-                {% endfor %}
-                </ol>
-    {% endif %}
-      
-    <fieldset><legend>Contact form</legend>
-        <p class="first">
-            <label for="{{ form.name.id_for_label }}" >שם</label>
-            {% if form.name.errors %}
-                <ol id="error_ol">
-                {% for error in form.name.errors %}
-                    <li id="error"><strong>{{ error|escape }}</strong></li>
-                {% endfor %}
-                </ol>
-            {% endif %}    
-            <input id="{{ form.name.id_for_label }}" name="{{ form.name.html_name }}" type="text" size="30" placeholder="שם..."/>   
-        </p>
-        <p>
-            
-            <label for="{{ form.address.id_for_label }}" >כתובת (אופציונלי)</label>
-            {% if form.address.errors %}
-                <ol id="error_ol">
-                {% for error in form.address.errors %}
-                    <li id="error"><strong>{{ error|escape }}</strong></li>
-                {% endfor %}
-                </ol>
-            {% endif %}  
-            <input id="{{ form.address.id_for_label }}" name="{{ form.address.html_name }}" type="text" size="30" placeholder="כתובת..."/>   
-        </p>
-        <p>
-            <label for="{{ form.phone.id_for_label }}" >טלפון</label>
-            {% if form.phone.errors %}
-                <ol id="error_ol">
-                {% for error in form.phone.errors %}
-                    <li id="error"><strong>{{ error|escape }}</strong></li>
-                {% endfor %}
-                </ol>
-            {% endif %}  
-            <input id="{{ form.phone.id_for_label }}" name="{{ form.phone.html_name }}" type="text" size="30" placeholder="טלפון..."/>   
-        </p>
-		<p>
-            <label for="{{ form.mail.id_for_label }}" >דואר אלקטרוני</label>
-            {% if form.mail.errors %}
-                <ol id="error_ol">
-                {% for error in form.mail.errors %}
-                    <li id="error"><strong>{{ error|escape }}</strong></li>
-                {% endfor %}
-                </ol>
-            {% endif %} 
-            <input id="{{ form.mail.id_for_label }}" name="{{ form.mail.html_name }}" type="text" size="30" placeholder="דואר אלקטרוני..."/>
-        </p>
+        {% if send_mail_fail %}
         
-    </fieldset>
-    
-    <fieldset>
-        <p>            
-            <label for="{{ form.message.id_for_label }}" >תוכן הודעה</label>
-            {% if form.message.errors %}
-                <ol id="error_ol">
-                {% for error in form.message.errors %}
-                    <li id="error"><strong>{{ error|escape }}</strong></li>
-                {% endfor %}
-                </ol>
-            {% endif %}
-            <textarea id="{{ form.message.id_for_label }}" name="{{ form.message.html_name }}" cols="30" rows="25"></textarea>            
-        </p>								
+            <h3 id="error-message">
+            שליחת ההודעה נכשלה עקב תקלה טכנית. אנא נסו שנית או צרו קשר באמצעות הדרכים המוצגות למעלה.
+            </h3>
         
-    </fieldset>	
-    
-    <p class="clear">
-        <button type="reset" class="clear-button">נקה שדות</button>
+        {% endif %}
         
-    </p>
-	
-	</div>
-	<button type="submit" class="submit-button">שלח!</button>
-</form>	
+        {% if form.non_field_errors %}
+                    <ol id="error_ol">
+                        <li><strong>אנא תקן את השדות השגויים:</strong></li>
+                    </ol>
+        {% endif %}
+          
+        <table>
+            <tr>
+            <td style="width:120px;" >
+                <label class="required" for="{{ form.name.id_for_label }}" >שם *</label>
+            </td>
+            <td style="width:350px;">
+                {% if form.name.errors %}
+                    <ol id="error_ol">
+                    {% for error in form.name.errors %}
+                        <li><strong>{{ error|escape }}</strong></li>
+                    {% endfor %}
+                    </ol>
+                {% endif %}    
+                <input id="{{ form.name.id_for_label }}" name="{{ form.name.html_name }}" type="text" size="30" placeholder="שם..."
+                {% if form.name.value %}
+                    value="{{form.name.value}}" 
+                {% endif %}
+                />   
+            </td>
+            </tr>
+            <tr>
+                <td>
+                <label class="required" for="{{ form.phone.id_for_label }}" >טלפון *</label>
+                </td>
+                <td>
+                {% if form.phone.errors %}
+                    <ol id="error_ol">
+                    {% for error in form.phone.errors %}
+                        <li><strong>{{ error|escape }}</strong></li>
+                    {% endfor %}
+                    </ol>
+                {% endif %}  
+                <input id="{{ form.phone.id_for_label }}" name="{{ form.phone.html_name }}" type="text" size="30" placeholder="טלפון..."
+                {% if form.phone.value %}
+                value="{{form.phone.value}}" 
+                {% endif %}
+                />   
+                </td>
+            </tr>
+            <tr>
+                <td>
+                
+                <label for="{{ form.address.id_for_label }}" >כתובת</label>
+                </td>
+                <td>
+                {% if form.address.errors %}
+                    <ol id="error_ol">
+                    {% for error in form.address.errors %}
+                        <li><strong>{{ error|escape }}</strong></li>
+                    {% endfor %}
+                    </ol>
+                {% endif %}  
+                <input id="{{ form.address.id_for_label }}" name="{{ form.address.html_name }}" type="text" size="30" placeholder="כתובת..."
+                {% if form.address.value %}
+                    value="{{form.address.value}}" 
+                {% endif %}/>   
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <label for="{{ form.mail.id_for_label }}" >דואר אלקטרוני</label>
+                </td>
+                <td>
+                {% if form.mail.errors %}
+                    <ol id="error_ol">
+                    {% for error in form.mail.errors %}
+                        <li><strong>{{ error|escape }}</strong></li>
+                    {% endfor %}
+                    </ol>
+                {% endif %} 
+                <input id="{{ form.mail.id_for_label }}" name="{{ form.mail.html_name }}" type="text" size="30" placeholder="דואר אלקטרוני..."
+                {% if form.mail.value %}
+                    value="{{form.mail.value}}" 
+                {% endif %}
+                />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <label class="required" for="{{ form.message.id_for_label }}" >תוכן הודעה *</label>
+                </td>
+                <td>
+                {% if form.message.errors %}
+                    <ol id="error_ol">
+                    {% for error in form.message.errors %}
+                        <li><strong>{{ error|escape }}</strong></li>
+                    {% endfor %}
+                    </ol>
+                {% endif %}
+                <textarea id="{{ form.message.id_for_label }}" name="{{ form.message.html_name }}" cols="30" rows="25">{% if form.message.value %}{{form.message.value}}{% endif %}</textarea>
+                </td>
+            </tr>
+        </table>
+        
+        
+        <div id="buttons">
+            <button type="reset" class="clear-button">נקה שדות</button>
+            <button type="submit" class="submit-button">שלח!</button>
+        </div>
+        
+    </div>
+    </form>	
 
 
+
+    </ul>
 </div>
-
 
 
 {% endblock content %}
