@@ -1,13 +1,16 @@
-todo
-
-change BG
-921*162 blog header
-
+yaron
+##############
+order fail
+seraching
+change Background
+insert newletter
+place holder of comment
 
 mor
 ########
-replace abox not home page
-ask about title of tabs
+choose Background
+921*162 blog header
+decide title of tabs
 newletter
 
 production
