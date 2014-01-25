@@ -29,9 +29,11 @@
   <body onload="{% block body-onload %}{% endblock body-onload %}" class="zinnia {% block theme-class %}light{% endblock theme-class %} {% block color-class %}magenta{% endblock color-class %} {% block sidebar-class %}right-sidebar{% endblock sidebar-class %} {% block body-class %}{% endblock body-class %}" >
     <div id="page">
 		<div id="header">
-            </ul> -->
+            </ul>
 			<div id="logo">
-				<a href="index.html"><img src="{% static 'margarita/images/logo.png' %}" alt="LOGO"></a>
+                <a href="{% url 'morsite.views.homepage' %}">
+                    <img src="{% static 'margarita/images/mor/upper_title.png' %}" style="height:70px;" alt="LOGO">
+                </a>
 			</div>
 			<div id="navigation">
                 {% block top_menu_block %}   

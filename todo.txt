@@ -10,7 +10,6 @@ remove stuff from sidebar
 replace abox not home page
 replace the title img
 ask about title of tabs
-
 newletter
 
 production
