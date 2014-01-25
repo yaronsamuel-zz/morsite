@@ -26,7 +26,7 @@ class CategoryAdminForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(CategoryAdminForm, self).__init__(*args, **kwargs)
-        rel = ManyToOneRel(Category, 'id')
+        rel = ManyToOneRel(Category, Entry, 'id')
         self.fields['parent'].widget = RelatedFieldWidgetWrapper(
             self.fields['parent'].widget, rel, self.admin_site)
 
@@ -53,7 +53,7 @@ class EntryAdminForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(EntryAdminForm, self).__init__(*args, **kwargs)
-        rel = ManyToManyRel(Category, 'id')
+        rel = ManyToManyRel(Category, Entry, 'id')
         self.fields['categories'].widget = RelatedFieldWidgetWrapper(
             self.fields['categories'].widget, rel, self.admin_site)
         self.fields['sites'].initial = [Site.objects.get_current()]

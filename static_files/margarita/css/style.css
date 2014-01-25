@@ -655,7 +655,7 @@ display: inline-block;
 	width: 249px;
 	margin: 0 0 0 -44px;
 	padding: 0 0 15px 24px;
-    
+    text-indent: 10px;
 }
 
 
@@ -954,6 +954,16 @@ vertical-align: middle;
 #connect a.vimeo:hover {
 	background-position: 0 -150px;
 }
+
+/* kisses */
+#static-page-image img{
+width:500px;
+margin:6px 20px 0 30px !important;
+}
+
+
+/* kisses */
+
 /** About **/
 #about #main > div h4 {
 	color: #7d7c7c;

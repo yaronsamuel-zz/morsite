@@ -1201,7 +1201,7 @@ msgstr "ארכיון %(category)s"
 #: .\templates\zinnia\entry_list.html:38
 #, python-format
 msgid "Tag archives: %(tag)s"
-msgstr ""
+msgstr "ארכיון: %(tag)s"
 
 #: .\templates\zinnia\entry_list.html:42
 #, python-format

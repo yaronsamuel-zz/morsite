@@ -7,6 +7,9 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^index.html','morsite.views.homepage'),
+    url(r'^kisses.html','morsite.views.kissesPage'),
+    url(r'^course.html','morsite.views.coursePage'),
+    
     url(r'^admin/', include(admin.site.urls)),
     url(r'^Prices/', include('Prices.urls')),
     

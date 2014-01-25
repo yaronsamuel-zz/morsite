@@ -32,7 +32,9 @@
     {% if category %}
     <h3>{% blocktrans %}Category archives: {{ category }}{% endblocktrans %}</h3>
         {% if category.description %}
-        <p>{{ category.description|striptags|safe }}</p>
+        <div id="contact-info" style="text-indent:20px">
+            <p>{{ category.description|striptags|safe }}</p>
+        </div>
         {% endif %}
     
 

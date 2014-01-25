@@ -12,4 +12,22 @@ def homepage(request):
         'homepage' : True , 
     })
     return HttpResponse(template.render(context))
+    
+
+def kissesPage(request):
+    
+    template = loader.get_template('morsite/kisses.html')
+    context = RequestContext(request, {
+
+    })
+    return HttpResponse(template.render(context))
      
+
+     
+def coursePage(request):
+    
+    template = loader.get_template('morsite/course.html')
+    context = RequestContext(request, {
+
+    })
+    return HttpResponse(template.render(context))

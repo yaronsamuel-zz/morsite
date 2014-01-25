@@ -1,10 +1,19 @@
 todo
 
+tips and recipies ?
 
-do the 2-3 static pages
 
+mor
+########
+decide icon of pages
 remove stuff from sidebar
 replace abox not home page
 replace the title img
-replace titles of pages
-icon of pages
+ask about title of tabs
+
+newletter
+
+production
+###########
+change mail in settings
+change mail of admin
