@@ -19,25 +19,25 @@ class GalleryImage(OrderedModel):
     title = models.CharField(max_length=30 , blank=True)
     description = models.CharField(max_length=50 , blank=True)
     
-    def save(self):
-        """
-        Re-order all items from 10 upwards, at intervals of 10.
-        This makes it easy to insert new items in the middle of 
-        existing items without having to manually shuffle 
-        them all around.
-        """
+    # def save(self , ):
+        # """
+        # Re-order all items from 10 upwards, at intervals of 10.
+        # This makes it easy to insert new items in the middle of 
+        # existing items without having to manually shuffle 
+        # them all around.
+        # """
        
-        # sizes = []
-        # if self.homepage:
-            # sizes.append(HOMEPAGE_THUMB_SIZE)
+        # # sizes = []
+        # # if self.homepage:
+            # # sizes.append(HOMEPAGE_THUMB_SIZE)
             
-        # if self.gallery:    
-            # sizes.append(GALLERY_THUMB_SIZE)
+        # # if self.gallery:    
+            # # sizes.append(GALLERY_THUMB_SIZE)
                 
-        # if sizes:
-            # self.item_picture.sizes = sizes
+        # # if sizes:
+            # # self.item_picture.sizes = sizes
         
-        super(GalleryImage, self).save()
+        # super(GalleryImage, self).save()
         
         
     def __unicode__(self):
