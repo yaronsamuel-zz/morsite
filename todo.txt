@@ -4,7 +4,8 @@ order fail
 seraching
 change Background
 insert newletter
-place holder of comment
+remove mail from comments
+name optinal for comments
 
 mor
 ########
