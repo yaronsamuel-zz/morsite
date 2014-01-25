@@ -1,14 +1,12 @@
 todo
 
-tips and recipies ?
+change BG
+921*162 blog header
 
 
 mor
 ########
-decide icon of pages
-remove stuff from sidebar
 replace abox not home page
-replace the title img
 ask about title of tabs
 newletter
 

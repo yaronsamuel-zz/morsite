@@ -13,7 +13,7 @@
     <meta name="author" content="Mor Samuel" />
     {% block meta %}{% endblock meta %}
     <!-- <link rel="pingback" href="/xmlrpc/" /> -->
-    <link rel="shortcut icon" href="{% static 'margarita/images/mor/cupcake2.png' %}" />
+    <link rel="shortcut icon" href="{% static 'margarita/images/mor/sicon.png' %}" />
     <link rel="home" href="{% url 'zinnia_entry_archive_index' %}" />
     <link rel="stylesheet" type="text/css" media="screen, projection" href="{% static "zinnia/css/screen.css" %}" />
     <link rel="stylesheet" type="text/css" media="print" href="{% static "zinnia/css/print.css" %}" />    	
@@ -25,6 +25,8 @@
     <![endif]-->
     {% block link %}{% endblock link %}
     {% block script %}{% endblock script %}
+	
+
   </head>
   <body onload="{% block body-onload %}{% endblock body-onload %}" class="zinnia {% block theme-class %}light{% endblock theme-class %} {% block color-class %}magenta{% endblock color-class %} {% block sidebar-class %}right-sidebar{% endblock sidebar-class %} {% block body-class %}{% endblock body-class %}" >
     <div id="page">
@@ -42,7 +44,7 @@
 			</div>
 		</div>
      <div id="contents">
-        <div id="adbox">
+        <div id="bababox">
             {% block abox %}
             {% endblock abox %}
         </div>
