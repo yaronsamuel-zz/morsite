@@ -7,6 +7,7 @@
     {% for field in form %}
     {% if field.is_hidden %}{{ field }}{% else %}
     {% if field.name != "url" %}
+    {% if field.name != "email" %}
     {% if user.email and field.name in "namemailurl" %}{% else %}
     <div{% if field.errors %} class="error"{% endif %}{% ifequal field.name "honeypot" %} style="display:none;"{% endifequal %}>
       {{ field.label_tag }}
@@ -15,7 +16,7 @@
       
     </div>
     {% endif %}{% endif %}
-    {% endif %}
+    {% endif %}{% endif %}
     {% endfor %}
     {% if user.is_authenticated %}
     <p class="auth">

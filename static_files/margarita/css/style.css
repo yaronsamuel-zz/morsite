@@ -287,6 +287,23 @@ float:right;
 
 /* End Prices */
 
+/* serach page */
+
+div .search {
+margin-right: 35px;
+}
+
+#search-summary {
+width: 300px;
+margin-right: 35px;
+display: inline-block;
+}
+
+
+/* end serach page */
+
+
+
 
 /* contact page */
 

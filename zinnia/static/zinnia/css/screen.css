@@ -422,7 +422,7 @@ display:inline
 
 .zinnia .info{
 color:#fff;
-background:#2ba6cb;
+background:#D8E0E2;
 border:2px solid rgba(0,0,0,0.1);
 border-color:#4fbada;
 text-shadow:0 -1px rgba(0,0,0,0.3);
@@ -432,7 +432,8 @@ text-shadow:0 -1px rgba(0,0,0,0.3);
 -o-border-radius:3px;
 border-radius:3px;
 padding:0.5em;
-margin-bottom:1em
+margin-bottom:1em;
+font-size:14px !important; 
 }
 
 .zinnia .info a{
@@ -494,7 +495,7 @@ color:#fff
 
 .zinnia .success{
 color:#fff;
-background:#7fae00;
+background:#D8E0E2;
 border:2px solid rgba(0,0,0,0.1);
 border-color:#a4e100;
 text-shadow:0 -1px rgba(0,0,0,0.3);
@@ -504,7 +505,8 @@ text-shadow:0 -1px rgba(0,0,0,0.3);
 -o-border-radius:3px;
 border-radius:3px;
 padding:0.5em;
-margin-bottom:1em
+margin-bottom:1em;
+font-size:14px !important; 
 }
 
 .zinnia .success a{

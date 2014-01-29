@@ -1,10 +1,8 @@
 yaron
 ##############
-seraching
 change Background
 insert newletter
-remove mail from comments
-name optinal for comments
+
 
 mor
 ########

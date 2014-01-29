@@ -1243,8 +1243,8 @@ msgstr ""
 #, python-format
 msgid "%(entry_count)s entry found"
 msgid_plural "%(entry_count)s entries found"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "פוסט %(entry_count)s נמצא"
+msgstr[1] "%(entry_count)s פוסטים נמצאו"
 
 #: .\templates\zinnia\entry_search.html:34
 msgid "Nothing found."
