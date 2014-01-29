@@ -1,0 +1,52 @@
+{% extends "zinnia/entry_list.html" %}
+{% load i18n zinnia_tags %}
+
+{% block title %}{% trans "Search results for" %} '{{ pattern }}'{% endblock title %}
+
+{% block meta-description %}{% trans "Search results for" %} '{{ pattern }}'{% endblock meta-description %}
+
+{% block link %}
+  {{ block.super }}
+  <link rel="alternate" type="application/rss+xml" title="{% trans "RSS Feed of search result of" %} '{{ pattern }}'" href="{% url 'zinnia_entry_search_feed' %}?pattern={{ pattern }}" />
+{% endblock link %}
+
+{% block body-class %}{{ block.super }} search {% if object_list %}search-results{% else %}search-no-results{% endif %}{% endblock body-class %}
+
+{% block content-title %}
+<h3>{% trans "Search results for" %} '{{ pattern }}'</h3>
+
+{% if error %}
+<p class="error">{{ error }}</p>
+{% endif %}
+
+{% if object_list %}
+<div id="search-summary">
+    <p class="success">
+      {% blocktrans count entry_count=paginator.count %}{{ entry_count }} entry found{% plural %}{{ entry_count }} entries found{% endblocktrans %}
+    </p>
+</div>
+{% else %}
+<div id="search-summary">
+    <p class="info">{% trans "Nothing found." %}</p>
+</div>
+<div class="search">
+  {% include "zinnia/tags/search_form.html" %}
+</div>
+{% endif %}
+{% endblock content-title %}
+
+{% block content-loop %}
+{% if not error %}
+{% for object in object_list %}
+  {% include object.content_template with object_content=object.html_preview continue_reading=1 %}
+{% endfor %}
+{% endif %}
+{% endblock content-loop %}
+
+{% block content-related %}
+{% if object_list %}
+<div class="search">
+  {% include "zinnia/tags/search_form.html" %}
+</div>
+{% endif %}
+{% endblock content-related %}
