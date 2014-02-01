@@ -904,6 +904,11 @@ text-transform:capitalize
 .zinnia.magenta h1,.zinnia.magenta h2,.zinnia.magenta h3,.zinnia.magenta h4,.zinnia.magenta h5,.zinnia.magenta h6{
 color:#d33682
 }
+/* 
+.zinnia .entry-content h1{
+font-size:25px;
+color:black;
+} */
 
 .zinnia.magenta a{
 color:#d33682

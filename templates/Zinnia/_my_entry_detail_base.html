@@ -63,7 +63,7 @@
       {% block entry-body %}
 
             {% block entry-content %}
-                {{ object_content|safe }}
+                {{ object_content|safe|striptags }}
             {% endblock entry-content %}
             <!-- In hendrerit sollicitudin eros, sit amet tincidunt magna condimentum id. Phasellus nec el -->
 

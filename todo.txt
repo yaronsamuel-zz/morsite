@@ -2,6 +2,10 @@ yaron
 ##############
 change Background
 insert newletter
+striptags issue?
+    -can use excerpt
+    - if not regular stripped preview
+    - consider br
 
 
 mor

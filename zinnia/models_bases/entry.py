@@ -211,7 +211,9 @@ class ContentEntry(models.Model):
         """
         Returns a preview of the "content" field formmated in HTML.
         """
-        return HTMLPreview(self.html_content)
+        return self.excerpt
+
+        # return HTMLPreview(self.html_content)
 
     @property
     def word_count(self):
