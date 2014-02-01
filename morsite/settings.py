@@ -25,6 +25,7 @@ def assign(name , value):
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+
 ADMINS = [
     ('Yaron' , 'samuel.yaron@gmail.com') ,         
     # ('Your Name', 'your_emai@example.com'),
@@ -46,7 +47,7 @@ DATABASES = {
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -100,8 +101,10 @@ SECRET_KEY = 'f3oda#81rs%yu+*-bc%_5@*nmmf0!yiyw23d(!34awfexfc+j-'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
+    ('django.template.loaders.cached.Loader', (
+        'django.template.loaders.filesystem.Loader',
+        'django.template.loaders.app_directories.Loader',
+    )),
 #     'django.template.loaders.eggs.Loader',
 )
 

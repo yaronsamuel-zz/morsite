@@ -548,7 +548,8 @@ line-height:1.68em
 
 .zinnia #widget-tags ul.tags li{
 list-style:none;
-display:inline
+display:inline;
+border-top: none;
 }
 
 .zinnia #widget-tags ul.tags .tag-1{

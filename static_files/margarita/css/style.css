@@ -140,10 +140,12 @@ img {
 	width: 126px;
 	padding-right: 6px;
     list-style-image: none;
+    position: relative;
+    top: -6px;
 }
 #navigation li:hover, #navigation li.selected {
 	background: url(../images/bg-navi-hover.png) no-repeat right top;
-	margin: -6px 0 0;
+	/* margin: -6px 0 0; */
 }
 #navigation li a {
 	color: #f0f0a8;
@@ -155,9 +157,9 @@ img {
     font-family:"felix007Medium";
     
 }
-#navigation li a:hover, #navigation li.selected a {
+#navigation li a:hover, #navigation li.selected a {    
 	background-color: #f0f0a8;
-	padding: 14px 0 21px;
+	padding: 8.5px 0 27px;
 	color: #563013;
 }
 /*------------------------------ CONTENTS ------------------------------*/
@@ -704,7 +706,7 @@ display: inline-block;
 #sidebar > div.section h3 {
 	background-position: -172px -60px;
 	color: #ffffff;
-	font-size: 16px;
+	font-size: 23px;
 	font-style: italic;
 	font-weight: normal;
 	height: 28px;
@@ -1462,7 +1464,7 @@ margin:6px 20px 0 30px !important;
 	text-decoration: none;
 }
 #footer .navigation li a:hover, #footer .navigation li.selected a {
-	color: #eb32ba;
+	color: #9e1c20;
 	text-decoration: underline;
 }
 
