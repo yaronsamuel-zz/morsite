@@ -2,6 +2,10 @@ yaron
 ##############
 insert newletter
 
+font on prcies
+font on contact and static pages
+inputs color
+
 mor
 ########
 decide title of tabs
