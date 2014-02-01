@@ -1,17 +1,9 @@
 yaron
 ##############
-change Background
 insert newletter
-striptags issue?
-    -can use excerpt
-    - if not regular stripped preview
-    - consider br
-
 
 mor
 ########
-choose Background
-921*162 blog header
 decide title of tabs
 newletter
 

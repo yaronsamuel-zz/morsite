@@ -12,7 +12,7 @@
 {% block body-class %}{{ block.super }} archive index {% now "\y\e\a\r-Y \m\o\n\t\h-m \w\e\ek-W \d\a\y-d" %}{% endblock body-class %}
 
 {% block content-related %}
-{% if date_list %}
+<!-- {% if date_list %}
 <div id="more-archives">
 <h3>{% trans "Yearly archives" %}</h3>
 <ul>
@@ -23,5 +23,13 @@
   {% endfor %}
 </ul>
 </div>
-{% endif %}
+{% endif %} -->
+
+    <div class="section">
+        <div id="widget-tags" class="widget">
+          <h3>{% trans "Categories" %}</h3>
+          {% get_tag_cloud %}
+        </div>
+
+    </div>
 {% endblock content-related %}

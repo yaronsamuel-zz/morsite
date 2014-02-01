@@ -63,7 +63,6 @@ font-weight:normal
 .zinnia h1{
 font-size:3em;
 line-height:1;
-margin-bottom:0.50em
 }
 
 .zinnia h2{
@@ -73,14 +72,12 @@ margin-bottom:0.75em
 
 .zinnia h3{
 font-size:1.5em;
-line-height:1;
-margin-bottom:1.00em
+/* line-height:1;
+margin-bottom:1.00em */
 }
 
 .zinnia h4{
 font-size:1.2em;
-line-height:1.25;
-margin-bottom:1.25em
 }
 
 .zinnia h5{
@@ -544,7 +541,7 @@ padding-left:1.5em
 
 
 .zinnia #widget-tags ul.tags{
-padding:0;
+padding: 0 13px;
 font-size:1.4em;
 line-height:1.68em
 }
@@ -900,40 +897,64 @@ text-transform:capitalize
 }
 
 
+.zinnia.magenta h1{
+color: #9e1c20;
+font-size: 27px;
+font-family:"yehuda";
+font-weight:bold;
+}
 
-.zinnia.magenta h1,.zinnia.magenta h2,.zinnia.magenta h3,.zinnia.magenta h4,.zinnia.magenta h5,.zinnia.magenta h6{
+.zinnia.magenta h2{
+color:#9e1c20;
+font-family:"ganfont";
+}
+.zinnia.magenta h3{
+font-family:"felix007medium";
 color:#d33682
 }
-/* 
-.zinnia .entry-content h1{
+.zinnia.magenta h4{
+color:#d33682
+}
+
+.zinnia.magenta h5{
+color: #563013;
+font-size: 16px;
+}
+
+
+.zinnia.magenta h6{
+color:#d33682
+}
+
+/* .zinnia .entry-content h1{
 font-size:25px;
 color:black;
 } */
 
 .zinnia.magenta a{
-color:#d33682
+color:#9e1c20
 }
 
 .zinnia.magenta a:visited{
-color:#d33682
+color:#9e1c20
 }
 
 .zinnia.magenta a:focus{
-color:#d33682
+color:#9e1c20
 }
 
 .zinnia.magenta a:hover{
-color:#d84b8f
+color:#9e1c20
 }
 
 .zinnia.magenta a:active{
-color:#dcbf60
+color:#9e1c20
 }
 
 .zinnia.magenta ol.flex-control-nav li a.active{
-background:#d33682
+background:#9e1c20
 }
 
 .zinnia.magenta .slide-content a{
-color:#e175a9
+color:#9e1c20
 }

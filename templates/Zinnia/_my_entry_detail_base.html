@@ -63,19 +63,23 @@
       {% block entry-body %}
 
             {% block entry-content %}
-                {{ object_content|safe|striptags }}
+			<h5>
+                {{ object_content|safe }}
+			</h5>
             {% endblock entry-content %}
             <!-- In hendrerit sollicitudin eros, sit amet tincidunt magna condimentum id. Phasellus nec el -->
 
             {% block continue-reading %}
             {% if continue_reading %} 
             <!-- and object_content.has_more -->
-            <a href="{{ object.get_absolute_url }}"
+            <h5>
+			<a href="{{ object.get_absolute_url }}"
                  title="{% blocktrans with object=object.title %}Continue reading {{ object }}{% endblocktrans %}"
                  class="more"
                  rel="bookmark">
                 {% trans "Continue reading" %}
             </a>
+			</h5>
             {% endif %}
             {% endblock continue-reading %}
       {% endblock entry-body %}

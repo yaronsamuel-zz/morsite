@@ -24,16 +24,49 @@
 }
 
 
+.yehuda {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'yehuda', sans-serif;
+    font-size-adjust: 0.45;
+}
+
+@font-face{ 
+	font-family: 'yehuda';
+	src: url('../fonts/yehudaclm-light-webfont.eot');
+	src: url('../fonts/yehudaclm-light-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/yehudaclm-light-webfont.woff') format('woff'),
+	     url('../fonts/yehudaclm-light-webfont.ttf') format('truetype'),
+	     url('../fonts/yehudaclm-light-webfont.svg#webfont') format('svg');
+}
+
+
+.ganfont {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'ganfont', sans-serif;
+    font-size-adjust: 0.45;
+}
+
+@font-face{ 
+	font-family: 'ganfont';
+	src: url('../fonts/ganclm_bold-webfont.eot');
+	src: url('../fonts/ganclm_bold-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/ganclm_bold-webfont.woff') format('woff'),
+	     url('../fonts/ganclm_bold-webfont.ttf') format('truetype'),
+	     url('../fonts/ganclm_bold-webfont.svg#webfont') format('svg');
+}
+
 
 body {
-	background: #e4e4e7 url(../images/bg-body.jpg) repeat-x left top;
+	background: #f0f0a8 url(../images/bg-body.jpg) repeat-x left top;
 	font-family: Verdana, Geneva, sans-serif;
 	margin: 0;
 }
 /*------------------------------ Sprites ------------------------------*/
-#page, #main, #main > div, #featured, #featured ul {
+/* #page, #main, #main > div, #featured, #featured ul {
 	background: url(../images/bg-shadows.png) no-repeat;
-}
+} */
 .btn, #navigation > a.cart, #shop a.cart, #shop a.proceed, #shop div.buttons a.back, #shop div.buttons span.update {
 	background: url(../images/buttons.png) no-repeat;
 }
@@ -113,7 +146,7 @@ img {
 	margin: -6px 0 0;
 }
 #navigation li a {
-	color: #2e2e2e;
+	color: #f0f0a8;
 	display: block;
 	font-size: 22px;
 	padding: 8px 0 18px;
@@ -123,12 +156,13 @@ img {
     
 }
 #navigation li a:hover, #navigation li.selected a {
-	background-color: #ffffff;
+	background-color: #f0f0a8;
 	padding: 14px 0 21px;
+	color: #563013;
 }
 /*------------------------------ CONTENTS ------------------------------*/
 #contents {
-	background: #ffffff url(../images/bg-content.jpg) no-repeat left top;
+	background: #ffffff /* url(../images/bg-content.jpg) no-repeat left top */;
 	min-height: 940px;
 	width: 940px;
 	margin: 0 auto;
@@ -137,14 +171,14 @@ img {
 	background-position: 0 0;
 }
 #contents h2 {
-	color: #bd188a;
-	display: inline-block;
-	font-family: "AlexBrush-Regular";
-	font-size: 90px;
-	font-weight: normal;
-	line-height: 90px;
-	margin: 0;
-	padding: 0 20px;
+color: #9e1c20;
+display: inline-block;
+font-family: "ganfont";
+font-size: 30px;
+font-weight: normal;
+line-height: 40px;
+margin: 0;
+padding: 0 20px;
 }
 #contents p {
 	color: #7c7c7c;
@@ -161,16 +195,22 @@ img {
 }
 
 
+
+
 /** Adbox **/
 #bababox {
 	max-height: 466px;
 	min-height: auto;
-	padding: 5px 0 0;
+	padding: 0;
 	text-align: center;
 }
 
 #bababox img{
 z-index:0;
+}
+
+#abox-not-homepage{
+background-color:#f0f0a8;
 }
 
 #wrap-abox {
@@ -373,13 +413,13 @@ width:90%
     }
 
 .submit-button {
-	-moz-box-shadow:inset 0px 1px 8px 2px #fbafe3;
-	-webkit-box-shadow:inset 0px 1px 8px 2px #fbafe3;
-	box-shadow:inset 0px 1px 8px 2px #fbafe3;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff5bb0), color-stop(1, #ef027d) );
-	background:-moz-linear-gradient( center top, #ff5bb0 5%, #ef027d 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bb0', endColorstr='#ef027d');
-	background-color:#ff5bb0;
+	-moz-box-shadow:inset 0px 1px 0px 0px #db925e;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #db925e;
+	box-shadow:inset 0px 1px 0px 0px #db925e;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #563013), color-stop(1, #995728) );
+	background:-moz-linear-gradient( center top, #563013 5%, #995728 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#563013', endColorstr='#995728');
+	background-color:#563013;
 	-webkit-border-top-left-radius:0px;
 	-moz-border-radius-topleft:0px;
 	border-top-left-radius:0px;
@@ -393,9 +433,9 @@ width:90%
 	-moz-border-radius-bottomleft:0px;
 	border-bottom-left-radius:0px;
 	text-indent:0;
-	border:1px solid #ee1eb5;
+	border:1px solid #7a3b0d;
 	display:inline-block;
-	color:#ffffff;
+	color:#f0f0a8;
 	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
@@ -405,17 +445,18 @@ width:90%
 	width:100px;
 	text-decoration:none;
 	text-align:center;
-	text-shadow:1px 1px 0px #c70067;
+	text-shadow:1px 1px 0px #563013;
 }
 .submit-button:hover {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ef027d), color-stop(1, #ff5bb0) );
-	background:-moz-linear-gradient( center top, #ef027d 5%, #ff5bb0 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ef027d', endColorstr='#ff5bb0');
-	background-color:#ef027d;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #995728), color-stop(1, #563013) );
+	background:-moz-linear-gradient( center top, #995728 5%, #563013 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#995728', endColorstr='#563013');
+	background-color:#995728;
 }.submit-button:active {
 	position:relative;
 	top:1px;
 }
+/* This button was generated using CSSButtonGenerator.com */
 
 
 .clear-button {
@@ -524,11 +565,10 @@ font-size: 20px !important;
 #featured h3 {
 	background-position: -1px 0;
 	color: #fff;
-	font-size: 16px;
+	font-size: 23px;
 	font-style: italic;
 	font-weight: normal;
 	height: 44px;
-	line-height: 24px;
 	width: 650px;
 	margin: 0 20px 0 0;
 	padding: 0 0 0 20px;
@@ -570,8 +610,8 @@ width:260px;
 	padding: 0;
 }
 #featured ul li a.more {
-	color: #eabe60;
-	font-size: 12px;
+	color: #563013;
+	font-size: 16px;
 	font-style: italic;
 	text-decoration: none;
     float:left;
@@ -764,18 +804,14 @@ img{
     text-align: center;
     }	
 
-
-
-
-
 .sidebar-submit-button {
-	-moz-box-shadow:inset 0px 1px 8px 2px #fbafe3;
-	-webkit-box-shadow:inset 0px 1px 8px 2px #fbafe3;
-	box-shadow:inset 0px 1px 8px 2px #fbafe3;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff5bb0), color-stop(1, #ef027d) );
-	background:-moz-linear-gradient( center top, #ff5bb0 5%, #ef027d 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bb0', endColorstr='#ef027d');
-	background-color:#ff5bb0;
+	-moz-box-shadow:inset 0px 1px 0px 0px #db925e;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #db925e;
+	box-shadow:inset 0px 1px 0px 0px #db925e;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #563013), color-stop(1, #995728) );
+	background:-moz-linear-gradient( center top, #563013 5%, #995728 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#563013', endColorstr='#995728');
+	background-color:#563013;
 	-webkit-border-top-left-radius:0px;
 	-moz-border-radius-topleft:0px;
 	border-top-left-radius:0px;
@@ -789,27 +825,26 @@ img{
 	-moz-border-radius-bottomleft:0px;
 	border-bottom-left-radius:0px;
 	text-indent:0;
-	border:1px solid #ee1eb5;
+	border:1px solid #7a3b0d;
 	display:inline-block;
-	color:#ffffff;
+	color:#f0f0a8;
 	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
 	font-style:normal;
 	height:40px;
 	line-height:40px;
-	width:203px;
+	width:204px;
 	text-decoration:none;
 	text-align:center;
-	text-shadow:1px 1px 0px #c70067;
+	text-shadow:1px 1px 0px #563013;
 }
 .sidebar-submit-button:hover {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ef027d), color-stop(1, #ff5bb0) );
-	background:-moz-linear-gradient( center top, #ef027d 5%, #ff5bb0 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ef027d', endColorstr='#ff5bb0');
-	background-color:#ef027d;
-}
-.sidebar-submit-button:active {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #995728), color-stop(1, #563013) );
+	background:-moz-linear-gradient( center top, #995728 5%, #563013 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#995728', endColorstr='#563013');
+	background-color:#995728;
+}.sidebar-submit-button:active {
 	position:relative;
 	top:1px;
 }
