@@ -6,6 +6,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 admin.autodiscover()
 
 urlpatterns = patterns('',
+    url(r'^$','morsite.views.homepage' , name='index'),
     url(r'^index.html','morsite.views.homepage'),
     url(r'^kisses.html','morsite.views.kissesPage'),
     url(r'^course.html','morsite.views.coursePage'),
