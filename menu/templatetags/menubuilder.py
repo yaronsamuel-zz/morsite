@@ -33,11 +33,17 @@ class TopMenuObject(template.Node):
         context['menu_item_width'] = menu_item_width
         
         context['highighted'] = None
-
+        isHompage = context.get('homepage' , False)
+        
+        if isHompage:
+             current_path = 'index.html'
+        
         for item in menuItems:          
             if item.link_url.endswith(current_path):
                 context['highlighted'] = item
                 break
+        
+
             
         return ''
     
