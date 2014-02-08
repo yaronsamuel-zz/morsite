@@ -1,0 +1,99 @@
+{% load i18n staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="{{ LANGUAGE_CODE }}" lang="{{ LANGUAGE_CODE }}" version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Samuel Cakes{% if not homepage %} - {% endif %}{% block title %}{% endblock title %}{% block title-page %}{% endblock title-page %}</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="cache-control" content="public" />
+    <meta name="robots" content="follow, all" />
+    <meta name="language" content="{{ LANGUAGE_CODE }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{% block meta-description %}{% trans "Just another Zinnia weblog." %}{% endblock meta-description %}{% block meta-description-page %}{% endblock meta-description-page %}" />
+    <meta name="keywords" content="{% block meta-keywords %}django, blog, weblog, zinnia{% endblock meta-keywords %}" />
+    <meta name="author" content="Mor Samuel" />
+    {% block meta %}{% endblock meta %}
+    <!-- <link rel="pingback" href="/xmlrpc/" /> -->
+    <link rel="shortcut icon" href="{% static 'margarita/images/mor/favicon.png' %}" />
+    <link rel="home" href="{% url 'zinnia_entry_archive_index' %}" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="{% static "zinnia/css/screen.css" %}" />
+    <link rel="stylesheet" type="text/css" media="print" href="{% static "zinnia/css/print.css" %}" />    	
+    <link rel="stylesheet" href="{% static 'margarita/css/style.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+    
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" type="text/css" media="screen, projection" href="{% static "zinnia/css/ie.css" %}" />
+    <![endif]-->
+    {% block link %}{% endblock link %}
+    {% block script %}{% endblock script %}
+	
+
+  </head>
+  <body onload="{% block body-onload %}{% endblock body-onload %}" class="zinnia {% block theme-class %}light{% endblock theme-class %} {% block color-class %}magenta{% endblock color-class %} {% block sidebar-class %}right-sidebar{% endblock sidebar-class %} {% block body-class %}{% endblock body-class %}" >
+    <div id="page">
+		<div id="header">
+            </ul>
+			<div id="logo">
+                <a href="{% url 'morsite.views.homepage' %}">
+                    <img src="{% static 'margarita/images/mor/upper_title.png' %}" style="height:70px;" alt="LOGO">
+                </a>
+			</div>
+			<div id="navigation">
+                {% block top_menu_block %}   
+                    {% include  "menu/_top_menu.html" %}
+                {% endblock top_menu_block %}
+			</div>
+		</div>
+     <div id="contents">
+        <div id="bababox">
+            {% block abox %}
+            {% endblock abox %}
+        </div>
+        <div id="body">
+        <div class="container" id="middle">
+
+        {% block sidebar %}
+        {% endblock sidebar %}
+          
+          <div id="content" class="hfeed">
+            {% block content %}
+            <div class="links">
+              <h3>{% trans "Useful links" %}</h3>
+              <ul>
+                <li>
+                  <a href="{% url 'zinnia_entry_archive_index' %}" title="{% trans "Weblog index" %}">
+                    {% trans "Weblog index" %}
+                  </a>
+                </li>
+                <li>
+                  <a href="{% url 'zinnia_sitemap' %}" title="{% trans "Sitemap" %}">
+                    {% trans "Sitemap" %}
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="search">
+              <h3>{% trans "Search" %}</h3>
+              {% include "zinnia/tags/search_form.html" %}
+            </div>
+            {% endblock content %}
+          </div>
+         
+        </div>
+        </div>
+     </div>
+     <div id="footer">
+        <div>
+            {% block footer_menu %}   
+                    {% include  "menu/_footer_menu.html" %}
+            {% endblock footer_menu %}
+
+            <p>
+                © Samuel Cakes 2014 All Rights Reserved
+            <br>
+                {% blocktrans %}Powered by <a href="http://www.djangoproject.com">Django</a> and <a href="https://github.com/Fantomas42/django-blog-zinnia">Zinnia {{ ZINNIA_VERSION }}</a>{% endblocktrans %}
+            </p>
+        </div>
+    </div>
+  </body>
+</html>
+

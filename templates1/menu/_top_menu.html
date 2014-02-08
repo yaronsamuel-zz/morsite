@@ -1,0 +1,17 @@
+{% load menubuilder %}{% top_menu topmenu %} 
+{% block top_menu_block %}    
+    <ul>
+    {% for item in menuitems %}
+        <li 
+            style="width:{{ menu_item_width }}px;"
+                    {% if item == highlighted  %}
+                        class="selected"
+                    {% endif %}
+                    >
+                        <a href="{{ item.link_url }}">
+                            {{item.title}}
+                        </a>
+                    </li>
+    {% endfor %}
+    </ul>
+{% endblock top_menu_block %}

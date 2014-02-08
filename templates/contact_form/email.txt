@@ -1,6 +1,0 @@
-You have got a message!
-שם : {{ name }}
-טלפון: {{ phone }}
-דואר אלקטרוני: {{ mail }}
-כתובת: {{ address }}
-תוכן ההודעה: {{ message }}
