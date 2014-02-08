@@ -1,10 +1,18 @@
 yaron
 ##############
-insert newletter
 
-font on prcies
-font on contact and static pages
-inputs color
+
+
+with mor
+###################
+font on contact and static pages (?)
+underline - cant do that, may config on of the fonts
+check
+טאגים : אברהם משה
+תגובות : 8 תגובות
+change comment photo
+insert newletter
+font on prcies (h3?)
 
 mor
 ########
@@ -13,5 +21,5 @@ newletter
 
 production
 ###########
-change mail in settings
+change mail in settings - check if works
 change mail of admin

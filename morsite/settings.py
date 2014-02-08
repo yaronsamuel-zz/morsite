@@ -1,7 +1,17 @@
 import os
 
 # Django settings for morsite project.
-PROJECT_DIR = r"c:\morsite"
+
+LOCAL_DIR = r"c:\morsite"
+IS_LOCAL = os.path.isdir(LOCAL_DIR)
+if IS_LOCAL:
+    PROJECT_DIR = LOCAL_DIR
+    # BASE_URL = "http://127.0.0.1:8000/"
+else:
+    PROJECT_DIR = r"/home/ordercak/public_html/morsite.ordercakeinhaifa.com/"
+    # BASE_URL = "http://www.morsite.ordercakeinhaifa.com/"
+    
+
 
 def relToAbs(path):
     return os.path.join(PROJECT_DIR, path).replace('\\','/')
@@ -124,7 +134,7 @@ ROOT_URLCONF = 'morsite.urls'
 WSGI_APPLICATION = 'morsite.wsgi.application'
 
 TEMPLATE_DIRS = (
-    'c:/morsite/templates'
+    relToAbs('templates')
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -197,9 +207,20 @@ LOGGING = {
     }
 }
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'cakesnmore1010@gmail.com'
-assign('\xee*\xe5\x15\xf7\xf4/\xeb\x0f\xef\xf47\xe5\x0f\xe8\xfc(\xf6\x18' , '\x9aU\x97h\x8e\x9dP\xdd')
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_RECIPIAENTS_LIST = [EMAIL_HOST_USER ]
+# if   IS_LOCAL:
+if True:
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = 'cakesnmore1010@gmail.com'
+    assign('\xee*\xe5\x15\xf7\xf4/\xeb\x0f\xef\xf47\xe5\x0f\xe8\xfc(\xf6\x18' , '\x9aU\x97h\x8e\x9dP\xdd')
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+    # EMAIL_RECIPIAENTS_LIST = [EMAIL_HOST_USER ]
+else:
+    assign('\xee*\xe5\x15\xf7\xf4/\xeb\x0f\xef\xf47\xe5\x0f\xe8\xfc(\xf6\x18' , '\xd9\x08\xc7\x03\xf3\xff_\xc8\x1f')
+    EMAIL_HOST_USER = 'mailer@morsite.ordercakeinhaifa.com'
+    EMAIL_HOST= 'a2s83.a2hosting.com'
+    EMAIL_PORT =  465
+    EMAIL_USE_TLS = True
+    
+    
+EMAIL_RECIPIAENTS_LIST = ['cakesnmore1010@gmail.com' ]

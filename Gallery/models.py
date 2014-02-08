@@ -3,11 +3,11 @@ from orderedmodel import OrderedModel
 from morsite.thumbs import ImageWithThumbsField
 import os
 
-HOMEPAGE_THUMB_SIZE = (100*2,100*2)
+HOMEPAGE_THUMB_SIZE = (170,170)
 HOMEPAGE_THUMB_WIDTH = 170
 HOMEPAGE_THUMB_HEIGHT = 170
 GALLERY_THUMB_SIZE = (123 * 2 , 112*2) 
-SIZES = [HOMEPAGE_THUMB_SIZE , GALLERY_THUMB_SIZE]
+SIZES = [GALLERY_THUMB_SIZE , ]
 
 # thumb that is (19,9) is in format (w,h) gets url 19x9.jpg
 
@@ -63,16 +63,16 @@ class GalleryImage(OrderedModel):
 
     @property    
     def thumb_hompage(self):
+        return self.thumb_gallery
         
-        (w,h) = HOMEPAGE_THUMB_SIZE
-        split = self.pictureURL.rsplit('.',1)
-        thumb_url = '%s.%sx%s.%s' % (split[0],w,h,split[1])
+        # (w,h) = HOMEPAGE_THUMB_SIZE
+        # split = self.pictureURL.rsplit('.',1)
+        # thumb_url = '%s.%sx%s.%s' % (split[0],w,h,split[1])
         
-        return thumb_url
+        # return thumb_url
         
     @property    
     def thumb_gallery(self):
-        
         (w,h) = GALLERY_THUMB_SIZE
         split = self.pictureURL.rsplit('.',1)
         thumb_url = '%s.%sx%s.%s' % (split[0],w,h,split[1])

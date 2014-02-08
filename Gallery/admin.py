@@ -10,6 +10,7 @@ class GalleryImageAdmin(OrderedModelAdmin):
                     'image_short_name' , 
                     'homepage',
                     'gallery',
+                    'pictureURL',
                     'description',
                     'reorder',
           )

@@ -12,7 +12,7 @@ def homepage_gallery_view(request):
     
     images = GalleryImage.objects.filter(homepage = True)
     
-    template = loader.get_template('Gallery/hompageGallery.html')
+    template = loader.get_template('gallery/hompageGallery.html')
     context = RequestContext(request, {
        
     })
@@ -22,7 +22,7 @@ def gallery_view(request):
     
     images = GalleryImage.objects.filter(gallery = True)
     
-    template = loader.get_template('Gallery/Gallery.html')    
+    template = loader.get_template('gallery/gallery.html')    
     context = RequestContext(request, {
         'images': images,
     })

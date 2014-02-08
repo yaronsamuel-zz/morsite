@@ -657,8 +657,13 @@ clear:both
 margin:0
 }
 
+.zinnia .entry-tags ,.zinnia .entry-discussions{
+font-size:16px !important;
+}
+
 .zinnia .entry-tags strong{
 padding-left:1.5em;
+
 background:transparent url('../img/tags.png?1362237962') no-repeat scroll
 }
 
