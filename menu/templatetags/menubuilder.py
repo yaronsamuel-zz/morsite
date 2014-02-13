@@ -23,8 +23,15 @@ class TopMenuObject(template.Node):
         self.menu_name = menu_name
 
     def render(self, context):
-        current_path = context['request'].path
-        user = context['request'].user
+        request = context.get('request' , None)
+        if request:
+            current_path = request.path
+            user = context['request'].user
+        else:
+            #some random string
+            current_path = '@@@@$@@@@$@@@@%@@@@@&@@'
+            user = None
+            
         top_menu = Menu.objects.filter(name=self.menu_name)
         menuItems = MenuItem.objects.filter(menu=top_menu)
         context['menuitems'] = menuItems

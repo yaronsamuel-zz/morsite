@@ -207,20 +207,15 @@ LOGGING = {
     }
 }
 
-# if   IS_LOCAL:
-if True:
-    EMAIL_HOST = 'smtp.gmail.com'
-    EMAIL_HOST_USER = 'cakesnmore1010@gmail.com'
-    assign('\xee*\xe5\x15\xf7\xf4/\xeb\x0f\xef\xf47\xe5\x0f\xe8\xfc(\xf6\x18' , '\x9aU\x97h\x8e\x9dP\xdd')
-    EMAIL_PORT = 587
-    EMAIL_USE_TLS = True
-    # EMAIL_RECIPIAENTS_LIST = [EMAIL_HOST_USER ]
-else:
-    assign('\xee*\xe5\x15\xf7\xf4/\xeb\x0f\xef\xf47\xe5\x0f\xe8\xfc(\xf6\x18' , '\xd9\x08\xc7\x03\xf3\xff_\xc8\x1f')
-    EMAIL_HOST_USER = 'mailer@morsite.ordercakeinhaifa.com'
-    EMAIL_HOST= 'a2s83.a2hosting.com'
-    EMAIL_PORT =  465
-    EMAIL_USE_TLS = True
+
+# assign('\xee*\xe5\x15\xf7\xf4/\xeb\x0f\xef\xf47\xe5\x0f\xe8\xfc(\xf6\x18' , '\x9aU\x97h\x8e\x9dP\xdd')
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'cakesnmore1010@gmail.com'
+assign('\xee*\xe5\x15\xf7\xf4/\xeb\x0f\xef\xf47\xe5\x0f\xe8\xfc(\xf6\x18' , '\xd1\x00\xce2\xd5\xc7\x08\xd1-\xcc\xde\x11\xd32\xcf\xc1')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+# EMAIL_RECIPIAENTS_LIST = [EMAIL_HOST_USER ]
+
     
     
 EMAIL_RECIPIAENTS_LIST = ['cakesnmore1010@gmail.com' ]

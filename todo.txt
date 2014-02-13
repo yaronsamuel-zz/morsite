@@ -1,5 +1,8 @@
 yaron
 ##############
+    production
+    ###########
+    change mail of admin
 
 
 
@@ -7,19 +10,16 @@ with mor
 ###################
 font on contact and static pages (?)
 underline - cant do that, may config on of the fonts
-check
-טאגים : אברהם משה
-תגובות : 8 תגובות
+
+check if mor likes
+    טאגים : אברהם משה
+    תגובות : 8 תגובות
+    
 change comment photo
-insert newletter
-font on prcies (h3?)
+insert newsletter
+font on prices (h3?)
 
 mor
 ########
 decide title of tabs
 newletter
-
-production
-###########
-change mail in settings - check if works
-change mail of admin
