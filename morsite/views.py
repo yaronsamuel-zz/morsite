@@ -31,3 +31,15 @@ def coursePage(request):
 
     })
     return HttpResponse(template.render(context))
+    
+
+def Page500(request):
+    
+    template = loader.get_template('morsite/500.shtml')
+    # lst = ['%s %s' %(k,v) for k,v in request.items()]
+    
+    context = RequestContext(request, {
+    'content_list' :[str(request)] ,
+
+    })
+    return HttpResponse(template.render(context))
