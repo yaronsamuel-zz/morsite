@@ -141,6 +141,7 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    'grappelli',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -160,6 +161,8 @@ INSTALLED_APPS = (
     'Gallery',
     'contact_form',
     'my_comment_app',
+    'tinymce',
+    
 )
 
 COMMENTS_APP = 'my_comment_app'
@@ -205,6 +208,11 @@ LOGGING = {
             'propagate': True,
         },
     }
+}
+
+
+TINYMCE_DEFAULT_CONFIG = {
+    'theme_advanced_buttons1' : "save,newdocument,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,styleselect,formatselect,fontselect,fontsizeselect",
 }
 
 

@@ -612,7 +612,7 @@ box-sizing:border-box
 
 .zinnia .entry-body img,.zinnia .entry-body img.left{
 margin:0 1em 1em 0;
-float:left
+/* float:left */
 }
 
 .zinnia .entry-body img.right{

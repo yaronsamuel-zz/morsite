@@ -3,6 +3,7 @@ from django.contrib import admin
 import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -11,6 +12,8 @@ urlpatterns = patterns('',
     url(r'^index.html','morsite.views.homepage'),
     url(r'^kisses.html','morsite.views.kissesPage'),
     url(r'^course.html','morsite.views.coursePage'),
+    
+   (r'^grappelli/', include('grappelli.urls')),
     
     url(r'^admin/', include(admin.site.urls)),
     url(r'^Prices/', include('Prices.urls')),
@@ -28,5 +31,6 @@ urlpatterns = patterns('',
     url(r'^contact/', 'contact_form.views.contact'),
     url(r'^thanks/', 'contact_form.views.thanks'),
     url(r'^contact/sidebar', 'contact_form.views.contact'),    
+    (r'^tinymce/', include('tinymce.urls')),
 ) 
 
