@@ -12,8 +12,4 @@ with mor
 tags - smaller again
 insert newsletter
 font on prices (h3?)
-
-mor
-########
 decide title of tabs
-newletter
