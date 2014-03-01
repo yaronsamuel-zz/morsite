@@ -25,7 +25,6 @@ urlpatterns = patterns('',
     
     url(r'^weblog/', include('zinnia.urls')),
     url(r'^comments/', include('django.contrib.comments.urls')),
-    url(r'^topmenu.html', 'menu.views.topmenu_view'),
     url(r'^hompageGallery.html', 'Gallery.views.homepage_gallery_view'),
     url(r'^Gallery.html', 'Gallery.views.gallery_view'),
     url(r'^contact/', 'contact_form.views.contact'),

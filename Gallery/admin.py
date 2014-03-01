@@ -8,7 +8,7 @@ class GalleryImageAdmin(OrderedModelAdmin):
     
     list_display = ('Title',
                     'image_short_name' , 
-                    'homepage',
+                    # 'homepage',
                     'gallery',
                     'pictureURL',
                     'description',
@@ -17,7 +17,7 @@ class GalleryImageAdmin(OrderedModelAdmin):
     fields = ('item_picture' , 
                 'title',
                 'description',
-                'homepage',
+                # 'homepage',
                 'gallery',
           )
           

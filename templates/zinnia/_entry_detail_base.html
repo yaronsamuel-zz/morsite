@@ -111,6 +111,11 @@
          title="{% blocktrans with object=object.title %}Comments on {{ object }}{% endblocktrans %}">
         {% blocktrans count comment_count=comment_count %}{{ comment_count }} comment{% plural %}{{ comment_count }} comments{% endblocktrans %}
       </a>
+      -
+      <a href="{{ object.get_absolute_url }}#comment-form"
+         title="{% blocktrans with object=object.title %}Leave a comment on {{ object }}{% endblocktrans %}">
+        הוסף תגובה!
+      </a>
       {% else %}
       {% if object.comments_are_open %}
       {% trans "No comments yet." %}

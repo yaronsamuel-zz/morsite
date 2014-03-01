@@ -5,17 +5,11 @@ yaron
     change mail of admin
 
 
+syncdb
 
 with mor
 ###################
-font on contact and static pages (?)
-underline - cant do that, may config on of the fonts
-
-check if mor likes
-    טאגים : אברהם משה
-    תגובות : 8 תגובות
-    
-change comment photo
+tags - smaller again
 insert newsletter
 font on prices (h3?)
 

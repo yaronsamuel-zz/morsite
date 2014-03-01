@@ -1,14 +1,11 @@
 ﻿{% load zinnia_tags i18n %}
 <div id="sidebar">
 
-    <div id="serch-sidebar">
-        <form method="get" action="{% url 'zinnia_entry_search' %}">
-          <p>
-            <input type="text" value="{% trans "חפש בבלוג..." %}" name="pattern" onfocus="this.value=''" />
-            <input type="submit" class="submitbutton" value="OK" />
-          </p>
-        </form>
-    </div>
+    <form action="index.html" method="post" id="newsletter">
+        <h3>הצטרפו עכשיו לניוזלטר</h3>
+        <input type="submit" value="הירשם" class="btn">
+        <input type="text" value="" class="txtfield">
+    </form>
     {% block facebook-block %}
         <div id="fb-sidebar-wrap">
             <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fmorscakes&amp;width=240&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" 
@@ -29,21 +26,25 @@
     {% endblock contact-sidebar-block %}
     {% endif %}
 
-    <form action="index.html" method="post" id="newsletter">
-        <h3>הצטרפו עכשיו לניוזלטר</h3>
-        <input type="submit" value="הירשם" class="btn">
-        <input type="text" value="" class="txtfield">
-    </form>
 
     <div class="section">
         <div id="widget-tags" class="widget">
-          <h3>{% trans "Categories" %}</h3>
+          <h3>למצוא פוסט בקלות</h3>
           {% get_tag_cloud %}
         </div>
         <div id="widget-comments" class="widget">
           <h3>{% trans "Recent comments" %}</h3>
           {% get_recent_comments %}
         </div>
+    </div>
+    
+    <div id="serch-sidebar">
+        <form method="get" action="{% url 'zinnia_entry_search' %}">
+          <p>
+            <input type="text" value="{% trans "חפש בבלוג..." %}" name="pattern" onfocus="this.value=''" />
+            <input type="submit" class="submitbutton" value="OK" />
+          </p>
+        </form>
     </div>
 
     {% if user.is_authenticated %}

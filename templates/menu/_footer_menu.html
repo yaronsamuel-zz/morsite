@@ -1,7 +1,6 @@
-{% load menubuilder %}{% top_menu topmenu %}    
+{% load menubuilder %}{% load_menu %}    
     <ul class="navigation">
     {% for item in menuitems %}
-        <!-- <li style="width:{{ menu_item_width }}px;">           -->
                     <li  
                     {% if item == highlighted  %}
                         class="selected"
