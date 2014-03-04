@@ -86,8 +86,7 @@ def getDBPath(FILES_TO_SYNC):
             
 def uploadFiles(fileList):
     login = ftplib.FTP(FTP_HOST , FTP_USER , FTP_PASSWORD)
-    global l
-    l = login
+
     for fil in fileList:
         relPath = os.path.relpath(fil , LOCAL_ROOT)
         relPath = relPath.replace('\\' , '/')
@@ -116,6 +115,53 @@ def runserver(root):
     
 def runchrome():
     subprocess.Popen([CHROMEPATH , SITE_URL] )
+
+def getRelDirsFromFiles(fileList):
+    
+    dirSet = set()
+    for fil in fileList:
+        dirname =  os.path.dirname(fil)
+        if dirname == LOCAL_ROOT:
+            continue
+            
+        dirname = os.path.relpath(dirname , LOCAL_ROOT)
+        dirname = dirname.replace('\\' , '/')
+        
+        dirSet.add(dirname )
+        
+    return list(dirSet)
+
+
+def getOnlyNewFiles(fileList):
+
+    dirs = getRelDirsFromFiles(fileList)
+    
+    ftp = ftplib.FTP(FTP_HOST , FTP_USER , FTP_PASSWORD)
+    
+    retfFileList = [] 
+    ftpFilelist = [] #to store all files in the frp server
+    
+    for dir in dirs:
+        ftp.cwd('~/%s'%dir)
+        tmpList = []
+        ftp.retrlines('LIST',tmpList.append)
+        for line in  tmpList:
+            basename = line.split(' ')[-1]
+            path = os.path.join(dir , basename).replace('\\' ,'/')
+            ftpFilelist.append(path)
+        
+
+
+        
+    for fil in fileList:
+        relPath = os.path.relpath(fil , LOCAL_ROOT)
+        relPath = relPath.replace('\\' , '/')
+        if relPath not in ftpFilelist:
+            retfFileList.append(fil)
+        else:
+            print relPath
+    
+    return retfFileList
     
 def main():
     fileList = getFileList(FILES_TO_SYNC)
@@ -132,13 +178,14 @@ def main():
         input = raw_input()
         
     gitBackup(LOCAL_ROOT)
-    uploadFiles(fileList)
+    
+    filesToUpload = getOnlyNewFiles(fileList)
+    filesToUpload.append(dbPath)
+    uploadFiles(filesToUpload)
     
     
 if __name__ == '__main__':
     main()
-    
-    
     
 #TODO
 # change to morsite
