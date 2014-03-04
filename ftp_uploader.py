@@ -158,8 +158,6 @@ def getOnlyNewFiles(fileList):
         relPath = relPath.replace('\\' , '/')
         if relPath not in ftpFilelist:
             retfFileList.append(fil)
-        else:
-            print relPath
     
     return retfFileList
     
