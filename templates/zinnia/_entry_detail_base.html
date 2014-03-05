@@ -105,7 +105,8 @@
     <p class="entry-discussions">
       <strong>{% trans "Discussions" %}</strong> :
       {% block entry-comments %}
-      {% with comment_count=object.comment_count %}
+      {% get_comment_count for object as comment_count %}
+      {% with comment_count_old=object.comment_count %}
       {% if comment_count %}
       <a href="{{ object.get_absolute_url }}#comments"
          title="{% blocktrans with object=object.title %}Comments on {{ object }}{% endblocktrans %}">

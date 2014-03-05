@@ -131,7 +131,8 @@
 {% block entry-comments %}
 <div id="comments">
   <h3>{% trans "Comments" %}</h3>
-  {% if object.comment_count %}
+   {% get_comment_count for object as comment_count %}
+  {% if comment_count %}
   {% with comment_list=object.comments %}
   <ol id="comment-list">
     {% for comment in comment_list %}
