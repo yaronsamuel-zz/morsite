@@ -158,6 +158,8 @@ def getOnlyNewFiles(fileList):
         relPath = relPath.replace('\\' , '/')
         if relPath not in ftpFilelist:
             retfFileList.append(fil)
+        else:
+            print relPath
     
     return retfFileList
     
@@ -181,9 +183,13 @@ def main():
     filesToUpload.append(dbPath)
     uploadFiles(filesToUpload)
     
+    print 'upload is finished'
+    print 'Press any key to exit'
+    raw_input()
+    
     
 if __name__ == '__main__':
-    main()
+    
     
 #TODO
 # change to morsite

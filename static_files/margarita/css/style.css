@@ -572,12 +572,12 @@ font-size: 20px !important;
 	font-style: italic;
 	font-weight: normal;
 	height: 44px;
-	width: 650px;
+    width: 620px;
 	margin: 0 20px 0 0;
 	padding: 0 0 0 20px;
     float: left;
     text-align: right;
-    text-indent: 60px;
+    text-indent: 25px;
 }
 
 #featured .featured-img{

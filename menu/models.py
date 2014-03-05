@@ -7,4 +7,4 @@ class MenuItem(OrderedModel):
     title = models.CharField(max_length=100)                             
 
     def __unicode__(self):
-        return "%s %s. %s" % (self.menu.slug, self.order, self.title)
+        return "%s. %s" % (self.order, self.title)

@@ -214,6 +214,7 @@ background-origin:content-box;
 -moz-background-clip:content-box;
 background-clip:content-box;
 width:940px;
+display: table;
 }
 
 .zinnia .container:after{
