@@ -246,7 +246,7 @@ text-align: center;
 }
 
 #category-picture h1{
-line-height: 3px;
+line-height: 20px;
 margin-top: 5px;
 text-align: center;
 }
@@ -304,7 +304,8 @@ text-align:right;
 
 #description-row{
 text-align:right;
-text-indent: 15px;
+padding-left: 75px;
+color:#563013;
 }
 
 #prices-column{
@@ -358,6 +359,10 @@ margin:10px;
 #facebook-wrap{
  height:27px;
  text-indent: 8px;
+}
+
+#newsletter-wrap{
+text-align: center;
 }
 
 #contact-hr{

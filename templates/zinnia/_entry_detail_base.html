@@ -94,7 +94,7 @@
       {% for tag in object.tags_list %}
       <a href="{% url 'zinnia_tag_detail' tag %}"
          title="{% blocktrans %}Show all entries tagged by {{ tag }}{% endblocktrans %}"
-         rel="tag">{{ tag }}</a>
+         rel="tag">{{ tag }}</a>{% if not forloop.last %}, {% endif %}
       {% empty %}
       <span>{% trans "No tags" %}</span>
       {% endfor %}
@@ -119,7 +119,7 @@
       </a>
       {% else %}
       {% if object.comments_are_open %}
-      {% trans "No comments yet." %}
+      {% trans "No comments yet." %}, 
       <a href="{{ object.get_absolute_url }}#comment-form"
          title="{% blocktrans with object=object.title %}Leave a comment on {{ object }}{% endblocktrans %}">
         {% trans "Be first to comment!" %}

@@ -17,6 +17,13 @@ class ProductCategory(OrderedModel):
         else:
             return None
 
+    @property
+    def sizes(self):
+        if self.category_description:
+            return self.category_description.count('/')
+        return 0
+        
+
 class Product(OrderedModel):
     
     category = models.ForeignKey(ProductCategory)
@@ -41,7 +48,7 @@ class Product(OrderedModel):
     def priceStr(self):
         prices = [ self.regular_price , self.big_price ,self.huge_price]
         prices = [str(p) for p in prices if p > 0]
-        return '/'.join(prices)
+        return '/'.join(prices[::-1])
 
         
 

@@ -2,7 +2,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 margin:0;
 padding:0;
 border:0;
-font:inherit;
+g
 font-size:100%;
 vertical-align:baseline;
 
@@ -15,7 +15,7 @@ line-height:1
 body{
 margin:auto;
 }
-
+92
 ol,ul{
 list-style:none
 }
@@ -685,7 +685,6 @@ padding-left:1.5em
 .zinnia .entry-next-prev{
 display: inline-flex;
 line-height:20px;
-text-align:center;
 }
 
 .zinnia .entry-next-prev h3{
@@ -918,10 +917,10 @@ font-family:"ganfont";
 }
 .zinnia.magenta h3{
 font-family:"felix007medium";
-color:#d33682
+color:#9e1c20
 }
 .zinnia.magenta h4{
-color:#d33682
+color:#9e1c20
 }
 
 .zinnia.magenta h5{

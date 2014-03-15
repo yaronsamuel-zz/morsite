@@ -37,7 +37,7 @@ TEMPLATE_DEBUG = DEBUG
 
 
 ADMINS = [
-    ('Yaron' , 'samuel.yaron@gmail.com') ,         
+    ('Mor' , 'SamuelCakes@gmail.com') ,         
     # ('Your Name', 'your_emai@example.com'),
 ]
 
@@ -111,10 +111,10 @@ SECRET_KEY = 'f3oda#81rs%yu+*-bc%_5@*nmmf0!yiyw23d(!34awfexfc+j-'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    ('django.template.loaders.cached.Loader', (
+    # ('django.template.loaders.cached.Loader', (
         'django.template.loaders.filesystem.Loader',
         'django.template.loaders.app_directories.Loader',
-    )),
+    # )),
 #     'django.template.loaders.eggs.Loader',
 )
 
@@ -226,4 +226,4 @@ EMAIL_USE_TLS = True
 
     
     
-EMAIL_RECIPIAENTS_LIST = ['cakesnmore1010@gmail.com' ]
+EMAIL_RECIPIAENTS_LIST = ['cakesnmore1010@gmail.com' , 'SamuelCakes@gmail.com']

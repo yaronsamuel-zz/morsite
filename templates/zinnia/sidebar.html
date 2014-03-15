@@ -1,11 +1,14 @@
 ﻿{% load zinnia_tags i18n %}
 <div id="sidebar">
 
-    <form action="index.html" method="post" id="newsletter">
+    <!-- <form action="index.html" method="post" id="newsletter">
         <h3>הצטרפו עכשיו לניוזלטר</h3>
         <input type="submit" value="הירשם" class="btn">
         <input type="text" value="" class="txtfield">
-    </form>
+    </form> -->
+	<div id="newsletter-wrap">
+		<iframe width="230" height="250" src="http://members.viplus.com/LandingPage,4a4b250c-b516-410a-81f8-039e3627c230,30662.aspx" frameborder="0" allowfullscreen></iframe>
+	</div>
     {% block facebook-block %}
         <div id="fb-sidebar-wrap">
             <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fmorscakes&amp;width=240&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" 

@@ -63,7 +63,7 @@
       {% block entry-body %}
 
             {% block entry-content %}
-			<h5>
+			<h5 style="width: 265px;display: flex;">
                 {{ object_content|safe }}
 			</h5>
             {% endblock entry-content %}
@@ -91,7 +91,7 @@
                   {% for tag in object.tags_list %}
                   <a href="{% url 'zinnia_tag_detail' tag %}"
                      title="{% blocktrans %}Show all entries tagged by {{ tag }}{% endblocktrans %}"
-                     rel="tag">{{ tag }}</a>
+                     rel="tag">{{ tag }}{% if not forloop.last %}, {% endif %}</a>
                   {% empty %}
                   <span>{% trans "No tags" %}</span>
                   {% endfor %}

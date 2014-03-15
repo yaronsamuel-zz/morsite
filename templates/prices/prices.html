@@ -27,7 +27,11 @@
                         <img src ="{{ category.pictureURL }}" />
                         <h1>{{ category.category_Name }}</h1>
                         {% if category.category_description %}
-                        <h4>{{ category.category_description }}</h4>
+						{% if category.sizes == 2 %}
+						<h4 style="float:left;padding-left:5px">{{ category.category_description }}</h4>
+						{% else %}
+                        <h4 style="float:left;padding-left:20px">{{ category.category_description }}</h4>
+						{% endif %}
                         {% else %}
                         <h4>&nbsp<h4>
                         {% endif %}

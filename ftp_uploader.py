@@ -101,11 +101,12 @@ def runProcess(argv):
         
 def gitBackup(root):
     os.chdir(root)
-    runProcess(['git' , 'add' ,'--all'])
+    gitPath = r'C:\Program Files (x86)\Git\bin\git.exe'
+    runProcess([gitPath , 'add' ,'--all'])
     commitMessage = datetime.datetime.now().strftime('%y_%m_%d %H_%M')
     commitMessage = '"Uploader - %s"' % (commitMessage , )
-    runProcess(['git' , 'commit', '-a' ,'-m' , commitMessage])
-    runProcess(['git' , 'push'])
+    runProcess([gitPath , 'commit', '-a' ,'-m' , commitMessage])
+    runProcess([gitPath , 'push'])
         
 def runserver(root):
     manageScript = os.path.join(root , 'manage.py')
@@ -177,7 +178,7 @@ def main():
         print 'enter x to upload files to server'
         input = raw_input()
         
-    gitBackup(LOCAL_ROOT)
+    # gitBackup(LOCAL_ROOT)
     
     filesToUpload = getOnlyNewFiles(fileList)
     filesToUpload.append(dbPath)
@@ -189,7 +190,7 @@ def main():
     
     
 if __name__ == '__main__':
-    
+    main()
     
 #TODO
 # change to morsite
