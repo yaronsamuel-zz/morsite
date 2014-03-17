@@ -8,7 +8,7 @@ if IS_LOCAL:
     PROJECT_DIR = LOCAL_DIR
     # BASE_URL = "http://127.0.0.1:8000/"
 else:
-    PROJECT_DIR = r"/home/ordercak/public_html/morsite.ordercakeinhaifa.com/"
+    PROJECT_DIR = r"/home/ordercak/public_html/sweetsamuel.co.il/"
     # BASE_URL = "http://www.morsite.ordercakeinhaifa.com/"
     
 
