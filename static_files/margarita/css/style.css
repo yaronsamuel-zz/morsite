@@ -112,12 +112,12 @@ height: 115px;
 }
 /** Logo **/
 #logo {
-
+    width:270px;
     text-align: center;
 }
 
 #title {
-    width:100%;
+    width:650px;
     padding-top: 36px;
 }
 /** Navigation **/
