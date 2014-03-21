@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xml:lang="{{ LANGUAGE_CODE }}" lang="{{ LANGUAGE_CODE }}" version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>Sweet Samuel{% if not homepage %} - {% endif %}{% block title %}{% endblock title %}{% block title-page %}{% endblock title-page %}</title>
+    <title>סמואל קונדיטורית בוטיק{% if not homepage %} - {% endif %}{% block title %}{% endblock title %}{% block title-page %}{% endblock title-page %}</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta http-equiv="cache-control" content="public" />
     <meta name="robots" content="follow, all" />
@@ -31,17 +31,28 @@
   <body onload="{% block body-onload %}{% endblock body-onload %}" class="zinnia {% block theme-class %}light{% endblock theme-class %} {% block color-class %}magenta{% endblock color-class %} {% block sidebar-class %}right-sidebar{% endblock sidebar-class %} {% block body-class %}{% endblock body-class %}" >
     <div id="page">
 		<div id="header">
-            </ul>
-			<div id="logo">
-                <a href="{% url 'morsite.views.homepage' %}">
-                    <img src="{% static 'margarita/images/mor/upper_title.png' %}" style="height:70px;" alt="LOGO">
-                </a>
-			</div>
-			<div id="navigation">
+            <div id="top">
+                <div id="logo">
+                    <a href="{% url 'morsite.views.homepage' %}">
+                        <img src="{% static 'margarita/images/mor/logo.jpg' %}" style="height:129px;" alt="סמואל קונדיטורית בוטיק">
+                    </a>
+                </div>
+                <div id="title">
+                <h1 style="font-size: 54px;">
+                        סמואל קונדיטורית בוטיק
+                    </h1>
+                    
+                    <h2 style="font-size: 32px;">
+                        0546-345733
+                    </h2>
+                </div>
+             </div>
+
+            <div id="navigation">
                 {% block top_menu_block %}   
                     {% include  "menu/_top_menu.html" %}
                 {% endblock top_menu_block %}
-			</div>
+            </div>
 		</div>
      <div id="contents">
         <div id="bababox">

@@ -12,6 +12,7 @@ urlpatterns = patterns('',
     url(r'^index.html','morsite.views.homepage'),
     url(r'^kisses.html','morsite.views.kissesPage'),
     url(r'^course.html','morsite.views.coursePage'),
+    url(r'^about.html','morsite.views.aboutPage'),
     
    (r'^grappelli/', include('grappelli.urls')),
     

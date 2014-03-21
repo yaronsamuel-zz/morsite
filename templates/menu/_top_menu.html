@@ -2,7 +2,7 @@
 {% load_menu %} 
 {% block top_menu_block %}    
     <ul>
-    {% for item in menuitems %}
+    {% for item , menu_item_width in menuitems %}
         <li 
             style="width:{{ menu_item_width }}px;"
                     {% if item == highlighted  %}

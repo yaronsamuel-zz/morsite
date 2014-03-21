@@ -15,7 +15,6 @@
     
     {% block entry-header %}
         {% block entry-title %}
-        {{ object.short_url}}
         <h4>
           <a href="{{ object.get_absolute_url }}" title="{{ object.title }}" rel="bookmark">
             {{ object.title|widont }}

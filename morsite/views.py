@@ -31,6 +31,14 @@ def coursePage(request):
 
     })
     return HttpResponse(template.render(context))
+
+def aboutPage(request):
+    
+    template = loader.get_template('morsite/about.html')
+    context = RequestContext(request, {
+
+    })
+    return HttpResponse(template.render(context))
     
 
 def Page500(request):

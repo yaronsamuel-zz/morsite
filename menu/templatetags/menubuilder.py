@@ -3,7 +3,7 @@ from django import template
 from django.core.cache import cache
 
 MENU_WIDTH = 870
-MAX_PICUTE_HEIGHT = 150
+WIDE_WIDTH = 130
 
 register = template.Library()
 
@@ -19,6 +19,8 @@ class MyMenuObject(template.Node):
         pass
 
     def render(self, context):
+        
+       
         request = context.get('request' , None)
         if request:
             current_path = request.path
@@ -29,16 +31,13 @@ class MyMenuObject(template.Node):
             user = None
             
         menuItems = MenuItem.objects.all()
-        context['menuitems'] = menuItems
-
-        menu_item_width = (MENU_WIDTH* 1.0 ) / len(menuItems)
-        context['menu_item_width'] = menu_item_width
         
         context['highighted'] = None
         isHompage = context.get('homepage' , False)
         
         if isHompage:
              current_path = 'index.html'
+        
         
         for item in menuItems:          
             if item.link_url.endswith(current_path):
@@ -51,10 +50,34 @@ class MyMenuObject(template.Node):
                     
                     context['highlighted'] = item
                     break
+        
+        
 
-            
+        context['menuitems'] =  getMenuItemsTupples(menuItems)
+        
         return ''
     
+    
+def getMenuItemsTupples(menuItems):
+    
+    retList = []
+    count = 0
+    for item in menuItems:
+        if len(item.title) > 10:
+            count += 1
+    
+    totalWidth  = MENU_WIDTH - count * WIDE_WIDTH
+    menu_item_width = (totalWidth* 1.0 ) / (len(menuItems) - count)
+    
+    for item in menuItems:
+        if len(item.title) > 10:
+            width = WIDE_WIDTH
+        else:
+            width = menu_item_width
+        
+        retList.append( (item , width) )
+    
+    return retList
     
     
 
