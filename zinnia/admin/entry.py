@@ -176,6 +176,7 @@ class EntryAdmin(admin.ModelAdmin):
                 pk=request.user.pk)
 
         entry.last_update = timezone.now()
+        entry.slug = fixSlug(entry.slug)
         entry.save()
 
     def queryset(self, request):
@@ -415,3 +416,9 @@ class EntryAdmin(admin.ModelAdmin):
                         settings.MARKUP_LANGUAGE)))})
         return media
     media = property(_media)
+
+    
+def fixSlug(slug):
+    for ch in r'?\/!@#$%^&*=+':
+        slug = slug.replace(ch ,'')
+    return slug.replace(' ' , '-')

@@ -47,7 +47,7 @@ class CoreEntry(models.Model):
     title = models.CharField(
         _('title'), max_length=255)
 
-    slug = models.SlugField(
+    slug = models.CharField(
         _('slug'), max_length=255,
         unique_for_date='creation_date',
         help_text=_("Used to build the entry's URL."))
