@@ -18,10 +18,9 @@
     <link rel="alternate" type="application/rss+xml" title="{% trans "RSS Feed of latest discussions" %}" href="{% url 'zinnia_discussion_latest_feed' %}" />
     {% get_archives_entries "zinnia/tags/archives_entries_link.html" %}
 {% endblock link %}
-{% block abox %}
-
-{% endblock abox %}
 
 {% block sidebar %}
-     {% include 'zinnia/sidebar.html' %}
+    <div class="col-xs-12 col-md-3 col-md-offset-1">
+        {% include 'zinnia/sidebar.html' %}
+     </div>
 {% endblock sidebar %}

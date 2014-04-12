@@ -29,33 +29,40 @@
 
 <div id="featured">
     {% block content-title %}
-    {% if category %}
-    <h3>{% blocktrans %}Category archives: {{ category }}{% endblocktrans %}</h3>
-    {% if category.description %}
-    <p>{{ category.description|striptags|safe }}</p>
-    {% endif %}
-    {% endif %}
+    <div class="row">
+        <div class="col-xs-12">
+            {% if category %}
+                <h3>{% blocktrans %}Category archives: {{ category }}{% endblocktrans %}</h3>
+            {% if category.description %}
+                <p>{{ category.description|striptags|safe }}</p>
+            {% endif %}
+            {% endif %}
 
-    {% if tag %}
-    <h3>{% blocktrans %}Tag archives: {{ tag }}{% endblocktrans %}</h3>
-    {% endif %}
+            {% if tag %}
+                <h3>{% blocktrans %}Tag archives: {{ tag }}{% endblocktrans %}</h3>
+            {% endif %}
 
-    {% if author %}
-    <h3>{% blocktrans %}Author archives: {{ author }}{% endblocktrans %}</h3>
-    {% endif %}
-    {% if homepage %}
-    <h3>הפוסטים האחרונים של סמואל</h3>
-    {% endif %}
-    {% endblock content-title %}
-    
+            {% if author %}
+                <h3>{% blocktrans %}Author archives: {{ author }}{% endblocktrans %}</h3>
+            {% endif %}
+            {% if homepage %}
+                <h3>הפוסטים האחרונים של סמואל</h3>
+            {% endif %}
+            {% endblock content-title %}
+        </div>
+    </div>
     <ul>
 {% block content-loop %}
 {% for object in object_list %}
-  {% include "zinnia/_my_entry_detail_base.html" with object_content=object.html_preview continue_reading=1 %}
+    {% include "zinnia/_my_entry_detail_base.html" with object_content=object.html_preview continue_reading=1 %}
 {% empty %}
-  <p class="info">
-    <a href="{% url 'admin:zinnia_entry_add' %}">{% trans "No entries yet." %}</a>
-  </p>
+    <div class="row" >
+        <div class="col-xs-12">
+          <p class="info">
+            <a href="{% url 'admin:zinnia_entry_add' %}">{% trans "No entries yet." %}</a>
+          </p>
+        </div>  
+    </div>  
 {% endfor %}
 {% endblock content-loop %}
 

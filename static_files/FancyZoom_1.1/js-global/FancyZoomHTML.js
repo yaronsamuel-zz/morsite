@@ -277,6 +277,7 @@ function insertZoomHTML() {
 		
 		var inCapTable = document.createElement("table");
 		inCapTable.setAttribute('border', '0');
+        inCapTable.setAttribute('style', 'direction:ltr');
 		inCapTable.setAttribute('cellPadding', '0');	// Wow. These honestly need to
 		inCapTable.setAttribute('cellSpacing', '0');	// be intercapped to work in IE. WTF?
 		inCapDiv.appendChild(inCapTable);

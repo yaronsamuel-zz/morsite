@@ -421,4 +421,6 @@ class EntryAdmin(admin.ModelAdmin):
 def fixSlug(slug):
     for ch in r'?\/!@#$%^&*=+':
         slug = slug.replace(ch ,'')
-    return slug.replace(' ' , '-')
+    slug = slug.replace(' ' , '-')
+    # slug =  iri_to_uri(slug)
+    return slug

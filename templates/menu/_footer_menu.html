@@ -1,6 +1,6 @@
 {% load menubuilder %}{% load_menu %}    
     <ul class="navigation">
-    {% for item in menuitems %}
+    {% for item , width in menuitems %}
                     <li  
                     {% if item == highlighted  %}
                         class="selected"

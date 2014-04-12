@@ -1,18 +1,38 @@
 {% load menubuilder %}
 {% load_menu %} 
 {% block top_menu_block %}    
-    <ul>
-    {% for item , menu_item_width in menuitems %}
-        <li 
-            style="width:{{ menu_item_width }}px;"
-                    {% if item == highlighted  %}
-                        class="selected"
-                    {% endif %}
-                    >
-                        <a href="{{ item.link_url }}">
-                            {{item.title}}
-                        </a>
-                    </li>
-    {% endfor %}
-    </ul>
+
+    
+    
+
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button id="nav-button" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+<!--         <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> -->
+            תפריט
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+           {% for item , menu_item_width in menuitems %}
+            <li style="width:{{ menu_item_width }}%;" class="{% if item == highlighted  %}active{% endif %}">
+                <a href="{{ item.link_url }}">
+                    {{item.title}}
+                </a>
+            </li>
+        {% endfor %}
+      </ul>
+    
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
 {% endblock top_menu_block %}

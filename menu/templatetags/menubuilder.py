@@ -2,8 +2,9 @@ from menu.models import MenuItem
 from django import template
 from django.core.cache import cache
 
+PADDING = 6
 MENU_WIDTH = 870
-WIDE_WIDTH = 130
+WIDE_WIDTH = 150
 
 register = template.Library()
 
@@ -68,12 +69,17 @@ def getMenuItemsTupples(menuItems):
     
     totalWidth  = MENU_WIDTH - count * WIDE_WIDTH
     menu_item_width = (totalWidth* 1.0 ) / (len(menuItems) - count)
+    paddingPrecent = (PADDING * 1.0) / MENU_WIDTH
     
     for item in menuItems:
         if len(item.title) > 10:
-            width = WIDE_WIDTH
+            width = ((WIDE_WIDTH * 1.0) / MENU_WIDTH) 
         else:
-            width = menu_item_width
+            width = (menu_item_width / MENU_WIDTH) 
+        
+        width -= paddingPrecent
+        width = width * 100
+        width = width - 0.9
         
         retList.append( (item , width) )
     

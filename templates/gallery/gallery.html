@@ -5,14 +5,20 @@
 {% block title %}גלריה{% endblock title %}
 {% block sidebar %}
 {% endblock sidebar %}
+{% block content-span %}10 offset1{% endblock content-span %}
+
 
 {% block content %}
-
-<h2 style="font-family:felix007Medium; margin-right: 403px;font-size:55px;">גלריה</h2>
-
-
+<div class="row">
+    <div class="span2 offset5">
+        <h2 style="font-family:felix007Medium; padding-top:20px;font-size:55px;text-align: center;">גלריה</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="span10 offset1" style="padding-bottom:30px">
 {% include "gallery/_gallery.html" %}
-
+    </div>
+</div>
 
 
 {% endblock content %}

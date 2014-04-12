@@ -14,32 +14,58 @@
 
 {% block sidebar %}
 {% endblock sidebar %}
-
+{% block content-cols %}col-xs-12{% endblock content-cols %}
 {% block content %}
-    <h2 style="font-family:felix007Medium; margin-right: 405px; font-size:55px">מחירון</h2>
+    <div class="row">
+        <div class="col-xs-4 col-xs-offset-4">
+            <h2 style="font-family:felix007Medium; padding-top:20px;font-size:55px;text-align: center;">מחירון</h2>
+        </div>
+    </div>
     
+    <div class="row">
+    <ul id="prices-ul">
     {% for triple_categories in product_categories %}
-        <ul id="prices-ul">
         {% for category in triple_categories %}
-           
-           <li id="prices-container">
-                    <div id="category-picture">
-                        <img src ="{{ category.pictureURL }}" />
-                        <h1>{{ category.category_Name }}</h1>
-                        {% if category.category_description %}
-						{% if category.sizes == 2 %}
-						<h4 style="float:left;padding-left:5px">{{ category.category_description }}</h4>
-						{% else %}
-                        <h4 style="float:left;padding-left:20px">{{ category.category_description }}</h4>
-						{% endif %}
-                        {% else %}
-                        <h4>&nbsp<h4>
-                        {% endif %}
+           <li class="col-xs-12 col-sm-6 col-md-4" id="prices-container" style="padding-bottom:20px;">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div id="category-picture">
+                                <img src ="{{ category.pictureURL }}" />
+                            </div>
+                        </div>
                     </div>
-                <table>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h1 style="text-align:center">{{ category.category_Name }}</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            {% if category.category_description %}
+                            {% if category.sizes == 2 %}
+                            <h4 style="float:left;padding-left:5px">{{ category.category_description }}</h4>
+                            {% else %}
+                            <h4 style="float:left;padding-left:20px">{{ category.category_description }}</h4>
+                            {% endif %}
+                            {% else %}
+                            <h4>&nbsp<h4>
+                            {% endif %}
+                        </div>
+                    </div>
+                                
+
+
+                    
+                
                 {% for product in category.product_set.all %}
-                    <tr>
-                         <td id="icon-column" >
+                    <div class="row" >
+                        <div class="col-xs-5 col-sm-4">
+                            <h3>{{ product.priceStr }}</h3>
+                        </div>
+                        <div class="col-xs-5 col-sm-6">
+                            <h3 style="text-align:right;">{{ product.product_name }}</h3>
+                        </div>
+                        <div class="col-xs-1" style="">
                           {% if product.pictureURL %}
                                 <a href="{{product.pictureURL }}" title="{{ product.product_description}}">
                                 <i class="fa fa-plus-square prices-icon"></i>                 
@@ -48,30 +74,25 @@
                           {% else %}
                                 &nbsp
                           {% endif %} 
-                        </td>
-                        <td id="name-column" >
-                        <h3 style="text-align:right;">{{ product.product_name }}</h3>
-                        </td>
-                        <td id="prices-column">
-                            <h3>{{ product.priceStr }}</h3>
-                        </td>
-                    </tr>
+                        </div>
+                    </div>
                     {% if product.product_description %}
-                    <tr style="line-height:12px;">
-                        
-                        <td colspan="3" id="description-row">
-                            {{ product.product_description }}
-                        </td>
-                    </tr>
+                        <div class="row" style="line-height:15px;padding-bottom:5px;">
+                            <div class="col-xs-9 col-md-10">
+                            
+                                {{ product.product_description }}
+                            </div>
+                        </div>
                     {% endif %}
                 {% endfor %}
-                </table>
+                
             </li>
 
+            
+        {% endfor %}
 
     {% endfor %}
     </ul>
-
-    {% endfor %}
+    </div>
     
 {% endblock content %}

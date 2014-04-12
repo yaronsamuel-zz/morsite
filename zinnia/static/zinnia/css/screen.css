@@ -147,8 +147,8 @@ margin:0
 }
 
 .zinnia ul,.zinnia ol{
-margin:0 1.5em 1.5em 0;
-padding-left:1.5em
+margin:0 0 1.5em 0;
+padding-left:1.7em
 }
 
 .zinnia ul{
@@ -159,9 +159,7 @@ list-style-type:disc
 list-style-type:decimal
 }
 
-.zinnia li{
-list-style-image:url('../img/bullet.png?1362237962')
-}
+
 
 .zinnia dl{
 margin:0 0 1.5em 0
@@ -196,56 +194,21 @@ font-style:italic
 cursor:help
 }
 
-.zinnia .container{
-*zoom:1;
-direction:rtl;
-max-width:41em;
-_width:41em;
-/* padding-left:1em;
-padding-right:1em;
-margin-left:auto;
-margin-right:auto; */
--webkit-background-origin:content;
--moz-background-origin:content;
--ms-background-origin:content-box;
--o-background-origin:content-box;
-background-origin:content-box;
--webkit-background-clip:content-box;
--moz-background-clip:content-box;
-background-clip:content-box;
-width:940px;
-display: table;
-}
-
-.zinnia .container:after{
-content:"";
-display:table;
-clear:both
-}
 
 
 
-@media (min-width: 50em){
-.zinnia .container{
-max-width:83em
-}
-
-
+.zinnia li{
+list-style-image:url('../img/bullet.png?1362237962')
 }
 
 
 
 
 
-}
-
-
-.zinnia.light{
-
-}
 
 .zinnia.light h1,.zinnia.light h2,.zinnia.light h3,.zinnia.light h4,.zinnia.light h5,.zinnia.light h6{
-color:#073642
+color:#073642;
+/* font-size: 1.7em; */
 }
 
 .zinnia.light a{
@@ -288,15 +251,18 @@ border-bottom:1px dotted #839496
 
 .zinnia.light h2.entry-title{
 border-bottom:1px solid #93a1a1;
-text-shadow:1px 1px 0 #93a1a1
+text-shadow:1px 1px 0 #93a1a1;
+font-size: 4.6em;
 }
 
 .zinnia.light .entry-info{
-color:#586e75
+color:#586e75;
+font-size: 1.6em;
 }
 
 .zinnia.light .entry-content{
-color:#073642
+color:#073642;
+margin-left: 20px;
 }
 
 .zinnia.light .entry-body img{
@@ -378,6 +344,7 @@ color:#073642
 
 .zinnia form label{
 display:block;
+font-size: 1.7em;
 font-weight:bold
 }
 
@@ -388,13 +355,15 @@ margin:0 0 1.5em 0
 
 .zinnia form legend{
 font-weight:bold;
-font-size:1.2em
+font-size: 1.8em;
+width: auto;
 }
 
 .zinnia form input[type=email],.zinnia form input[type=text],.zinnia form input[type=password]{
 margin:0.5em 0;
-width:50%;
-padding:0.5em
+width:75%;
+padding:0.5em;
+font-size:1.7em;
 }
 
 .zinnia form textarea{
@@ -542,9 +511,15 @@ padding-left:1.5em
 
 
 .zinnia #widget-tags ul.tags{
-padding: 0 13px;
-font-size:1.4em;
-line-height:1.68em
+padding: 6px 13px;
+font-size: 2em;
+line-height: 2.4em;
+
+}
+
+.zinnia #widget-comments li{
+font-size: 1.7em;
+margin-right: 5px;
 }
 
 .zinnia #widget-tags ul.tags li{
@@ -612,8 +587,7 @@ box-sizing:border-box
 }
 
 .zinnia .entry-body img,.zinnia .entry-body img.left{
-margin:0 1em 1em 0;
-/* float:left */
+max-height: 400px;
 }
 
 .zinnia .entry-body img.right{
@@ -699,7 +673,8 @@ margin-left:20px;
 }
 
 .zinnia .entry-widgets,.zinnia #comments,.zinnia #pingbacks,.zinnia #trackbacks{
-padding-top:1em
+padding-top:1em;
+font-size: 1.7em;
 }
 
 .zinnia #comment-list li,.zinnia #pingback-list li,.zinnia #trackback-list li{

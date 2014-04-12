@@ -1,15 +1,15 @@
 ﻿{% load zinnia_tags i18n %}
 <div id="sidebar">
 
-    <!-- <form action="index.html" method="post" id="newsletter">
-        <h3>הצטרפו עכשיו לניוזלטר</h3>
-        <input type="submit" value="הירשם" class="btn">
-        <input type="text" value="" class="txtfield">
-    </form> -->
-	<div id="newsletter-wrap">
-		<iframe width="230" height="250" src="http://members.viplus.com/LandingPage,4a4b250c-b516-410a-81f8-039e3627c230,30662.aspx" frameborder="0" allowfullscreen></iframe>
-	</div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-12">
+            <div id="newsletter-wrap">
+                <iframe width="230" height="250" src="http://members.viplus.com/LandingPage,4a4b250c-b516-410a-81f8-039e3627c230,30662.aspx" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    
     {% block facebook-block %}
+    <div class="col-xs-12 col-sm-6 col-md-12">
         <div id="fb-sidebar-wrap">
             <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fmorscakes&amp;width=240&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" 
             scrolling="no" 
@@ -18,19 +18,20 @@
             allowTransparency="true">
             </iframe>
         </div>
+    </div>
     {% endblock facebook-block %}
-
+    
     {% if contact_page %}
     {% else %}
     {% block contact-sidebar-block %}
-    <div class="section">
-        {% include "contact_form/contactSideBar.html" %}
+    <div class="col-sm-5 col-md-12 hidden-xs sidebar-section">
+            {% include "contact_form/contactSideBar.html" %}
+        
     </div>
     {% endblock contact-sidebar-block %}
     {% endif %}
 
-
-    <div class="section">
+    <div class="col-sm-5 col-sm-offset-2 col-md-12 col-md-offset-0 hidden-xs sidebar-section">
         <div id="widget-tags" class="widget">
           <h3>למצוא פוסט בקלות</h3>
           {% get_tag_cloud %}
@@ -41,13 +42,15 @@
         </div>
     </div>
     
-    <div id="serch-sidebar">
-        <form method="get" action="{% url 'zinnia_entry_search' %}">
-          <p>
-            <input type="text" value="{% trans "חפש בבלוג..." %}" name="pattern" onfocus="this.value=''" />
-            <input type="submit" class="submitbutton" value="OK" />
-          </p>
-        </form>
+    <div class="col-xs-12">
+        <div id="serch-sidebar">
+            <form method="get" action="{% url 'zinnia_entry_search' %}">
+              <p>
+                <input type="text" value="{% trans "חפש בבלוג..." %}" name="pattern" onfocus="this.value=''" />
+                <input type="submit" class="submitbutton" value="OK" />
+              </p>
+            </form>
+        </div>
     </div>
 
     {% if user.is_authenticated %}

@@ -47,7 +47,7 @@ class CoreEntry(models.Model):
     title = models.CharField(
         _('title'), max_length=255)
 
-    slug = models.CharField(
+    slug = models.SlugField(
         _('slug'), max_length=255,
         unique_for_date='creation_date',
         help_text=_("Used to build the entry's URL."))
@@ -164,6 +164,7 @@ class CoreEntry(models.Model):
             'month': creation_date.strftime('%m'),
             'day': creation_date.strftime('%d'),
             'slug': self.slug})
+            
 
     def __str__(self):
         return '%s: %s' % (self.title, self.get_status_display())

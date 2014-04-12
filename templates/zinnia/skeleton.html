@@ -15,6 +15,13 @@
     <!-- <link rel="pingback" href="/xmlrpc/" /> -->
     <link rel="shortcut icon" href="{% static 'margarita/images/mor/favicon.png' %}" />
     <link rel="home" href="{% url 'zinnia_entry_archive_index' %}" />
+    
+        
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}" type="text/css" media="screen">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-theme.css' %}" type="text/css" media="screen">
+    <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+    <script src="{% static 'bootstrap/js/jquery.min.js' %}"></script>
+    
     <link rel="stylesheet" type="text/css" media="screen, projection" href="{% static "zinnia/css/screen.css" %}" />
     <link rel="stylesheet" type="text/css" media="print" href="{% static "zinnia/css/print.css" %}" />    	
     <link rel="stylesheet" href="{% static 'margarita/css/style.css' %}" type="text/css">
@@ -23,6 +30,7 @@
     <!--[if lt IE 8]>
         <link rel="stylesheet" type="text/css" media="screen, projection" href="{% static "zinnia/css/ie.css" %}" />
     <![endif]-->
+    
     {% block link %}{% endblock link %}
     {% block script %}{% endblock script %}
 	
@@ -38,18 +46,16 @@
     </script>
     
     
+    
+    
+    
   </head>
   <body onload="{% block body-onload %}{% endblock body-onload %}" class="zinnia {% block theme-class %}light{% endblock theme-class %} {% block color-class %}magenta{% endblock color-class %} {% block sidebar-class %}right-sidebar{% endblock sidebar-class %} {% block body-class %}{% endblock body-class %}" >
-    <div id="page">
-		<div id="header">
-            <div id="top">
-                <div id="logo">
-                    <a href="{% url 'morsite.views.homepage' %}">
-                        <img src="{% static 'margarita/images/mor/logo.jpg' %}" style="height:129px;" alt="סמואל קונדיטורית בוטיק">
-                    </a>
-                </div>
-                <div id="title">
-                <h1 style="font-size: 54px;">
+  <header id="head">
+    <div class="container">
+            <div class="row" >
+                <div class="col-xs-12 col-md-8" id="title">
+                    <h1 style="font-size: 54px;">
                         סמואל קונדיטורית בוטיק
                     </h1>
                     
@@ -57,65 +63,60 @@
                         0546-345733
                     </h2>
                 </div>
+                <div class="col-xs-12 col-md-4" id="logo">
+                    <a href="{% url 'morsite.views.homepage' %}">
+                        <img src="{% static 'margarita/images/mor/logo.jpg' %}" style="height:129px;" alt="סמואל קונדיטורית בוטיק">
+                    </a>
+                </div>
              </div>
 
-            <div id="navigation">
+            <div class="row" id="navigation">
+                <div id="sub-navigation" class="col-md-12 col-xs-12" style="padding:0;">
                 {% block top_menu_block %}   
                     {% include  "menu/_top_menu.html" %}
                 {% endblock top_menu_block %}
+                </div>
             </div>
-		</div>
-     <div id="contents">
-        <div id="bababox">
-            {% block abox %}
-            {% endblock abox %}
-        </div>
-        <div id="body">
-        <div class="container" id="middle">
-
-        {% block sidebar %}
-        {% endblock sidebar %}
-          
-          <div id="content" class="hfeed">
-            {% block content %}
-            <div class="links">
-              <h3>{% trans "Useful links" %}</h3>
-              <ul>
-                <li>
-                  <a href="{% url 'zinnia_entry_archive_index' %}" title="{% trans "Weblog index" %}">
-                    {% trans "Weblog index" %}
-                  </a>
-                </li>
-                <li>
-                  <a href="{% url 'zinnia_sitemap' %}" title="{% trans "Sitemap" %}">
-                    {% trans "Sitemap" %}
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="search">
-              <h3>{% trans "Search" %}</h3>
-              {% include "zinnia/tags/search_form.html" %}
-            </div>
-            {% endblock content %}
-          </div>
-         
-        </div>
-        </div>
-     </div>
-     <div id="footer">
-        <div>
-            {% block footer_menu %}   
-                    {% include  "menu/_footer_menu.html" %}
-            {% endblock footer_menu %}
-
-            <p>
-                © Samuel Cakes 2014 All Rights Reserved
-            <br>
-                {% blocktrans %}Powered by <a href="http://www.djangoproject.com">Django</a> and <a href="https://github.com/Fantomas42/django-blog-zinnia">Zinnia {{ ZINNIA_VERSION }}</a>{% endblocktrans %}
-            </p>
-        </div>
     </div>
+  </header>
+  
+
+    <section  class="main-content">
+      <div id="my-body" class="container">
+        <div class="row" style="margin-top: 10px;">
+            <div class="{% block content-cols %}col-xs-12 col-md-8{% endblock content-cols %}" style=" padding-left: 0; ">
+              <div id="content" class="hfeed">
+                {% block content %}
+
+                {% endblock content %}
+              </div>
+
+            </div>
+            {% block sidebar %}
+            {% endblock sidebar %}
+        </div>
+      </div>
+    </section>
+    
+    <footer>
+       <div id="my-footer" class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <p>
+                    © Samuel Cakes 2014 All Rights Reserved
+                <br>
+                    {% blocktrans %}Powered by <a href="http://www.djangoproject.com">Django</a> and <a href="https://github.com/Fantomas42/django-blog-zinnia">Zinnia {{ ZINNIA_VERSION }}</a>{% endblocktrans %}
+                </p>
+            </div>
+            <div class="col-sm-8 hidden-xs" id="footer-navigation">
+                {% block footer_menu %}   
+                        {% include  "menu/_footer_menu.html" %}
+                {% endblock footer_menu %}
+            </div>
+        </div>
+       </div>
+    </footer>
+    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.js' %}"> </script>
   </body>
 </html>
 
