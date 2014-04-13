@@ -1,4 +1,4 @@
-{% extends "zinnia/base_not_home_page.html" %}
+{% extends "zinnia/base.html" %}
 
 {% block title %}מחירון{% endblock title %}
 {% block script %}
@@ -40,17 +40,21 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-12">
-                            {% if category.category_description %}
+                        {% if category.category_description %}
                             {% if category.sizes == 2 %}
-                            <h4 style="float:left;padding-left:5px">{{ category.category_description }}</h4>
-                            {% else %}
-                            <h4 style="float:left;padding-left:20px">{{ category.category_description }}</h4>
+                                <div class="col-xs-12" style="left:-65px"> 
+                            {% elif category.sizes == 1 %}
+                                <div class="col-xs-12" style="left:-35px">
+                            {% elif category.sizes == 0 %}
+                                <div class="col-xs-12" style="left:-5px">
                             {% endif %}
-                            {% else %}
-                            <h4>&nbsp<h4>
-                            {% endif %}
-                        </div>
+                                    <h4 style="float:left;">{{ category.category_description }}</h4>
+                                </div>
+                        {% else %}
+                            <div class="col-xs-12">
+                                <h4>&nbsp<h4>
+                            </div>
+                        {% endif %}
                     </div>
                                 
 
@@ -59,10 +63,10 @@
                 
                 {% for product in category.product_set.all %}
                     <div class="row" >
-                        <div class="col-xs-5 col-sm-4">
+                        <div class="col-xs-5 col-sm-3">
                             <h3>{{ product.priceStr }}</h3>
                         </div>
-                        <div class="col-xs-5 col-sm-6">
+                        <div class="col-xs-5 col-sm-7">
                             <h3 style="text-align:right;">{{ product.product_name }}</h3>
                         </div>
                         <div class="col-xs-1" style="">

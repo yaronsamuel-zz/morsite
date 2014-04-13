@@ -1,16 +1,4 @@
 {% load static %}
-   
-    {% block link %}
-        <link rel="stylesheet" href="{% static 'photobox/styles.css' %}">
-        <link rel="stylesheet" href="{% static 'photobox/photobox/photobox.css' %}">
-        <!--[if lt IE 9]><link rel="stylesheet" href=""{% static 'photobox/photobox/photobox.ie.css' %}"><![endif]-->
-    {% endblock link %}
-    
-    {% block script %}
-        <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="{% static 'photobox/photobox/photobox.js' %}"></script>
-    {% endblock script %}
 <!--
 /*
  * Photobox
@@ -22,28 +10,25 @@
  * http://www.opensource.org/licenses/MIT
  */
 -->
-    
-	<div id='wrap'>
-        <div id='gallery'>
-        {% for image in images %}
-        <li class="loaded">
-            <a href="{{ image.pictureURL }}"> <!-- real picture -->
+
+<div id='gallery'>
+    {% for image in images %}
+    <li class="loaded">
+        <a href="{{ image.pictureURL }}"> <!-- real picture -->
+        
+            <img src="{{ image.thumb_gallery }}" title="{{ image.title }}" alt="{{ image.description }}" >
+            <!-- thumb -->
             
-                <img src="{{ image.thumb_gallery }}" title="{{ image.title }}" alt="{{ image.description }}" >
-                <!-- thumb -->
-                
-            </a>
-        </li>
-        {% endfor %}
+        </a>
+    </li>
+{% endfor %}
+</div>
 
-    
-        </div>
-    </div>
-    <script>
-        // applying photobox on a `gallery` element which has lots of thumbnails links. Passing options object as well:
-        //-----------------------------------------------
-        $('#gallery').photobox('a',{ time:0 });
+<script>
+    // applying photobox on a `gallery` element which has lots of thumbnails links. Passing options object as well:
+    //-----------------------------------------------
+    $('#gallery').photobox('a',{ time:0 });
 
-    </script>
+</script>
 
 

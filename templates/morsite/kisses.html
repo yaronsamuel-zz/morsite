@@ -1,5 +1,5 @@
 
-{% extends "zinnia/base_not_home_page.html" %}
+{% extends "zinnia/base.html" %}
 {% load static %}
 
 {% block title %}נשיקות ממותגות{% endblock title %}
@@ -9,8 +9,8 @@
     
     <h3>נשיקות ממותגות</h3>
     
-        <div class="row-fluid" id="contact-info">
-            <div class="span10 offset1">
+        <div class="row" id="contact-info">
+            <div class="col-xs-10 col-xs-offset-1">
                 <h5>
     נשיקות ממותגות מושלמות לאירועים מיוחדים כמו חתונה, בר ובת מצווה, חגים, או יום הולדת עגול. מזכרת מתוקה ויפהפיה לכל אורח ואורחת.
     הנשיקות מתאימות כמתנות לעובדים או ללקוחות שלכם, כשלוגו העסק שלכם מודפס על גבי הנשיקות.
@@ -19,26 +19,20 @@
            
             </div>
         </div>
-    <ul style="text-align:center">
-        <li class="row-fluid" style="margin:1>
-            <div class="span10 offset1">
-                <div id="static-page-image">
-                    <img src="{% static 'margarita/images/mor/IMG_3223_kisses1.JPG' %}" title="נשיקות ממותגות" alt="נשיקות ממותגות"/>
-                </div>
+    <ul style="text-align:center;margin-bottom: 30px;">
+        <li class="row" style="margin:1">
+            <div class="col-xs-12">
+                    <img src="{% static 'margarita/images/mor/IMG_3223_kisses1.JPG' %}" class="static-page-image" title="נשיקות ממותגות" alt="נשיקות ממותגות"/>
             </div>
         </li>
-        <li class="row-fluid" id="contact-info">
-            <div class="span10 offset1">
-                <div id="static-page-image">
-                    <img src="{% static 'margarita/images/mor/kisses2.JPG' %}" title="נשיקות ממותגות" alt="נשיקות ממותגות"/>
-                </div>
+        <li class="row" id="contact-info">
+            <div class="col-xs-12">
+                    <img src="{% static 'margarita/images/mor/kisses2.JPG' %}" class="static-page-image" title="נשיקות ממותגות" alt="נשיקות ממותגות"/>
             </div>
         </li>
-        <li class="row-fluid" id="contact-info">
-            <div class="span10 offset1">
-                <div id="static-page-image">
-                    <img src="{% static 'margarita/images/mor/IMG_3244_kisses3.JPG' %}" title="נשיקות ממותגות" alt="נשיקות ממותגות"/>
-                </div>
+        <li class="row" id="contact-info">
+            <div class="col-xs-12">
+                    <img src="{% static 'margarita/images/mor/IMG_3244_kisses3.JPG' %}" class="static-page-image" title="נשיקות ממותגות" alt="נשיקות ממותגות"/>
             </div>
         </li>
                 
