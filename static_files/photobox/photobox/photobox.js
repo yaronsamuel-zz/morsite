@@ -23,7 +23,7 @@
         // Preload images
         preload = {}, preloadPrev = new Image(), preloadNext = new Image(),
         // DOM elements
-        closeBtn, image, video, prevBtn, nextBtn, caption, captionText, pbLoader, autoplayBtn, thumbs, wrapper, 
+        closeBtn, image, video, prevBtn, nextBtn, caption, captionText, pbLoader, autoplayBtn, thumbs, wrapper, myTitle,
 
         defaults = {
             loop:       true,   // Allows to navigate between first and last images
@@ -47,7 +47,9 @@
                     pbLoader = $('<div class="pbLoader"><b></b><b></b><b></b></div>'),
 					prevBtn = $('<div id="pbPrevBtn" class="prevNext"><b></b></div>').on('click', next_prev),
                     nextBtn = $('<div id="pbNextBtn" class="prevNext"><b></b></div>').on('click', next_prev),
+                    myTitle = $('<div class="row"><div class="col-xs-12 col-sm-10 col-sm-offset-1"><h2 id="pbTitle">לצפייה בתמונות נוספות ניתן להחליק לצדדים</h2></div></div>'),
                     wrapper = $('<div class="wrapper">').append(  // gives Perspective
+
                         image = $('<img>'),
 						video = $('<div>')
                     ),

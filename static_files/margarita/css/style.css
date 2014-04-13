@@ -530,6 +530,7 @@ width:100%;
 	border: 1px solid #eeeeee;
 	margin: 6px 0 0 30px;
     max-height: 210px;
+    max-width: 100%;
 }
 #featured ul li h4 {
 	color: #7c7c7c;
@@ -1149,7 +1150,15 @@ width: 900px;
 float:center;
 padding:20px;
 
+}
 
+#pbTitle{
+font-family: felix007Medium;
+font-size: 40px;
+text-align: center;
+color:#f0eae3;
+background-color:#2E2B28;
+border-radius: 6px;
 }
 
 
@@ -1238,6 +1247,10 @@ border:none;
     #sub-navigation{
     padding-left:15px !important;
     padding-right:15px !important;
+    }
+    
+    #pbTitle{
+    font-size:28px;
     }
 }
 

@@ -156,7 +156,9 @@ list-style-type:disc
 }
 
 .zinnia ol{
-list-style-type:decimal
+list-style-type:decimal;
+font-size:2em;
+padding-right: 25px;
 }
 
 
