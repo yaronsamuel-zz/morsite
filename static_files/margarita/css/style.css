@@ -211,7 +211,6 @@ margin: 0;
 
 #prices-ul{
 direction:rtl;
-font-size: 1.7em;
 }
 
 #category-picture img{
@@ -228,12 +227,14 @@ border: 4px solid #d3d1d2;
 }
 
 
-/* 
-media="screen"
-@media (max-width: 979px) and (min-width: 768px)
-.thumbnails .span3 {
-width: 352px;
-} */
+
+
+@media (max-width: 979px) and (min-width: 768px){
+.main-content {
+padding-top: 12px;
+}
+
+}
 
 
 
@@ -336,7 +337,7 @@ width:90%
 		clear:both;
 		margin:0;
 		text-align:left;
-        padding: 6px 0 20px 32px;
+        padding: 6px 0 20px 0;
         height: 60px;
     }	
     #buttons button{
@@ -944,6 +945,10 @@ float: initial !important;
 }
 
 
+.static-page-section{
+line-height:22px;
+}
+
 /* kisses */
 
 /** About **/
@@ -1172,7 +1177,6 @@ font-size:1.7em;
 }
 
 .submit input{
-font-size: 1.7em;
 }
 
 /* bootstrap */
